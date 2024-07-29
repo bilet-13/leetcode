@@ -11,8 +11,10 @@ class Solution(object):
                 continue
             else:
                 not_equal_nums.append(num)
+
         k = len(not_equal_nums)
-        for i in range(k) :
-            nums[i] = not_equal_nums[i]
+
+        
+        nums[:k] = not_equal_nums[:k]
 
         return k 
