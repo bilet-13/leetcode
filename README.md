@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0027-remove-element](https://github.com/bilet-13/leetcode/tree/master/0027-remove-element) |
+| [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 ## Two Pointers
 |  |
@@ -15,17 +16,21 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Depth-First Search
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 ## Breadth-First Search
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 ## Union Find
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 ## Matrix
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 <!---LeetCode Topics End-->
