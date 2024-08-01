@@ -17,10 +17,10 @@ class Solution:
             node, clone_node = queue.pop(0) 
 
             for neighbor_node in node.neighbors:
-                if clone_graph.get(neighbor_node.val, None) == None:
+                if neighbor_node.val not in clone_graph.keys():
                     clone_neighbor = Node(neighbor_node.val, [])
                     clone_graph[neighbor_node.val] = clone_neighbor
-                    
+
                     queue.append((neighbor_node, clone_neighbor))
 
                 clone_node.neighbors.append(clone_graph[neighbor_node.val])
