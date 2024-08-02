@@ -2,14 +2,8 @@ class Solution:
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
         values_graph = {}
         for i in range(len(equations)):
-            if equations[i][0] not in values_graph:
-                values_graph[equations[i][0]] = []
-            values_graph[equations[i][0]].append((equations[i][1], values[i]))
-            
-            if equations[i][1] not in values_graph:
-                    values_graph[equations[i][1]] = []
-
-            values_graph[equations[i][1]].append((equations[i][0], float(1 / values[i]) ) )
+            self.add_edge(values_graph, equations[i][0], equations[i][1], values[i])
+            self.add_edge(values_graph, equations[i][1], equations[i][0], float(1 /values[i]))
 
         results = []
 
@@ -25,11 +19,16 @@ class Solution:
                 
         return results
 
+    def add_edge(self, graph, start, end, weight):
+        if start not in graph:
+            graph[start] = []
+        graph[start].append((end, weight))
+            
+
     def DFS(self, start, end, graph):
 
         stack = [(start, 1)]
         visited = {start: 1}
-
 
         while stack:
             node, value = stack.pop(-1)
