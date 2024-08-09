@@ -4,22 +4,10 @@ class Solution:
         if not root:
             return False
         
-        queue = deque()
-        queue.append([root, root.val])
-        visited = set()
-        visited.add(root)
-        answer = False
+        if not root.left and not root.right:
+            return targetSum == root.val
 
-        while queue:
-            n,  sum_n = queue.popleft()
-            if not n.left and not n.right:
-                if sum_n == targetSum:
-                    answer |= True
-                answer |= False
-
-            for child in [n.left, n.right]:
-                if child and child not in visited:
-                    queue.append([child, sum_n + child.val])
-                    visited.add(child)
+        left_sum = self.hasPathSum(root.left, targetSum-root.val)
+        right_sum = self.hasPathSum(root.right, targetSum-root.val)
         
-        return answer
+        return left_sum or right_sum
