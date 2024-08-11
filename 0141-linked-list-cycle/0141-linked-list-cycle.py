@@ -6,7 +6,6 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        val_map = {}
 
         if not head:
             return False
@@ -15,11 +14,9 @@ class Solution:
         hare = head.next.next
         turtle = head.next
 
-        while hare:
+        while hare and hare.next:
             if hare is turtle:
                 return True
-            if not hare.next or not hare.next.next or not turtle.next:
-                break
             hare = hare.next.next
             turtle = turtle.next
 
