@@ -22,6 +22,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0027-remove-element](https://github.com/bilet-13/leetcode/tree/master/0027-remove-element) |
 | [0141-linked-list-cycle](https://github.com/bilet-13/leetcode/tree/master/0141-linked-list-cycle) |
+| [0151-reverse-words-in-a-string](https://github.com/bilet-13/leetcode/tree/master/0151-reverse-words-in-a-string) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -71,6 +72,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0013-roman-to-integer](https://github.com/bilet-13/leetcode/tree/master/0013-roman-to-integer) |
 | [0014-longest-common-prefix](https://github.com/bilet-13/leetcode/tree/master/0014-longest-common-prefix) |
 | [0058-length-of-last-word](https://github.com/bilet-13/leetcode/tree/master/0058-length-of-last-word) |
+| [0151-reverse-words-in-a-string](https://github.com/bilet-13/leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 ## Shortest Path
 |  |
