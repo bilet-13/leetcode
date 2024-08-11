@@ -7,9 +7,7 @@
 class Solution:
 
     def build_map(self, vals):
-        index_map = {}
-        for i in range(len(vals)):
-            index_map[vals[i]] = i
+        index_map = { val: i for i, val in enumerate(vals)}
 
         return index_map
 
@@ -17,22 +15,18 @@ class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
 
         index_map = self.build_map(inorder)
-        print(index_map)
-        
-        return self._buildTree(preorder, inorder, index_map)
+        return self._buildTree(preorder, inorder, 0, len(preorder)-1, 0, len(inorder)-1, index_map)
     
-    def _buildTree(self, preorder: List[int], inorder: List[int], index_map):
-        if not preorder:
+    def _buildTree(self, preorder: List[int], inorder: List[int], pre_start, pre_end, in_start, in_end, index_map):
+
+        if pre_start > pre_end or in_start > in_end:
             return None
 
-        if len(preorder) == 1:
-            return TreeNode(val=preorder[0])
-
+        root = TreeNode(val=preorder[pre_start])
+        in_root_index = index_map[root.val]
+        left_subtree_size = in_root_index - in_start
         
-        root = TreeNode(val=preorder[0])
-        in_root_index = inorder.index(root.val)
-
-        root.left = self._buildTree(preorder[1:in_root_index+1], inorder[:in_root_index], index_map)
-        root.right = self._buildTree(preorder[in_root_index+1:], inorder[in_root_index+1:], index_map)
+        root.left = self._buildTree(preorder, inorder, pre_start+1, pre_start+left_subtree_size, in_start, in_root_index-1, index_map)
+        root.right = self._buildTree(preorder, inorder, pre_start+left_subtree_size+1, pre_end, in_root_index+1, in_end, index_map)
 
         return root
