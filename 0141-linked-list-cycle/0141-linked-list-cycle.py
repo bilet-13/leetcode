@@ -13,8 +13,8 @@ class Solution:
         node = head
 
         while node:
-            if node not in val_map:
-                val_map[node] = True
+            if id(node) not in val_map:
+                val_map[id(node)] = True
             else:
                 return True
             node = node.next
