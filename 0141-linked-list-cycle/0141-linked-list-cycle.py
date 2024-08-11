@@ -10,15 +10,19 @@ class Solution:
 
         if not head:
             return False
-        node = head
+        if not head.next or not head.next.next:
+            return False
+        hare = head.next.next
+        turtle = head.next
 
-        while node:
-            if id(node) not in val_map:
-                val_map[id(node)] = True
-            else:
+        while hare:
+            if hare is turtle:
                 return True
-            node = node.next
-        
+            if not hare.next or not hare.next.next or not turtle.next:
+                break
+            hare = hare.next.next
+            turtle = turtle.next
+
         return False
 
         
