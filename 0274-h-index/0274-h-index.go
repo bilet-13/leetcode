@@ -2,11 +2,12 @@ func hIndex(citations []int) int {
     sort.Ints(citations)
 
     for i:= len(citations)-1; i > -1; i--{
-        if len(citations) - i == citations[i]{
-            return len(citations) - i
+        num_paper := len(citations) - i
+        if num_paper == citations[i]{
+            return num_paper
         }
-        if len(citations) - i > citations[i]{
-            return len(citations) - i - 1
+        if num_paper > citations[i]{
+            return num_paper - 1
         }
     }
 
