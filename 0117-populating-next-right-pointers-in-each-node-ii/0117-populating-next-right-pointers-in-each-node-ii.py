@@ -12,8 +12,6 @@ class Solution:
     def connect(self, root: 'Node') -> 'Node':
         if not root:
             return root
-        
-
         next_row_head = None
         next_prev = None
         cur = root
@@ -42,12 +40,3 @@ class Solution:
 
         return root
 
-    def preorder_search_and_link_nodes(self, root, depth_nodes, depth):
-        if not root:
-            return
-        
-        if root.left:
-            root.left.next = root.right
-        
-        self.preorder_search_and_link_nodes(root.left, depth_nodes, depth+1)
-        self.preorder_search_and_link_nodes(root.right, depth_nodes, depth+1)
