@@ -10,24 +10,44 @@ class Node:
 
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
-        depth_nodes = {}
-        self.preorder_search_and_add_queue(root, depth_nodes, 0)
+        if not root:
+            return root
+        
 
-        for depth in depth_nodes:
-            left = 0
-            right = 1
-            while right > left and right < len(depth_nodes[depth]):
-                depth_nodes[depth][left].next = depth_nodes[depth][right]
-                left += 1
-                right += 1
+        next_row_head = None
+        next_prev = None
+        cur = root
+
+        while cur:
+            while cur:
+                if cur.left:
+                    if next_prev:
+                        next_prev.next = cur.left
+                    else:
+                        next_row_head = cur.left
+                    next_prev = cur.left
+
+                if cur.right:
+                    if next_prev:
+                        next_prev.next = cur.right
+                    else:
+                        next_row_head = cur.right
+                    next_prev = cur.right
+                cur = cur.next
+
+            cur = next_row_head
+            next_row_head = None
+            next_prev = None
+                        
+
         return root
 
-    def preorder_search_and_add_queue(self, root, depth_nodes, depth):
+    def preorder_search_and_link_nodes(self, root, depth_nodes, depth):
         if not root:
             return
-        if depth not in depth_nodes:
-            depth_nodes[depth] = []
-        depth_nodes[depth].append(root)
         
-        self.preorder_search_and_add_queue(root.left, depth_nodes, depth+1)
-        self.preorder_search_and_add_queue(root.right, depth_nodes, depth+1)
+        if root.left:
+            root.left.next = root.right
+        
+        self.preorder_search_and_link_nodes(root.left, depth_nodes, depth+1)
+        self.preorder_search_and_link_nodes(root.right, depth_nodes, depth+1)
