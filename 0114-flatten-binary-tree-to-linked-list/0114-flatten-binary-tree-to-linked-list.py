@@ -26,10 +26,4 @@ class Solution:
             cur = cur.right
         return root
 
-    def _find_preorder(self, root, preorder):
-        if not root:
-            return None
 
-        preorder.append(root)
-        self._find_preorder(root.left, preorder)
-        self._find_preorder(root.right, preorder)
