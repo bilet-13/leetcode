@@ -12,24 +12,23 @@ class Solution:
         if not root:
             return root
         
-        preorder = deque()
+        cur = root
+        while(cur):
+            if cur.left:
+                pre = cur.left
+                while pre.right:
+                    pre = pre.right
+                pre.right = cur.right
 
-        self._find_preorder(root, preorder)
-        node = root
-        preorder.popleft()
+                cur.right = cur.left
+                cur.left = None
 
-        while preorder:
-            next_node =  preorder.popleft()
-            node.left = None
-            node.right = next_node
-            node = next_node
-        
+            cur = cur.right
         return root
 
     def _find_preorder(self, root, preorder):
         if not root:
             return None
-
 
         preorder.append(root)
         self._find_preorder(root.left, preorder)
