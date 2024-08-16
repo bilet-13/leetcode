@@ -5,6 +5,8 @@ class Solution:
         dp_canJump[-1] = True
 
         for i in range(len(nums)-2, -1, -1):
+            if dp_canJump[i]:
+                    continue
             for j in range(0, nums[i]+1):
                 if i + j > len(nums) - 1:
                     break
