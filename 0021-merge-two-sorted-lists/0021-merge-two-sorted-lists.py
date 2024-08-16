@@ -12,34 +12,19 @@ class Solution:
         elif not list2:
             return list1
         
-        head = None 
-        cur = None
+        dummy = ListNode() 
+        cur = dummy
         while list1 and list2:
             if list1.val < list2.val:
-                if head == None:
-                    head = list1
-                    cur = head
-                else:
-                    cur.next = list1
-                    cur = cur.next
+                cur.next = list1
                 list1 = list1.next
             else :
-                if head == None:
-                    head = list2
-                    cur = head
-                else:
-                    cur.next = list2
-                    cur = cur.next
+                cur.next = list2
                 list2 = list2.next
-        while list1:
-            cur.next = list1
             cur = cur.next
-            list1 = list1.next
-        while list2:
-            cur.next = list2
-            cur = cur.next
-            list2 = list2.next
         
-        return head
+        cur.next = list1 if list1 else list2
+        
+        return dummy.next
 
 
