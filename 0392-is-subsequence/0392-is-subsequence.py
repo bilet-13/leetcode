@@ -17,4 +17,4 @@ class Solution:
             cur_s += 1
             cur_t += 1
 
-        return True if cur_s == len(s) else False
+        return cur_s == len(s) 
