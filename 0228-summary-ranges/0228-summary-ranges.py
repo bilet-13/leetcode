@@ -4,24 +4,14 @@ class Solution:
             return []
 
         ranges = []
-        a = None
-        num_next = 0
+        start = nums[0]
 
-        for i in range(0, len(nums)):
-            if a == None:
-                a = nums[i]
-                num_next = 0
-
-            elif nums[i] != a + num_next + 1:
-                ranges.append(self.get_output(a, a+num_next))
-                a = nums[i]
-                num_next = 0
-            else:
-                num_next += 1
-            
-            if i == len(nums) - 1:
-                ranges.append(self.get_output(a, a+num_next))
-                
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i-1] + 1:
+                ranges.append(self.get_output(start, nums[i-1]))
+                start = nums[i]
+        
+        ranges.append(self.get_output(start, nums[-1]))
         return ranges
 
     def get_output(self, a, b):
