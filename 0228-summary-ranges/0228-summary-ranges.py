@@ -2,14 +2,17 @@ class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
         if not nums:
             return []
-        if len(nums) == 1:
-            return [f'{nums[0]}']
+
         ranges = []
-        a = nums[0]
+        a = None
         num_next = 0
 
-        for i in range(1, len(nums)):
-            if nums[i] != a + num_next + 1:
+        for i in range(0, len(nums)):
+            if a == None:
+                a = nums[i]
+                num_next = 0
+
+            elif nums[i] != a + num_next + 1:
                 ranges.append(self.get_output(a, a+num_next))
                 a = nums[i]
                 num_next = 0
@@ -20,5 +23,6 @@ class Solution:
                 ranges.append(self.get_output(a, a+num_next))
                 
         return ranges
+
     def get_output(self, a, b):
         return f'{a}->{b}' if a != b else f'{a}'
