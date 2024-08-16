@@ -3,12 +3,13 @@ class Solution:
         s = s.lower()
 
         cur = 0
-        alphanumeric_s = ""
+        alphanumeric_char = []
         while cur < len(s):
             if( ord('0') <= ord(s[cur])  and ord(s[cur]) <= ord('9') )or (ord('a') <= ord(s[cur]) and ord(s[cur]) <= ord('z')):
-                alphanumeric_s += s[cur]
+                alphanumeric_char += s[cur]
             cur += 1
-
+            
+        alphanumeric_s = "".join(alphanumeric_char)
         start = 0
         end = len(alphanumeric_s) - 1
         print(alphanumeric_s)
