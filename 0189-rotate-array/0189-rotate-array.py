@@ -5,19 +5,16 @@ class Solution:
         """
         if k == 0 or len(nums) == 1:
             return None
-        if k < len(nums):
-            last_k = [nums[i] for i in range(len(nums)-k, len(nums))]
-            for i in range(len(nums)-1, k-1, -1):
-                nums[i] = nums[i-k]
-            
-            for i in range(len(last_k)):
-                nums[i] = last_k[i]
-        else:
-            for _ in range(k):
-                self._rotate(nums)
+        k = k % len(nums)
+        self._reverse(nums, 0, len(nums)-1)
+        self._reverse(nums, 0, k-1)
+        self._reverse(nums, k, len(nums)-1)
 
-    def _rotate(self, nums):
-        first = nums[-1]
-        for i in range(len(nums)-1, 0, -1):
-            nums[i] = nums[i-1]
-        nums[0] = first
+
+    def _reverse(self, nums, start, end):
+        while start < end:
+            tmp_num = nums[start]
+            nums[start] = nums[end]
+            nums[end] = tmp_num
+            start += 1
+            end -= 1
