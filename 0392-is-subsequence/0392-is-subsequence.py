@@ -1,8 +1,6 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        if not s and not t:
-            return True
-        elif not s:
+        if not s:
             return True
         elif not t:
             return False
