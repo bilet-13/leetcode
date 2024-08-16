@@ -1,23 +1,20 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        s = s.lower()
-
-        cur = 0
-        alphanumeric_char = []
-        while cur < len(s):
-            if( ord('0') <= ord(s[cur])  and ord(s[cur]) <= ord('9') )or (ord('a') <= ord(s[cur]) and ord(s[cur]) <= ord('z')):
-                alphanumeric_char += s[cur]
-            cur += 1
-            
-        alphanumeric_s = "".join(alphanumeric_char)
+        
         start = 0
-        end = len(alphanumeric_s) - 1
-        print(alphanumeric_s)
+        end = len(s) - 1
+
         while start < end:
-            if alphanumeric_s[start] != alphanumeric_s[end]:
+            while start < end and not s[start].isalnum():
+                start += 1
+            while start < end and not s[end].isalnum():
+                end -= 1
+
+            if s[start].lower() != s[end].lower():
                 return False
-            end -= 1
             start += 1
+            end -= 1 
+        
         return True
 
 
