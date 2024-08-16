@@ -2,26 +2,27 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         [123334]
         [123343]
-        cur = 0 
-        end = len(nums)
-
-        element = nums[cur]
+        duplicated_num = nums[0]
         count = 1
-        cur += 1
+        insert_pos = 1
 
-        while cur < end:
-            if element == nums[cur] and count < 2:
-                count += 1
-                cur += 1
-            elif element == nums[cur] and count == 2:
-                self.push_end(nums, cur, end)
-                end -= 1
-            elif element != nums[cur]:
-                element = nums[cur]
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i-1]:
+                if count < 2:
+                    nums[insert_pos] = nums[i]
+                    count += 1
+                    insert_pos += 1
+                else:
+                    count += 1
+
+            else:
                 count = 1
-                cur += 1
+                duplicated_num = nums[i]
+                nums[insert_pos] = nums[i]
+                insert_pos += 1
         
-        return end
+        
+        return insert_pos
 
     def push_end(self, nums, index, end):
         tmp_num = nums[index]
