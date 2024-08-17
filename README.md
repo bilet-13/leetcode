@@ -18,6 +18,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/bilet-13/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0162-find-peak-element](https://github.com/bilet-13/leetcode/tree/master/0162-find-peak-element) |
+| [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
@@ -83,6 +84,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0133-clone-graph](https://github.com/bilet-13/leetcode/tree/master/0133-clone-graph) |
 | [0141-linked-list-cycle](https://github.com/bilet-13/leetcode/tree/master/0141-linked-list-cycle) |
+| [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0205-isomorphic-strings](https://github.com/bilet-13/leetcode/tree/master/0205-isomorphic-strings) |
 ## Graph
 |  |
@@ -167,6 +169,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+| [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 ## Linked List
 |  |
@@ -178,11 +181,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0274-h-index](https://github.com/bilet-13/leetcode/tree/master/0274-h-index) |
 ## Counting Sort
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0274-h-index](https://github.com/bilet-13/leetcode/tree/master/0274-h-index) |
 ## Stack
 |  |
