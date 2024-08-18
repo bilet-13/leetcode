@@ -11,6 +11,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0033-search-in-rotated-sorted-array](https://github.com/bilet-13/leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/bilet-13/leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0035-search-insert-position](https://github.com/bilet-13/leetcode/tree/master/0035-search-insert-position) |
+| [0045-jump-game-ii](https://github.com/bilet-13/leetcode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/bilet-13/leetcode/tree/master/0055-jump-game) |
 | [0074-search-a-2d-matrix](https://github.com/bilet-13/leetcode/tree/master/0074-search-a-2d-matrix) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/bilet-13/leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
@@ -210,6 +211,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 |  |
 | ------- |
+| [0045-jump-game-ii](https://github.com/bilet-13/leetcode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/bilet-13/leetcode/tree/master/0055-jump-game) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/bilet-13/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/bilet-13/leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -217,6 +219,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Greedy
 |  |
 | ------- |
+| [0045-jump-game-ii](https://github.com/bilet-13/leetcode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/bilet-13/leetcode/tree/master/0055-jump-game) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/bilet-13/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 ## Recursion
