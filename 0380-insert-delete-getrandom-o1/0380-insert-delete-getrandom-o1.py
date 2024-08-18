@@ -15,8 +15,6 @@ class RandomizedSet:
     def remove(self, val: int) -> bool:
         if val in self.hash_table:
             val_index = self.hash_table[val]
-
-            tmp = self.arr[val_index]
             self.arr[val_index], self.arr[-1] = self.arr[-1], self.arr[val_index]
 
             self.hash_table[self.arr[val_index]] = val_index
