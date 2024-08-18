@@ -17,7 +17,8 @@ class RandomizedSet:
             val_index = self.hash_table[val]
             self.arr[val_index], self.arr[-1] = self.arr[-1], self.arr[val_index]
 
-            self.hash_table[self.arr[val_index]] = val_index
+            swap_element, swap_index = self.arr[val_index], val_index
+            self.hash_table[swap_element] = swap_index
             del self.hash_table[self.arr[-1]]
 
             self.arr.pop(-1)
