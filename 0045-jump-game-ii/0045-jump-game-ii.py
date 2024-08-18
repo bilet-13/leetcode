@@ -5,21 +5,16 @@ class Solution:
         
         pos = 0
         num_jump = 0
-        fartest = 0 + nums[0]
+        farthest = 0 + nums[0]
         next_pos = 0
         
         while pos < len(nums):
-            
-            if pos == len(nums) -1:
-                print(pos)
-                return num_jump
-
             for i in range(1, nums[pos]+1):
                 neighbor = pos + i
                 if neighbor >= len(nums) - 1:
-                    return num_jump + 1
-                elif nums[neighbor] + neighbor > fartest:
-                    fartest = nums[neighbor] + neighbor
+                     return num_jump + 1
+                elif nums[neighbor] + neighbor > farthest:
+                    farthest = nums[neighbor] + neighbor
                     next_pos = neighbor
                     
             num_jump += 1
