@@ -26,6 +26,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0228-summary-ranges](https://github.com/bilet-13/leetcode/tree/master/0228-summary-ranges) |
 | [0274-h-index](https://github.com/bilet-13/leetcode/tree/master/0274-h-index) |
+| [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 ## Two Pointers
 |  |
@@ -88,6 +89,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0141-linked-list-cycle](https://github.com/bilet-13/leetcode/tree/master/0141-linked-list-cycle) |
 | [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0205-isomorphic-strings](https://github.com/bilet-13/leetcode/tree/master/0205-isomorphic-strings) |
+| [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Graph
 |  |
 | ------- |
@@ -163,6 +165,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0012-integer-to-roman](https://github.com/bilet-13/leetcode/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/bilet-13/leetcode/tree/master/0013-roman-to-integer) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
+| [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Bit Manipulation
 |  |
 | ------- |
@@ -200,6 +203,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
+| [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -234,4 +238,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
+## Randomized
+|  |
+| ------- |
+| [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 <!---LeetCode Topics End-->
