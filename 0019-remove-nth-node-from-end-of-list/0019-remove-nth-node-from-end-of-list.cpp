@@ -33,6 +33,7 @@ public:
         //delete node if node is not head
         auto deleted_node = prev_node->next;
         prev_node->next = deleted_node->next;
+        delete deleted_node;
         return head;
 
     }
