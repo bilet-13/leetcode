@@ -16,11 +16,11 @@ public:
         auto slow = dummy;
         auto fast = dummy;
         
-        for (auto i = 0; i <= n; i++){
+        for (auto i = 0; i < n; i++){
             fast = fast->next;
         }
         
-        while(fast != nullptr){
+        while(fast->next != nullptr){
             slow = slow->next;
             fast = fast->next;
         }
