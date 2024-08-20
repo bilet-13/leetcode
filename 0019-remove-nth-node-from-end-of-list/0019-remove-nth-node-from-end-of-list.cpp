@@ -25,12 +25,14 @@ public:
             cur = cur->next;
             index += 1;
         }
-
+        // if removed node is head
         if (prev_node == nullptr){
-            return head->next;
+            auto new_head = head->next;
+            delete head;
+            return new_head;
         }
 
-        //delete node if node is not head
+        //remove node if node is not head
         auto deleted_node = prev_node->next;
         prev_node->next = deleted_node->next;
         delete deleted_node;
