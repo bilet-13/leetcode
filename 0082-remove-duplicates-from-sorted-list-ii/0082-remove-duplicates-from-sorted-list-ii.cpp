@@ -16,28 +16,27 @@ public:
         }
 
         auto dummy = new ListNode(101, head);
-        auto slow = dummy;
-        auto fast = head;
+        auto prev = dummy;
+        auto current = head;
         int count = 1;
-        int duplicate = head->val;
+        int current_val = head->val;
 
-        while(fast != nullptr){
+        while(current != nullptr){
             count = 1;
-            duplicate = fast->val;
-            while(fast->next != nullptr && fast->next->val == duplicate){
-                fast = fast->next;
+            current_val = current->val;
+            while(current->next != nullptr && current->next->val == current_val){
+                current = current->next;
                 count += 1;
             }
 
-            if(count ==1){
-                slow->next = fast;
-                fast = fast->next;
-                slow = slow->next;
+            if(count == 1){
+                prev = prev->next;
             }
             else{
-                slow->next = fast->next;
-                fast = fast->next;
+                prev->next = current->next;
             }
+
+            current = current->next;
         }
         return dummy->next;
     }
