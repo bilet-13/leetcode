@@ -30,9 +30,8 @@ public:
                 auto prev_reverse_node =  reverse_head;
 
                 while(!reverse_nodes.empty()){
-                    auto reverse_node = reverse_nodes.top();
+                    prev_reverse_node->next = reverse_nodes.top();
                     reverse_nodes.pop();
-                    prev_reverse_node->next = reverse_node;
                     prev_reverse_node = prev_reverse_node->next;
                 }
                 prev->next = reverse_head;
