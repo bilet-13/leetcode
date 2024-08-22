@@ -35,9 +35,10 @@ public:
             else{
                 prev->next = current->next;
             }
-
             current = current->next;
         }
-        return dummy->next;
+        auto new_head = dummy->next;
+        delete dummy;
+        return new_head;
     }
 };
