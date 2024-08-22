@@ -25,7 +25,7 @@ public:
                 continue;
             }
             else{
-                ListNode* reverse_head = reverse_nodes.top();
+                auto reverse_head = reverse_nodes.top();
                 reverse_nodes.pop();
                 auto prev_reverse_node =  reverse_head;
 
@@ -38,7 +38,6 @@ public:
                 prev_reverse_node->next = node;
                 prev = prev_reverse_node;
             }
-            
         }
         return dummy->next;
     }
