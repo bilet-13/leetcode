@@ -17,8 +17,7 @@ public:
 
         auto len = 1;
         auto node = head;
-        auto dummy = new ListNode(0, head);
-        auto tail = dummy;
+        ListNode* tail = nullptr;
         while(node->next != nullptr){
             len++;
             node = node->next;
@@ -26,7 +25,6 @@ public:
         tail = node;
         k = k % len;
         if (k == 0){
-            delete dummy;
             return head;
         }
         auto cur = 1;
@@ -39,9 +37,7 @@ public:
         auto new_head = node->next;
         node->next = nullptr;
         tail->next = head;
-        dummy->next = new_head;
-
-        delete dummy;
+       
         return new_head;
 
     }
