@@ -21,21 +21,21 @@ public:
         auto more_tail = more_head;
         auto node = head;
         ListNode* next_node = nullptr;
+
         while(node != nullptr){
             next_node = node->next;
-
             if(node->val < x){
                 less_tail->next = node;
                 less_tail = less_tail->next;
-                less_tail->next = nullptr;
             }
             else{
                 more_tail->next = node;
                 more_tail = more_tail->next;
-                more_tail->next = nullptr;
             }
             node = next_node;
         } 
+        less_tail->next = nullptr;
+        more_tail->next = nullptr;
 
         ListNode* new_head = nullptr;
         if (less_tail != less_head && more_head != more_tail){
