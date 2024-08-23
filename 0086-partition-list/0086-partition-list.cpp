@@ -20,10 +20,8 @@ public:
         auto less_tail = less_head;
         auto more_tail = more_head;
         auto node = head;
-        ListNode* next_node = nullptr;
 
         while(node != nullptr){
-            next_node = node->next;
             if(node->val < x){
                 less_tail->next = node;
                 less_tail = less_tail->next;
@@ -32,7 +30,7 @@ public:
                 more_tail->next = node;
                 more_tail = more_tail->next;
             }
-            node = next_node;
+            node = node->next;
         } 
         more_tail->next = nullptr;
 
