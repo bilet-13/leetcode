@@ -34,20 +34,11 @@ public:
             }
             node = next_node;
         } 
-        less_tail->next = nullptr;
         more_tail->next = nullptr;
 
         ListNode* new_head = nullptr;
-        if (less_tail != less_head && more_head != more_tail){
-            less_tail->next = more_head->next;
-            new_head = less_head->next;
-        }
-        else if (less_tail == less_head){
-            new_head = more_head->next;
-        }
-        else{
-            new_head = less_head->next;
-        }
+        less_tail->next = more_head->next;
+        new_head = less_head->next;
 
         return new_head;
     }
