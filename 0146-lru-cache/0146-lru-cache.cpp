@@ -18,7 +18,7 @@ public:
     
     int get(int key) {
         auto iter = cache.find(key);
-        if(iter == cache.end()){
+        if (iter == cache.end()) {
             return -1;
         }
 
@@ -29,7 +29,7 @@ public:
     void put(int key, int value) {
         auto iter = cache.find(key);
 
-        if(iter != cache.end()){
+        if (iter != cache.end() ){
             iter->second.first = value;
             iter->second.second = update_lru(key, iter->second.second);
             return;
