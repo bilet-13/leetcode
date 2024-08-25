@@ -5,10 +5,8 @@ private:
     list<int> lru_list;
     int cache_capacity;
 
-    list<int>::iterator update_lru(int key, list<int>::iterator updated_iter){
-        lru_list.erase(updated_iter);
-        lru_list.push_front(key);
-        return lru_list.begin();
+    void update_lru(int key, list<int>::iterator updated_iter){
+         lru_list.splice(lru_list.begin(), lru_list, updated_iter);
     }
 
 public:
@@ -22,7 +20,7 @@ public:
             return -1;
         }
 
-        iter->second.second = update_lru(key, iter->second.second);
+        update_lru(key, iter->second.second);
         return iter->second.first;
     }
     
@@ -31,7 +29,7 @@ public:
 
         if (iter != cache.end() ){
             iter->second.first = value;
-            iter->second.second = update_lru(key, iter->second.second);
+            update_lru(key, iter->second.second);
             return;
         }
 
