@@ -1,43 +1,55 @@
 class LRUCache {
-public:
-    LRUCache(int capacity) : capacity(capacity) {}
-
-    int get(int key) {
-        if (cache.find(key) == cache.end()) {
-            return -1; // Key not found
-        }
-        // Key found, move it to the front of the list
-        updateLRU(key);
-        return cache[key].first;
-    }
-
-    void put(int key, int value) {
-        if (cache.find(key) != cache.end()) {
-            // Key exists, update the value and move it to the front
-            cache[key].first = value;
-            updateLRU(key);
-        } else {
-            // Key doesn't exist, insert it
-            if (lruList.size() == capacity) {
-                // Cache is full, remove the least recently used item
-                int lru_key = lruList.back();
-                lruList.pop_back();
-                cache.erase(lru_key);
-            }
-            lruList.push_front(key);
-            cache[key] = {value, lruList.begin()};
-        }
-    }
 
 private:
-    int capacity;
-    list<int> lruList; // Stores keys in LRU order
-    unordered_map<int, pair<int, list<int>::iterator>> cache; // Maps key to (value, list iterator)
+    unordered_map<int, pair<int, list<int>::iterator>> cache;
+    list<int> lru_list;
+    int cache_capacity;
 
-    void updateLRU(int key) {
-        // Move the accessed key to the front of the list
-        lruList.erase(cache[key].second);
-        lruList.push_front(key);
-        cache[key].second = lruList.begin();
+    list<int>::iterator update_lru(int key, list<int>::iterator updated_iter){
+        lru_list.erase(updated_iter);
+        lru_list.push_front(key);
+        return lru_list.begin();
+    }
+
+public:
+    LRUCache(int capacity) {
+        cache_capacity = capacity;
+    }
+    
+    int get(int key) {
+        auto iter = cache.find(key);
+        if(iter == cache.end()){
+            return -1;
+        }
+
+        iter->second.second = update_lru(key, iter->second.second);
+        return iter->second.first;
+    }
+    
+    void put(int key, int value) {
+        auto iter = cache.find(key);
+
+        if(iter != cache.end()){
+            iter->second.first = value;
+            iter->second.second = update_lru(key, iter->second.second);
+            return;
+        }
+
+        if (cache.size() == cache_capacity){
+            auto lru_key = lru_list.back();
+            lru_list.pop_back();
+            cache.erase(lru_key);
+        }
+
+        lru_list.push_front(key);
+        cache[key] = make_pair(value, lru_list.begin());
+        return;
     }
 };
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
