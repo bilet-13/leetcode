@@ -186,12 +186,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
+| [0190-reverse-bits](https://github.com/bilet-13/leetcode/tree/master/0190-reverse-bits) |
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
 ## Divide and Conquer
 |  |
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
+| [0190-reverse-bits](https://github.com/bilet-13/leetcode/tree/master/0190-reverse-bits) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 ## Linked List
 |  |
