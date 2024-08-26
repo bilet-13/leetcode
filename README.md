@@ -116,6 +116,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0013-roman-to-integer](https://github.com/bilet-13/leetcode/tree/master/0013-roman-to-integer) |
 | [0014-longest-common-prefix](https://github.com/bilet-13/leetcode/tree/master/0014-longest-common-prefix) |
 | [0058-length-of-last-word](https://github.com/bilet-13/leetcode/tree/master/0058-length-of-last-word) |
+| [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0125-valid-palindrome](https://github.com/bilet-13/leetcode/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/bilet-13/leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0205-isomorphic-strings](https://github.com/bilet-13/leetcode/tree/master/0205-isomorphic-strings) |
@@ -178,11 +179,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0002-add-two-numbers](https://github.com/bilet-13/leetcode/tree/master/0002-add-two-numbers) |
 | [0012-integer-to-roman](https://github.com/bilet-13/leetcode/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/bilet-13/leetcode/tree/master/0013-roman-to-integer) |
+| [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Bit Manipulation
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
 ## Divide and Conquer
 |  |
@@ -284,4 +287,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
+## Simulation
+|  |
+| ------- |
+| [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 <!---LeetCode Topics End-->
