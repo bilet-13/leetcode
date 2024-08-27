@@ -73,7 +73,7 @@ public:
     }
 
     pair<TreeNode*, TreeNode*> findKey(TreeNode* root, int key){
-        if (root == nullptr){
+        if (!root ){
             return make_pair(nullptr, nullptr);
         }
 
@@ -81,16 +81,16 @@ public:
             return make_pair(nullptr, root);
         }
 
-        if (root->left != nullptr && root->left->val == key){
+        if (root->left && root->left->val == key){
             return make_pair(root, root->left);
         }
 
-        else if (root->right != nullptr && root->right->val == key){
+        else if (root->right && root->right->val == key){
             return make_pair(root, root->right);
         }
         
         auto left_result = findKey(root->left, key);
-        if (left_result.second != nullptr){
+        if (left_result.second){
             return left_result;
         }
 
