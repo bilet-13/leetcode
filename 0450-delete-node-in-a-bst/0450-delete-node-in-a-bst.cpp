@@ -16,17 +16,17 @@ public:
             return root;
         }
 
-        auto pos = find_key(root, key);
+        auto pos = findKey(root, key);
         if(pos.second == nullptr){
             return root;
         }
         
         auto parent = pos.first;
         auto node = pos.second;
-        bool left = parent != nullptr && parent->left == node ? true : false;
+        bool left = parent && parent->left == node ;
 
-        if(node->left == nullptr && node->right == nullptr){
-            if (parent == nullptr){
+        if(!node->left && !node->right){
+            if (!parent){
                 return nullptr;
             }
 
@@ -39,9 +39,9 @@ public:
             return root;
         }
 
-        else if (node->left == nullptr || node->right == nullptr){
-            auto remain_node = node->left != nullptr ? node->left : node->right;
-            if (parent == nullptr){
+        else if (!node->left  || !node->right ){
+            auto remain_node = node->left ? node->left : node->right;
+            if (!parent){
                 return remain_node;
             }
         
@@ -55,7 +55,7 @@ public:
         }
 
         else{
-            auto largest_left_subtree = find_largest(node->left);
+            auto largest_left_subtree = findLargest(node->left);
             auto replace_val = largest_left_subtree->val;
 
             deleteNode(node, replace_val);
@@ -65,14 +65,14 @@ public:
         }
     }
 
-    TreeNode* find_largest(TreeNode* root){
+    TreeNode* findLargest(TreeNode* root){
         if(root->right == nullptr){
             return root;
         }
-        return find_largest(root->right);
+        return findLargest(root->right);
     }
 
-    pair<TreeNode*, TreeNode*> find_key(TreeNode* root, int key){
+    pair<TreeNode*, TreeNode*> findKey(TreeNode* root, int key){
         if (root == nullptr){
             return make_pair(nullptr, nullptr);
         }
@@ -89,11 +89,11 @@ public:
             return make_pair(root, root->right);
         }
         
-        auto left_result = find_key(root->left, key);
+        auto left_result = findKey(root->left, key);
         if (left_result.second != nullptr){
             return left_result;
         }
 
-        return find_key(root->right, key);
+        return findKey(root->right, key);
     }
 };
