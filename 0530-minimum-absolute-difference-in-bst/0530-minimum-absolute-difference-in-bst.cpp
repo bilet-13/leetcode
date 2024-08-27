@@ -10,52 +10,38 @@
  * };
  */
 class Solution {
+private:
+    void inorderTraverse(TreeNode* root, vector<int>& sorted_list){
+        if (!root){
+            return;
+        }
+
+        inorderTraverse(root->left, sorted_list);
+        
+        sorted_list.push_back(root->val);
+        
+        inorderTraverse(root->right, sorted_list);
+        return;
+    }
+
 public:
     int getMinimumDifference(TreeNode* root) {
         
-        if (!root){
-            return INT_MAX;
-        }
+        vector<int> sorted_list;
 
-        if(!root->left && !root->right){
-            return INT_MAX;
-        }
-        else if(!root->left){
-            auto successor_val = get_successor(root);
-            return min(abs(root->val - successor_val), getMinimumDifference(root->right));
-        }
-        else if(!root->right){
-            auto predecessor_val = get_predecessor(root);
-            return min(abs(root->val - predecessor_val), getMinimumDifference(root->left));
-        }
+        inorderTraverse(root, sorted_list);
+        int min_difference = INT_MAX;
+        int prev = sorted_list[0];
+        int difference;
 
-        else{
-            auto successor_val = get_successor(root);
-            auto predecessor_val = get_predecessor(root);
+        for(auto i = 1; i < sorted_list.size(); i++){
+            difference = abs(sorted_list[i] - prev);
+            min_difference = min(min_difference, difference);
             
-            auto min_root_difference = min(abs(root->val - predecessor_val), abs(root->val - successor_val));
-            auto min_difference_two_sbutree = min(getMinimumDifference(root->left), getMinimumDifference(root->right));
-            
-            return min(min_root_difference, min_difference_two_sbutree); 
+            prev = sorted_list[i];
         }
+        return min_difference;
+
+
     }
-
-    int get_predecessor(TreeNode* root){
-        auto node = root->left;
-
-        while(node && node->right){
-            node = node->right;
-        }
-        return node->val;
-    }
-
-    int get_successor(TreeNode* root){
-        auto node = root->right;
-
-        while(node && node->left){
-            node = node->left;
-        }
-        return node->val;
-    }
-
 };
