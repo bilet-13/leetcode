@@ -12,88 +12,24 @@
 class Solution {
 public:
     TreeNode* deleteNode(TreeNode* root, int key) {
-        if (root == nullptr){
-            return root;
+        if (!root) return root;
+
+        if (key < root->val) {
+            root->left = deleteNode(root->left, key);
+        } else if (key > root->val) {
+            root->right = deleteNode(root->right, key);
+        } else {
+            if (!root->left) return root->right;
+            if (!root->right) return root->left;
+            TreeNode* largestLeft = findLargest(root->left);
+            root->val = largestLeft->val;
+            root->left = deleteNode(root->left, largestLeft->val);
         }
-
-        auto pos = findKey(root, key);
-        if(pos.second == nullptr){
-            return root;
-        }
-        
-        auto parent = pos.first;
-        auto node = pos.second;
-        bool left = parent && parent->left == node ;
-
-        if(!node->left && !node->right){
-            if (!parent){
-                return nullptr;
-            }
-
-            if (left){
-                parent->left = nullptr;
-            }
-            else{
-                parent->right = nullptr;
-            }
-            return root;
-        }
-
-        else if (!node->left  || !node->right ){
-            auto remain_node = node->left ? node->left : node->right;
-            if (!parent){
-                return remain_node;
-            }
-        
-            if (left) {
-                parent->left = remain_node;
-            }
-            else{
-                parent->right = remain_node;
-            }
-            return root;
-        }
-
-        else{
-            auto largest_left_subtree = findLargest(node->left);
-            auto replace_val = largest_left_subtree->val;
-
-            deleteNode(node, replace_val);
-
-            node->val = replace_val;
-            return root;
-        }
+        return root;
     }
-
-    TreeNode* findLargest(TreeNode* root){
-        if(root->right == nullptr){
-            return root;
-        }
-        return findLargest(root->right);
-    }
-
-    pair<TreeNode*, TreeNode*> findKey(TreeNode* root, int key){
-        if (!root ){
-            return make_pair(nullptr, nullptr);
-        }
-
-        if (root->val == key){
-            return make_pair(nullptr, root);
-        }
-
-        if (root->left && root->left->val == key){
-            return make_pair(root, root->left);
-        }
-
-        else if (root->right && root->right->val == key){
-            return make_pair(root, root->right);
-        }
-        
-        auto left_result = findKey(root->left, key);
-        if (left_result.second){
-            return left_result;
-        }
-
-        return findKey(root->right, key);
+private:
+    TreeNode* findLargest(TreeNode* root) {
+        while (root->right) root = root->right;
+        return root;
     }
 };
