@@ -1,17 +1,19 @@
 class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
-        vector<bool> is_string_segemented(s.length()+1, false);
-        is_string_segemented[0] = true;
+        vector<bool> is_string_segmented(s.length()+1, false);
+        is_string_segmented[0] = true;
 
-        for(auto i = 1; i <= s.length(); i++){
-            for(auto iter = wordDict.begin(); iter != wordDict.end(); iter++){
-                if(i >= iter->length()  && s.substr(i - iter->length(), iter->length()) == *iter){
-                    is_string_segemented[i] =  is_string_segemented[i] || is_string_segemented[i - iter->length()];
+        for(auto i = 1; i <= s.length(); ++i){
+            for(const string& word : wordDict){
+                auto word_len = word.length();
+
+                if(i >= word_len  && s.substr(i - word_len, word_len) == word){
+                    is_string_segmented[i] =  is_string_segmented[i] || is_string_segmented[i - word_len];
                 }
             }
         }
 
-        return is_string_segemented[s.length()];
+        return is_string_segmented[s.length()];
     }
 };
