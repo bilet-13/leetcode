@@ -8,7 +8,7 @@ public:
             for(const string& word : wordDict){
                 auto word_len = word.length();
 
-                if(i >= word_len  && s.substr(i - word_len, word_len) == word){
+                if(i >= word_len  && s.compare(i - word_len, word_len, word) == 0){
                     is_string_segmented[i] =  is_string_segmented[i] || is_string_segmented[i - word_len];
                 }
             }
