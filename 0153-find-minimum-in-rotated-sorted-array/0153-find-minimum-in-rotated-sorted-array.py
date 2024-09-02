@@ -8,7 +8,7 @@ class Solution:
         right = len(nums) - 1
         rightest = nums[-1]
 
-        while left < right:
+        while left <= right:
             mid = (left + right) // 2
             if nums[mid] > rightest:
                 left = mid + 1
