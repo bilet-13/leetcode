@@ -52,6 +52,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0141-linked-list-cycle](https://github.com/bilet-13/leetcode/tree/master/0141-linked-list-cycle) |
 | [0151-reverse-words-in-a-string](https://github.com/bilet-13/leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
+| [0202-happy-number](https://github.com/bilet-13/leetcode/tree/master/0202-happy-number) |
 | [0392-is-subsequence](https://github.com/bilet-13/leetcode/tree/master/0392-is-subsequence) |
 ## Depth-First Search
 |  |
@@ -109,6 +110,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0141-linked-list-cycle](https://github.com/bilet-13/leetcode/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
 | [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
+| [0202-happy-number](https://github.com/bilet-13/leetcode/tree/master/0202-happy-number) |
 | [0205-isomorphic-strings](https://github.com/bilet-13/leetcode/tree/master/0205-isomorphic-strings) |
 | [0242-valid-anagram](https://github.com/bilet-13/leetcode/tree/master/0242-valid-anagram) |
 | [0290-word-pattern](https://github.com/bilet-13/leetcode/tree/master/0290-word-pattern) |
@@ -203,6 +205,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0070-climbing-stairs](https://github.com/bilet-13/leetcode/tree/master/0070-climbing-stairs) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
+| [0202-happy-number](https://github.com/bilet-13/leetcode/tree/master/0202-happy-number) |
 | [0279-perfect-squares](https://github.com/bilet-13/leetcode/tree/master/0279-perfect-squares) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Bit Manipulation
