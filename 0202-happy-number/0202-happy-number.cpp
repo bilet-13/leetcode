@@ -1,29 +1,33 @@
 class Solution {
+    int getSquareSum(int n){
+        auto sum = 0;
+        int digit;
+
+        while (n) {
+            digit = n % 10;
+            n /= 10;
+            sum += pow(digit, 2);
+        }
+        return sum;
+    }
+
 public:
     bool isHappy(int n) {
-        int digit;
-        int sum = 0;
-        set<int> numbers;
+        auto slow = n;
+        auto fast = n;
 
         while(true){
-            sum = 0;
+            slow = getSquareSum(slow);
+            fast = getSquareSum(fast);
+            fast = getSquareSum(fast);
 
-            while(n != 0){
-                digit = n % 10;
-                n /= 10;
-                sum += pow(digit, 2);
-            }
-            n = sum;
-
-            if (sum == 1){
+            if (fast == 1){
                 return true;
             }
 
-            if(numbers.count(sum)){
+            if(fast == slow){
                 return false;
             }
-
-            numbers.insert(sum);
         }
 
     }
