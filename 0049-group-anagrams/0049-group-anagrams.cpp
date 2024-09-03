@@ -11,7 +11,7 @@ public:
             anagrams_group[sorted_string].push_back(str);
         }
 
-        for (auto& anagram : anagrams_group){
+        for (const auto& anagram : anagrams_group){
             answer.push_back(move(anagram.second));
         }
 
