@@ -9,15 +9,7 @@ public:
         visited.insert(1);
 
         int min_step = -1;
-
-        unordered_map<int, pair<int,int>> label_pos;
-    
-        for(int i = 1; i <= n*n; i++){
-            auto pos = getPos(i, n);
-            label_pos[i] = pos;
-            cout<<pos.first<<" "<<pos.second<<endl;
-        }
-
+        
         while(!nodes.empty()){
             auto step_node = nodes.front();
             nodes.pop();
@@ -31,7 +23,7 @@ public:
             }
 
             for (int next = label+1 ; next <= min(label+6, n*n); next++){
-                auto next_pos = label_pos[next];
+                auto next_pos = getPos(next, n);
                 auto next_label = next;
                 if (board[next_pos.first][next_pos.second] != -1){
                     next_label = board[next_pos.first][next_pos.second];
@@ -51,7 +43,6 @@ public:
         int row =  n - 1 - label/n;
 
         int column;
-
         if( row % 2 == (n-1) % 2){
             column = label % n ;
         }
