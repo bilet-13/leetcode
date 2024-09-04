@@ -5,11 +5,11 @@ public:
         queue<pair<int, int>> nodes;
         nodes.push(make_pair(0, 1));
         
-        set<int> visited;
+        unordered_set<int> visited;
         visited.insert(1);
 
         int min_step = -1;
-        
+
         while(!nodes.empty()){
             auto step_node = nodes.front();
             nodes.pop();
