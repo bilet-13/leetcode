@@ -5,8 +5,8 @@ public:
         queue<pair<int, int>> nodes;
         nodes.push(make_pair(0, 1));
         
-        unordered_set<int> visited;
-        visited.insert(1);
+        vector<int> visited(n*n+1, 0);
+        visited[1] = 1;
 
         int min_step = -1;
 
@@ -29,8 +29,8 @@ public:
                     next_label = board[next_pos.first][next_pos.second];
                 }
 
-                if (!visited.count(next_label)){
-                    visited.insert(next_label);
+                if (!visited[next_label]){
+                    visited[next_label] = 1;
                     nodes.push(make_pair(step+1, next_label));
                 }
             }  
