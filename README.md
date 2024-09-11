@@ -21,6 +21,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0055-jump-game](https://github.com/bilet-13/leetcode/tree/master/0055-jump-game) |
 | [0064-minimum-path-sum](https://github.com/bilet-13/leetcode/tree/master/0064-minimum-path-sum) |
 | [0066-plus-one](https://github.com/bilet-13/leetcode/tree/master/0066-plus-one) |
+| [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 | [0074-search-a-2d-matrix](https://github.com/bilet-13/leetcode/tree/master/0074-search-a-2d-matrix) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/bilet-13/leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -148,6 +149,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0049-group-anagrams](https://github.com/bilet-13/leetcode/tree/master/0049-group-anagrams) |
 | [0058-length-of-last-word](https://github.com/bilet-13/leetcode/tree/master/0058-length-of-last-word) |
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
+| [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 | [0125-valid-palindrome](https://github.com/bilet-13/leetcode/tree/master/0125-valid-palindrome) |
 | [0139-word-break](https://github.com/bilet-13/leetcode/tree/master/0139-word-break) |
 | [0151-reverse-words-in-a-string](https://github.com/bilet-13/leetcode/tree/master/0151-reverse-words-in-a-string) |
@@ -353,6 +355,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
+| [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 ## Memoization
 |  |
 | ------- |
