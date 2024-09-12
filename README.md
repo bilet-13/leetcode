@@ -18,6 +18,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0045-jump-game-ii](https://github.com/bilet-13/leetcode/tree/master/0045-jump-game-ii) |
 | [0049-group-anagrams](https://github.com/bilet-13/leetcode/tree/master/0049-group-anagrams) |
 | [0053-maximum-subarray](https://github.com/bilet-13/leetcode/tree/master/0053-maximum-subarray) |
+| [0054-spiral-matrix](https://github.com/bilet-13/leetcode/tree/master/0054-spiral-matrix) |
 | [0055-jump-game](https://github.com/bilet-13/leetcode/tree/master/0055-jump-game) |
 | [0064-minimum-path-sum](https://github.com/bilet-13/leetcode/tree/master/0064-minimum-path-sum) |
 | [0066-plus-one](https://github.com/bilet-13/leetcode/tree/master/0066-plus-one) |
@@ -108,6 +109,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0036-valid-sudoku](https://github.com/bilet-13/leetcode/tree/master/0036-valid-sudoku) |
+| [0054-spiral-matrix](https://github.com/bilet-13/leetcode/tree/master/0054-spiral-matrix) |
 | [0064-minimum-path-sum](https://github.com/bilet-13/leetcode/tree/master/0064-minimum-path-sum) |
 | [0073-set-matrix-zeroes](https://github.com/bilet-13/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/bilet-13/leetcode/tree/master/0074-search-a-2d-matrix) |
@@ -362,6 +364,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Simulation
 |  |
 | ------- |
+| [0054-spiral-matrix](https://github.com/bilet-13/leetcode/tree/master/0054-spiral-matrix) |
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 ## Memoization
