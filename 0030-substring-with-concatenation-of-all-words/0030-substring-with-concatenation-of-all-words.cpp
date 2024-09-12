@@ -28,7 +28,7 @@ public:
                 }
 
                 int pop_start = j - (words.size()*w_len);
-                if (pop_start >= 0 && pop_start+w_len <= s.size()){
+                if (pop_start >= 0 ){
                     int pop_start = j - (words.size()*w_len);
                     auto pop_iter = current_count.find(s.substr(pop_start, w_len));
 
