@@ -7,7 +7,6 @@ public:
         for(int num : nums){
             twos |= (ones & num);
             ones ^= num;
-
             int mask = ~(ones & twos);
             ones &= mask;
             twos &= mask;
