@@ -46,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0228-summary-ranges](https://github.com/bilet-13/leetcode/tree/master/0228-summary-ranges) |
 | [0238-product-of-array-except-self](https://github.com/bilet-13/leetcode/tree/master/0238-product-of-array-except-self) |
 | [0274-h-index](https://github.com/bilet-13/leetcode/tree/master/0274-h-index) |
+| [0289-game-of-life](https://github.com/bilet-13/leetcode/tree/master/0289-game-of-life) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
@@ -116,6 +117,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0074-search-a-2d-matrix](https://github.com/bilet-13/leetcode/tree/master/0074-search-a-2d-matrix) |
 | [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
+| [0289-game-of-life](https://github.com/bilet-13/leetcode/tree/master/0289-game-of-life) |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 ## Hash Table
 |  |
@@ -373,6 +375,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0054-spiral-matrix](https://github.com/bilet-13/leetcode/tree/master/0054-spiral-matrix) |
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
+| [0289-game-of-life](https://github.com/bilet-13/leetcode/tree/master/0289-game-of-life) |
 ## Memoization
 |  |
 | ------- |
