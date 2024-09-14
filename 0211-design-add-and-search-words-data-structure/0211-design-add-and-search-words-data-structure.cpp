@@ -5,14 +5,12 @@ struct Node{
     Node(){
         is_word = false;
     }
-
-    
 };
 
 class WordDictionary {
 private:
     Node* root;
-    
+
     bool _dfs(Node* root, string word, int i){
         if(i == word.size()){
             return root->is_word;
@@ -26,11 +24,12 @@ private:
                 return false;
             }
             else{
-                bool found = false;
                 for(auto node : root->child){
-                    found = found || _dfs(node.second, word, i+1);
+                    if( _dfs(node.second, word, i+1)){
+                        return true;
+                    }
                 }
-                return found;
+                return false;
             }
         }
         return false;
