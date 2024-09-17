@@ -3,7 +3,7 @@ public:
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
         int pos = findInsertPos(intervals, newInterval);
         intervals.insert(intervals.begin()+pos, newInterval);
-        cout<<pos<<endl;
+
         mergeIntervals(intervals, pos);
         return intervals;
     }
@@ -45,7 +45,7 @@ public:
             right++;
             end = max(intervals[right][1], end);
         }
-        cout<<left<< " "<< right<<endl;
+
         auto iter = intervals.erase(intervals.begin()+left, intervals.begin()+right+1);
         intervals.insert(iter, {start, end});
     }
