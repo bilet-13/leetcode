@@ -23,8 +23,8 @@ public:
         queue<string> letters_node;
         
         auto root_letters = _getChar(digits.substr(0, 1));
-        for(auto& letter: root_letters){
-            letters_node.push(move(letter));
+        for(auto letter: root_letters){
+            letters_node.push(std::move(letter));
         }
 
         int len = 0;
@@ -45,7 +45,7 @@ public:
                 auto node = letters_node.front();
                 letters_node.pop();
 
-                for(const auto next: next_letters){
+                for( auto next: next_letters){
                     letters_node.push(node+next);
                 }
             }
