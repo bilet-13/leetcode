@@ -9,7 +9,7 @@ public:
 
         int prev_start = points[0][0];
         int prev_end = points[0][1];
-        int num_non_overlapping_intervals = 0;
+        int num_non_overlapping_intervals = 1;
 
         for(int i = 1; i < points.size(); i++){
             if((points[i][0] >= prev_start && points[i][0] <= prev_end ) || (points[i][1] >= prev_start && points[i][1] <= prev_end )){
@@ -22,7 +22,6 @@ public:
                 prev_end =  points[i][1];
             }
         }
-        num_non_overlapping_intervals++;
 
         return num_non_overlapping_intervals;
     }
