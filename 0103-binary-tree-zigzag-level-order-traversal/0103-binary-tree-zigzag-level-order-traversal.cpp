@@ -36,16 +36,13 @@ public:
             reverse(level_nodes.begin(), level_nodes.end());
             depth += 1;
             for(int i = 0; i < level_nodes.size(); i++){
-               if (depth % 2 == 1){
-                    if(level_nodes[i]->right) next_nodes.push_back(level_nodes[i]->right);
-                    if(level_nodes[i]->left) next_nodes.push_back(level_nodes[i]->left);
-               }
-               else{
-                    if(level_nodes[i]->left) next_nodes.push_back(level_nodes[i]->left);
-                    if(level_nodes[i]->right) next_nodes.push_back(level_nodes[i]->right);
-               }
+                auto* first = depth % 2 == 0 ? level_nodes[i]->left : level_nodes[i]->right;
+                auto* second = depth % 2 == 0 ? level_nodes[i]->right : level_nodes[i]->left;
+
+                if (first) next_nodes.push_back(first);
+                if (second) next_nodes.push_back(second);
             }
-            
+
             for(int i = 0; i < next_nodes.size(); i++){
                 nodes.push(next_nodes[i]);
             }
