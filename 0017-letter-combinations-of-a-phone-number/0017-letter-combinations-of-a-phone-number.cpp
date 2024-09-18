@@ -23,8 +23,8 @@ public:
         queue<string> letters_node;
         
         auto root_letters = _getChar(digits.substr(0, 1));
-        for(const auto letter: root_letters){
-            letters_node.push(letter);
+        for(auto& letter: root_letters){
+            letters_node.push(move(letter));
         }
 
         int len = 0;
