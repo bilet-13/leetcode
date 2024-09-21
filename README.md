@@ -71,6 +71,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0086-partition-list](https://github.com/bilet-13/leetcode/tree/master/0086-partition-list) |
 | [0125-valid-palindrome](https://github.com/bilet-13/leetcode/tree/master/0125-valid-palindrome) |
 | [0141-linked-list-cycle](https://github.com/bilet-13/leetcode/tree/master/0141-linked-list-cycle) |
+| [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
 | [0151-reverse-words-in-a-string](https://github.com/bilet-13/leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/bilet-13/leetcode/tree/master/0202-happy-number) |
@@ -289,6 +290,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0004-median-of-two-sorted-arrays](https://github.com/bilet-13/leetcode/tree/master/0004-median-of-two-sorted-arrays) |
 | [0053-maximum-subarray](https://github.com/bilet-13/leetcode/tree/master/0053-maximum-subarray) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+| [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
 | [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0190-reverse-bits](https://github.com/bilet-13/leetcode/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/bilet-13/leetcode/tree/master/0191-number-of-1-bits) |
@@ -309,11 +311,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0138-copy-list-with-random-pointer](https://github.com/bilet-13/leetcode/tree/master/0138-copy-list-with-random-pointer) |
 | [0141-linked-list-cycle](https://github.com/bilet-13/leetcode/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
+| [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
 ## Sorting
 |  |
 | ------- |
 | [0049-group-anagrams](https://github.com/bilet-13/leetcode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/bilet-13/leetcode/tree/master/0056-merge-intervals) |
+| [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
 | [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0242-valid-anagram](https://github.com/bilet-13/leetcode/tree/master/0242-valid-anagram) |
@@ -431,4 +435,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/bilet-13/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
+## Merge Sort
+|  |
+| ------- |
+| [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
 <!---LeetCode Topics End-->
