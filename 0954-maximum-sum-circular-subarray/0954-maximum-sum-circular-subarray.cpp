@@ -2,13 +2,14 @@ class Solution {
 public:
     int maxSubarraySumCircular(vector<int>& nums) {
         
-        int sum = 0;
+        int total_sum = 0;
         int max_sum = INT_MIN;
-        int cur_max = INT_MIN;
+        int min_sum = INT_MAX;
+        int cur_max = 0;
         int cur_min = 0;
 
         for(const auto& num : nums){
-            sum += num;
+            total_sum += num;
         }
 
         for(const auto& num : nums){
@@ -18,8 +19,9 @@ public:
 
             cur_min = min(0, cur_min);
             cur_min += num;
-            max_sum = cur_min != sum ? max(max_sum, sum-cur_min) : max_sum;
+            min_sum = min(min_sum, cur_min);
         }
-        return max_sum;
+
+        return min_sum == total_sum ? max_sum : max(max_sum, total_sum-min_sum);
     }
 };
