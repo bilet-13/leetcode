@@ -1,9 +1,6 @@
 class Solution {
 public:
     ListNode* sortList(ListNode* head) {
-        if (!head || !head->next) {
-            return head;
-        }
         return mergeList(head);
     }
 
