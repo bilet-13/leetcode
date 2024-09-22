@@ -1,75 +1,34 @@
 class MedianFinder {
 private:
-    priority_queue<int, vector<int>, greater<int>> min_heap;
-    priority_queue<int> max_heap;
+    priority_queue<int, vector<int>, greater<int>> upper_heap;
+    priority_queue<int> lower_heap;
     
 public:
     MedianFinder() {
     }
     
     void addNum(int num) {
-        if(max_heap.empty() && min_heap.empty()){
-            max_heap.push(num);
-            return;
-        }
+        lower_heap.push(num);
 
-        else if(min_heap.empty()){
-            if(num < max_heap.top()){
-                int top_val = max_heap.top();
-                max_heap.pop();
-
-                min_heap.push(top_val);
-                max_heap.push(num);
-            }
-            else{
-                min_heap.push(num);
-            }
-            return;
+        upper_heap.push(lower_heap.top());
+        lower_heap.pop();
+        
+        if(upper_heap.size() > lower_heap.size()){
+            lower_heap.push(upper_heap.top());
+            upper_heap.pop();
         }
-
-        if(num <= min_heap.top() && num >= max_heap.top()){
-            if(min_heap.size() > max_heap.size()){
-                max_heap.push(num);
-            }
-            else{
-                min_heap.push(num);
-            }
-        }
-
-        else if (num > min_heap.top()){
-            if(min_heap.size() > max_heap.size()){
-                int top_val = min_heap.top();
-                min_heap.pop();
-
-                max_heap.push(top_val);
-            }
-            min_heap.push(num);
-        }
-        else{
-            if(max_heap.size() > min_heap.size()){
-                int top_val = max_heap.top();
-                max_heap.pop();
-                
-                min_heap.push(top_val);
-            }
-            max_heap.push(num);
-        }
+        return;
     }
     
     double findMedian() {
-        int size = max_heap.size() + min_heap.size();
+        int size = lower_heap.size() + upper_heap.size();
 
         if(size % 2 == 1){
-            if(min_heap.size() > max_heap.size()){
-                return static_cast<double>(min_heap.top());
-            }
-            else{
-                return static_cast<double>(max_heap.top());
-            }
+            return static_cast<double>(lower_heap.top());
         }
 
         else{
-            return (static_cast<double>(min_heap.top()) + static_cast<double>(max_heap.top())) / 2;
+            return (static_cast<double>(upper_heap.top()) + static_cast<double>(lower_heap.top())) / 2;
         }
     }
 };
