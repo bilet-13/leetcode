@@ -1,48 +1,75 @@
 class MedianFinder {
 private:
-    vector<int> sorted_nums;
+    priority_queue<int, vector<int>, greater<int>> min_heap;
+    priority_queue<int> max_heap;
+    
 public:
     MedianFinder() {
     }
     
     void addNum(int num) {
-        int left = 0;
-        int right = sorted_nums.size()-1;
-        int len = sorted_nums.size();
+        if(max_heap.empty() && min_heap.empty()){
+            max_heap.push(num);
+            return;
+        }
 
-        while(left <= right){
-            int mid = left + (right-left) / 2;
+        else if(min_heap.empty()){
+            if(num < max_heap.top()){
+                int top_val = max_heap.top();
+                max_heap.pop();
 
-            if(sorted_nums[mid] == num){
-                sorted_nums.insert(sorted_nums.begin()+mid, num);
-                break;
-            }
-            else if(sorted_nums[mid] > num){
-                right = mid-1;
+                min_heap.push(top_val);
+                max_heap.push(num);
             }
             else{
-                left = mid+1;
+                min_heap.push(num);
+            }
+            return;
+        }
+
+        if(num <= min_heap.top() && num >= max_heap.top()){
+            if(min_heap.size() > max_heap.size()){
+                max_heap.push(num);
+            }
+            else{
+                min_heap.push(num);
             }
         }
 
-        if(sorted_nums.size() == len){
-            sorted_nums.insert(sorted_nums.begin()+left, num);
-        }
+        else if (num > min_heap.top()){
+            if(min_heap.size() > max_heap.size()){
+                int top_val = min_heap.top();
+                min_heap.pop();
 
+                max_heap.push(top_val);
+            }
+            min_heap.push(num);
+        }
+        else{
+            if(max_heap.size() > min_heap.size()){
+                int top_val = max_heap.top();
+                max_heap.pop();
+                
+                min_heap.push(top_val);
+            }
+            max_heap.push(num);
+        }
     }
     
     double findMedian() {
-        double result = 0.0;
+        int size = max_heap.size() + min_heap.size();
 
-        if(sorted_nums.size() % 2 == 1){
-            int middle = sorted_nums.size() / 2;
-            return static_cast<double>(sorted_nums[middle]);
+        if(size % 2 == 1){
+            if(min_heap.size() > max_heap.size()){
+                return static_cast<double>(min_heap.top());
+            }
+            else{
+                return static_cast<double>(max_heap.top());
+            }
         }
+
         else{
-            int middle = sorted_nums.size() / 2;
-            double num1 = sorted_nums[middle];
-            double num2 = sorted_nums[middle-1];
-            return (num1 + num2) / 2;
+            return (static_cast<double>(min_heap.top()) + static_cast<double>(max_heap.top())) / 2;
         }
     }
 };
