@@ -1,6 +1,6 @@
 class Solution {
 private:
-    void getCombine(vector<vector<int>>& result, int start, int n, int k, vector<int> current){
+    void getCombine(vector<vector<int>>& result, int start, int n, int k, vector<int>& current){
         if(current.size() == k){
             result.push_back(current);
             return;
@@ -16,7 +16,8 @@ private:
 public:
     vector<vector<int>> combine(int n, int k) {
         vector<vector<int>> result;
-        getCombine(result, 1, n, k, {});
+        vector<int> current;
+        getCombine(result, 1, n, k, current);
 
         return result;
     }
