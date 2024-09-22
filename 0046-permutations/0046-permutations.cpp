@@ -2,21 +2,17 @@ class Solution {
 
 private:
 
-    void getPermute(vector<vector<int>>& result, vector<int>& nums, int start, vector<int>& current){
-        if(current.size() == nums.size()){
-            result.push_back(current);
+    void getPermute(vector<vector<int>>& result, vector<int>& nums, int start){
+        if(start == nums.size()-1){
+            result.push_back(nums);
             return;
         }
 
         for(int i = start; i < nums.size(); i++){
             swap(nums[start], nums[i]);
-
-            for(int j = start; j < nums.size(); j++){
-                current.push_back(nums[j]);
-                getPermute(result, nums, j+1, current);
-                current.pop_back();
-            }
-
+            
+            getPermute(result, nums, start+1);
+            
             swap(nums[start], nums[i]);
         }
         return;
@@ -24,9 +20,8 @@ private:
 public:
     vector<vector<int>> permute(vector<int>& nums) {
         vector<vector<int>> result;
-        vector<int> current;
 
-        getPermute(result, nums, 0, current);
+        getPermute(result, nums, 0);
         return result;
     }
 };
