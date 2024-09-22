@@ -13,10 +13,10 @@ public:
             degree[city_b] += 1;
         }
 
-        sort(degree.begin(), degree.end(), [](const int a, const int b){return a > b;});
+        sort(degree.begin(), degree.end());
 
-        for(int i = n ; i >= 1; i--){
-            max_importance += static_cast<long long>(i) * static_cast<long long>(degree[n-i]);
+        for(int i = 1 ; i <= n; i++){
+            max_importance += static_cast<long long>(i) * static_cast<long long>(degree[i-1]);
         }
         return max_importance;
     }
