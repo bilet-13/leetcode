@@ -13,9 +13,9 @@ private:
             return false;
         }
         
-        double dy = col - colQ;
-        double dx = row - rowQ;
-        if ( abs(dy/dx) == 1) {
+        int dy = col - colQ;
+        int dx = row - rowQ;
+        if ( abs(dx) == abs(dy)) {
             return false;
         }
     }
