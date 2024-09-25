@@ -1,7 +1,7 @@
 class Solution {
 
     void findCombination(vector<int>& candidates, int& index, int target, vector<vector<int>>& result, vector<int>& current, int sum){
-        if(sum > target || index >= candidates.size()){
+        if(sum > target){
             return;
         }
 
