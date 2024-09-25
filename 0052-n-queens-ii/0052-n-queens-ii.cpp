@@ -13,13 +13,9 @@ private:
             return false;
         }
         
-        // Check if they are on the same major diagonal (row - col)
-        if ((row - col) == (rowQ - colQ)) {
-            return false;
-        }
-        
-        // Check if they are on the same minor diagonal (row + col)
-        if ((row + col) == (rowQ + colQ)) {
+        double dy = col - colQ;
+        double dx = row - rowQ;
+        if ( abs(dy/dx) == 1) {
             return false;
         }
     }
