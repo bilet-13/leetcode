@@ -1,38 +1,33 @@
 class Solution {
 
-    void findCombination(vector<int>& candidates, int target, set<multiset<int>>& result, multiset<int>& current, int sum){
-        if(sum > target){
+    void findCombination(vector<int>& candidates, int& index, int target, vector<vector<int>>& result, vector<int>& current, int sum){
+        if(sum > target || index >= candidates.size()){
             return;
         }
 
         else if( sum == target){
-            if(result.count(current) == 0){
-                result.insert(current);
-            }
+            result.push_back(current);
             return;
         }
 
-        for(auto& num : candidates){
-            current.insert(num);
-            findCombination(candidates, target, result, current, sum+num);
-            current.erase(current.find(num));
+        for(int i = index; i < candidates.size(); i++){
+            current.push_back(candidates[i]);
+            findCombination(candidates, i, target, result, current, sum+candidates[i]);
+            current.pop_back();
         }
         return;
     }   
 
 public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        set<multiset<int>> result;
-        multiset<int> current;
-        vector<vector<int>> return_vec;
+        vector<vector<int>> result;
+        vector<int> current;
 
-        findCombination(candidates, target, result, current, 0);
+        sort(candidates.begin(), candidates.end());
+        
+        int index = 0;
+        findCombination(candidates, index , target, result, current, 0);
 
-        for(auto& combination : result){
-            vector<int> tmp(combination.begin(), combination.end());
-            return_vec.push_back(std::move(tmp));
-        }
-
-        return return_vec;
+        return result;
     }
 };
