@@ -31,6 +31,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 | [0073-set-matrix-zeroes](https://github.com/bilet-13/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/bilet-13/leetcode/tree/master/0074-search-a-2d-matrix) |
+| [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/bilet-13/leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
@@ -140,6 +141,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0064-minimum-path-sum](https://github.com/bilet-13/leetcode/tree/master/0064-minimum-path-sum) |
 | [0073-set-matrix-zeroes](https://github.com/bilet-13/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/bilet-13/leetcode/tree/master/0074-search-a-2d-matrix) |
+| [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
@@ -201,6 +203,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 | [0076-minimum-window-substring](https://github.com/bilet-13/leetcode/tree/master/0076-minimum-window-substring) |
+| [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0125-valid-palindrome](https://github.com/bilet-13/leetcode/tree/master/0125-valid-palindrome) |
 | [0127-word-ladder](https://github.com/bilet-13/leetcode/tree/master/0127-word-ladder) |
 | [0139-word-break](https://github.com/bilet-13/leetcode/tree/master/0139-word-break) |
@@ -484,6 +487,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0047-permutations-ii](https://github.com/bilet-13/leetcode/tree/master/0047-permutations-ii) |
 | [0052-n-queens-ii](https://github.com/bilet-13/leetcode/tree/master/0052-n-queens-ii) |
 | [0077-combinations](https://github.com/bilet-13/leetcode/tree/master/0077-combinations) |
+| [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
 ## Merge Sort
 |  |
