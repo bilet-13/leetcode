@@ -212,6 +212,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0208-implement-trie-prefix-tree](https://github.com/bilet-13/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/bilet-13/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
+| [0227-basic-calculator-ii](https://github.com/bilet-13/leetcode/tree/master/0227-basic-calculator-ii) |
 | [0242-valid-anagram](https://github.com/bilet-13/leetcode/tree/master/0242-valid-anagram) |
 | [0290-word-pattern](https://github.com/bilet-13/leetcode/tree/master/0290-word-pattern) |
 | [0392-is-subsequence](https://github.com/bilet-13/leetcode/tree/master/0392-is-subsequence) |
@@ -302,6 +303,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0172-factorial-trailing-zeroes](https://github.com/bilet-13/leetcode/tree/master/0172-factorial-trailing-zeroes) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/bilet-13/leetcode/tree/master/0202-happy-number) |
+| [0227-basic-calculator-ii](https://github.com/bilet-13/leetcode/tree/master/0227-basic-calculator-ii) |
 | [0279-perfect-squares](https://github.com/bilet-13/leetcode/tree/master/0279-perfect-squares) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Bit Manipulation
@@ -370,6 +372,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0042-trapping-rain-water](https://github.com/bilet-13/leetcode/tree/master/0042-trapping-rain-water) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/bilet-13/leetcode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
+| [0227-basic-calculator-ii](https://github.com/bilet-13/leetcode/tree/master/0227-basic-calculator-ii) |
 ## Design
 |  |
 | ------- |
