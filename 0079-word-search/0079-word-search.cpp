@@ -1,32 +1,31 @@
 class Solution {
+private:
+    vector<vector<int>> direction  = {{0,1}, {0, -1}, {1, 0}, {-1, 0}};
+    bool _exist(vector<vector<char>>& board, string& word, int i, int x, int y){
+        if(i == word.size()){
+            return true;
+        }
+
+        if(x < 0 || x >= board.size() || y < 0 || y >= board[0].size() || board[x][y] != word[i]){
+            return false;
+        }
+
+        board[x][y] = '0';
+
+        for(const auto& dir : direction){
+            if(_exist(board, word, i+1, x + dir[0], y + dir[1])){
+                return true;
+            }
+        }
+        board[x][y] = word[i];
+        return false;
+    }
 public:
     bool exist(vector<vector<char>>& board, string word) {
-        int m = board.size();
-        int n = board[0].size();
-        
-        function<bool(int, int, int)> backtrack = [&](int i, int j, int k) {
-            if (k == word.length()) {
-                return true;
-            }
-            if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] != word[k]) {
-                return false;
-            }
-            
-            char temp = board[i][j];
-            board[i][j] = '\0';
-            
-            if (backtrack(i + 1, j, k + 1) || backtrack(i - 1, j, k + 1) || 
-                backtrack(i, j + 1, k + 1) || backtrack(i, j - 1, k + 1)) {
-                return true;
-            }
-            
-            board[i][j] = temp; 
-            return false;
-        };
-        
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
-                if (backtrack(i, j, 0)) {
+
+        for (int i = 0;  i < board.size(); i++){
+            for(int j = 0; j < board[0].size(); j++){
+                if(_exist(board, word, 0, i, j)){
                     return true;
                 }
             }
