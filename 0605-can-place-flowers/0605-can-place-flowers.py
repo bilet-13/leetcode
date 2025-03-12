@@ -1,11 +1,15 @@
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         remain_flowers = n
+        index = 0
 
-        for index in range(len(flowerbed)):
+        while index < len(flowerbed):
             if(self.canPlant(flowerbed, index)):
                 flowerbed[index] = 1
                 remain_flowers -= 1
+                index += 2
+            else:
+                index += 1
 
         return remain_flowers <= 0    
 
