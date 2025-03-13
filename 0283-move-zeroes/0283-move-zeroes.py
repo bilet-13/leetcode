@@ -3,24 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        zero = 0      
+        left = 0
+        first_non_zero_num = 0      
 
-        while zero < len(nums) - 1:
-            while nums[zero] != 0 and zero < len(nums) - 1:
-                zero += 1
-
-            if zero == len(nums) - 1:
-                return
-
-            first_non_zero_num = zero
-
+        while first_non_zero_num < len(nums) - 1 and left < len(nums) - 1:
             while nums[first_non_zero_num] == 0 and first_non_zero_num < len(nums) - 1:
                 first_non_zero_num += 1
-            
-            if first_non_zero_num == len(nums) - 1 and nums[first_non_zero_num] == 0:
+
+            if nums[first_non_zero_num] == 0:
                 return
 
-            nums[first_non_zero_num], nums[zero] = nums[zero], nums[first_non_zero_num]
-            zero += 1
+            nums[first_non_zero_num], nums[left] = nums[left], nums[first_non_zero_num]
+            
+            left += 1
+            first_non_zero_num = left
 
             
