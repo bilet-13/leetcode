@@ -1,17 +1,15 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        
-        num_has_appeared = set()
-        unique_num = []
 
-        for i in range(len(nums)):
-            if nums[i] in num_has_appeared:
-                continue
-            else:
-                unique_num.append(nums[i])
-                num_has_appeared.add(nums[i])
-        
-        for i in range(len(unique_num)):
-            nums[i] = unique_num[i]
+        if len(nums) == 1:
+            return len(nums)
 
-        return len(unique_num)
+        unique_element_index = 1
+
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[unique_element_index] = nums[i]
+                unique_element_index += 1
+
+        return unique_element_index
+        
