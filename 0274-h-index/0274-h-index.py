@@ -1,12 +1,13 @@
 class Solution:
     def hIndex(self, citations: List[int]) -> int:
-        
-        citations.sort(reverse=True)
+        non_increased_citations = sorted(citations, reverse=True)
 
-        for i in range(len(citations)):
-            num_papers = i+1
-            if num_papers == citations[i]:
-                return num_papers
-            elif num_papers > citations[i]:
-                return num_papers - 1
-        return len(citations)
+        h_index = 0
+
+        for index in range(len(non_increased_citations)):
+            if non_increased_citations[index] >= index + 1:
+                h_index = index + 1
+            else:
+                return h_index
+
+        return h_index
