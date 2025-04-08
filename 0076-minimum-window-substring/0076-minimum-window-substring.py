@@ -1,10 +1,5 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        def char_to_idx(char):
-            if 'z' >= char >= 'a':
-                return ord(char) - ord('a') 
-            return ALPHABET_NUM + ord(char) - ord('A')
-
         def window_contain_target(window_freq, target_freq):
             return all(window_freq[char] >= target_freq[char] for char in target_freq)
 
