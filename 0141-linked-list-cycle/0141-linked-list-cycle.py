@@ -1,25 +1,20 @@
 # Definition for singly-linked list.
 # class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
+        slow = head
+        fast = head
 
-        if not head:
-            return False
-        if not head.next or not head.next.next:
-            return False
-        hare = head.next.next
-        turtle = head.next
+        while slow and fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
 
-        while hare and hare.next:
-            if hare is turtle:
+            if slow == fast:
                 return True
-            hare = hare.next.next
-            turtle = turtle.next
-
+        
         return False
-
         
