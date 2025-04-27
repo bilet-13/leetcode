@@ -6,29 +6,35 @@
 
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
-        # 1 8 2 3 4 5 6 7    
-        # 1 2 3 4 5 6 7      
-        # 1 8 2 7 3 6 4 5
-        # 1 8 2 7 3 6 4 5
-        curr = head
+        slow = head 
+        fast = head
         
-        while curr.next and curr.next.next:
-            second_last = curr
-            while second_last.next.next:
-                second_last = second_last.next
-            
-            tail_node = second_last.next
-            second_last.next = None
-            
-            next_curr = curr.next
-            curr.next = tail_node
-            tail_node.next = next_curr
-            curr = next_curr
-
-
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
         
-
-
-
-
+        head_right_list = slow.next
+        slow.next = None
         
+        curr = head_right_list
+        prev = None
+
+        while curr:
+            next_node = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
+        head_right_list = prev
+
+        curr1 = head
+        curr2 = head_right_list
+
+        while curr1 and curr2:
+            next_curr1 = curr1.next
+            next_curr2 = curr2.next
+
+            curr1.next = curr2
+            curr2.next = next_curr1
+
+            curr2 = next_curr2
+            curr1 = next_curr1
