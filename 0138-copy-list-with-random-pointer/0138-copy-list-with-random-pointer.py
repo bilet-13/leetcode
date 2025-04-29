@@ -9,38 +9,27 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-        # create hash map map index of node to index of random node
-        node_to_index = {} # map key: id (node) value: index of the node
-        index_to_node = []
         curr = head
-        index = 0
 
         while curr:
-            node_to_index[id(curr)] = index
-            index_to_node.append(curr)
+            next_node = curr.next
+            curr.next = Node(curr.val, next=next_node)
+            curr = next_node
 
-            curr = curr.next
-            index += 1
+        curr = head
+
+        while curr:
+            curr.next.random = curr.random.next if curr.random is not None else None
+            curr = curr.next.next
         
-        list_length = index
-        dummy = Node(-1)
-        copy_nodes = []
+        new_head = head.next if head is not None else None
+        curr = new_head
 
-        curr = dummy
-        original_curr = head
-
-        # 2 create new nodes with same values
-        while original_curr:
-            curr.next = Node(x=original_curr.val)
-            original_curr = original_curr.next
+        while curr and curr.next:
+            curr.next = curr.next.next
             curr = curr.next
 
-            copy_nodes.append(curr)
+        return new_head
 
-        # 3 set up random pointers
-        for i in range(list_length):
-            random_node = index_to_node[i].random
-            copy_nodes[i].random = copy_nodes[node_to_index[id(random_node)]] if random_node is not None else None
-
-        return dummy.next
+        
         
