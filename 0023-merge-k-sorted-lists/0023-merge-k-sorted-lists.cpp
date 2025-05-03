@@ -8,39 +8,34 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-
-        struct cmp{
-            bool operator () (ListNode* a, ListNode* b){
-                return a->val > b->val;
-            }
+        auto cmp = [](ListNode* a, ListNode* b) {
+            return a->val > b->val;
         };
-        auto dummy = new ListNode();
-        auto cur = dummy;
-        priority_queue<ListNode*, vector<ListNode*>, cmp> min_nodes;
+        priority_queue<ListNode*, vector<ListNode*>, decltype(cmp)> min_heap(cmp);
 
-        for(const auto& list: lists){
-            auto node = list;
-            while(node){
-                min_nodes.push(node);
-                auto tmp = node->next;
-                node->next = nullptr;
-                node = tmp;
+        for (auto list : lists) {
+            if (list != nullptr) {
+                min_heap.push(list);
             }
         }
+        auto dummy = new ListNode();
+        auto curr = dummy;
 
-        while(!min_nodes.empty()){
-            auto node = min_nodes.top();
-            min_nodes.pop();
+        while (!min_heap.empty()) {
+            auto min_node = min_heap.top();
+            min_heap.pop();
 
-            cur->next = node;
-            cur = cur->next;
+            curr->next = min_node;
+            curr = curr->next;
+
+            if (min_node->next != nullptr) {
+                min_heap.push(min_node->next);
+            }
         }
-
-        auto head = dummy->next;
-        delete dummy;
-        return head;
+        return dummy->next;
     }
 };
