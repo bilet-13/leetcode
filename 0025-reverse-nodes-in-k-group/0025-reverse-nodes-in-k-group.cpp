@@ -8,36 +8,47 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
 class Solution {
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
+        // find the head of the head of k node and the head of next head of next k nodes
+        // reverse the k nodes and let the tail of reversed k node point to next head 
+        // repeat
+        // if cna not find next head break
 
-        auto node = head;
-        auto dummy = new ListNode(-1, head);
-        auto prev = dummy;
-        stack<ListNode*> reverse_nodes;
+        ListNode *dummy = new ListNode(0, head);
+        ListNode *start = dummy->next;
+        ListNode *prev = dummy;
+        ListNode *next_head = nullptr;
+        stack<ListNode*> reversed_nodes;
 
-        while(node != nullptr){
-            reverse_nodes.push(node);
-            node = node->next;
+        while (start != nullptr) {
+            next_head = start;
+            int node_num = 0;
 
-            if(reverse_nodes.size() < k){
-                continue;
+            for (int i = 0; i < k; i++) {
+                if (next_head == nullptr) {
+                    break;
+                } 
+                reversed_nodes.push(next_head);
+                node_num += 1;
+                next_head = next_head->next;
             }
-            else{
-                auto reverse_head = reverse_nodes.top();
-                reverse_nodes.pop();
-                auto prev_reverse_node =  reverse_head;
 
-                while(!reverse_nodes.empty()){
-                    prev_reverse_node->next = reverse_nodes.top();
-                    reverse_nodes.pop();
-                    prev_reverse_node = prev_reverse_node->next;
-                }
-                prev->next = reverse_head;
-                prev_reverse_node->next = node;
-                prev = prev_reverse_node;
+            if (reversed_nodes.size() < k) {
+                break;
             }
+
+            while (!reversed_nodes.empty()) {
+                auto node = reversed_nodes.top();
+                reversed_nodes.pop();
+
+                prev->next = node;
+                prev = node;
+            }
+            prev->next = next_head;
+            start = next_head;
         }
         return dummy->next;
     }
