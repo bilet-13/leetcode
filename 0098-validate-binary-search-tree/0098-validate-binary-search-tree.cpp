@@ -13,28 +13,23 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        vector<int> nodes;
-        inOrderTravsal(root, nodes);
-
-        int previous = nodes[0];
-
-        for (int i = 1; i < nodes.size(); i++) {
-            if (nodes[i] <= previous) {
-                return false;
-            }
-            previous = nodes[i];
-        }
-        return true;
+        TreeNode *prev = nullptr;
+        return inOrderTravsal(root, prev);
     }
 
-    void inOrderTravsal(TreeNode* root, vector<int>& nodes) {
+    bool inOrderTravsal(TreeNode* root, TreeNode *&prev) {
         if (root == nullptr) {
-            return;
+            return true;
         }
-        inOrderTravsal(root->left, nodes);
+        if (!inOrderTravsal(root->left, prev)) {
+            return false;
+        }
 
-        nodes.push_back(root->val);
+        if (prev != nullptr && root->val <= prev->val) {
+            return false;
+        }
+        prev = root;
 
-        inOrderTravsal(root->right, nodes);
+        return inOrderTravsal(root->right, prev);
     }
 };
