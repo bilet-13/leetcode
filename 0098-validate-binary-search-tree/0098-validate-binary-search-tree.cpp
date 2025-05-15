@@ -14,14 +14,14 @@ class Solution {
 public:
     bool isValidBST(TreeNode* root) {
         TreeNode *prev = nullptr;
-        return inOrderTravsal(root, prev);
+        return inOrderTraversal(root, prev);
     }
 
-    bool inOrderTravsal(TreeNode* root, TreeNode *&prev) {
+    bool inOrderTraversal(TreeNode* root, TreeNode* &prev) {
         if (root == nullptr) {
             return true;
         }
-        if (!inOrderTravsal(root->left, prev)) {
+        if (!inOrderTraversal(root->left, prev)) {
             return false;
         }
 
@@ -30,6 +30,6 @@ public:
         }
         prev = root;
 
-        return inOrderTravsal(root->right, prev);
+        return inOrderTraversal(root->right, prev);
     }
 };
