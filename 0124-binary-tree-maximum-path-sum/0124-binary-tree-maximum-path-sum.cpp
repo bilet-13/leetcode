@@ -12,7 +12,7 @@
 
 class Solution {
 private:
-    int maxPath = INT_MIN;
+    int maxPath = numeric_limits<int>::min();
     int getMaxPath(TreeNode *root) {
         if (root == nullptr) {
             return 0;
