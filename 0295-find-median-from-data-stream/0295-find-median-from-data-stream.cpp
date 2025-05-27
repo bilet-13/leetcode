@@ -1,41 +1,43 @@
 class MedianFinder {
 private:
-    priority_queue<int, vector<int>, greater<int>> upper_heap;
-    priority_queue<int> lower_heap;
-    
+    priority_queue<int> smallerHeap;
+    priority_queue<int, vector<int>, greater<int>> largerHeap;
 public:
     MedianFinder() {
+
     }
     
     void addNum(int num) {
-        lower_heap.push(num);
+        if (smallerHeap.size() > largerHeap.size()) {
+            if (num > smallerHeap.top()) {
+                largerHeap.push(num);
+            } else {
+                int largerNum = smallerHeap.top();
+                smallerHeap.pop();
 
-        upper_heap.push(lower_heap.top());
-        lower_heap.pop();
-        
-        if(upper_heap.size() > lower_heap.size()){
-            lower_heap.push(upper_heap.top());
-            upper_heap.pop();
+                smallerHeap.push(num);
+                largerHeap.push(largerNum);
+            }
+        } else {
+            if (largerHeap.empty() || num < largerHeap.top()) {
+                smallerHeap.push(num);
+            } else {
+                int smallNum = largerHeap.top();
+                largerHeap.pop();
+
+                largerHeap.push(num);
+                smallerHeap.push(smallNum);
+            }
         }
-        return;
     }
     
     double findMedian() {
-        int size = lower_heap.size() + upper_heap.size();
+        int total = smallerHeap.size() + largerHeap.size();
 
-        if(size % 2 == 1){
-            return static_cast<double>(lower_heap.top());
-        }
-
-        else{
-            return (static_cast<double>(upper_heap.top()) + static_cast<double>(lower_heap.top())) / 2;
+        if (total % 2 == 1) {
+            return (double)smallerHeap.top();
+        } else {
+            return ((double)smallerHeap.top() + (double)largerHeap.top()) / 2;
         }
     }
 };
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * MedianFinder* obj = new MedianFinder();
- * obj->addNum(num);
- * double param_2 = obj->findMedian();
- */
