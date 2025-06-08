@@ -1,56 +1,40 @@
 class Solution {
 private:
-unordered_map<int, vector<string>> m_num_letters = {
-        {2, {"a", "b", "c"}},
-        {3, {"d", "e", "f"}},
-        {4, {"g", "h", "i"}},
-        {5, {"j", "k", "l"}},
-        {6, {"m", "n", "o"}},
-        {7, {"p", "q", "r", "s"}},
-        {8, {"t", "u", "v"}},
-        {9, {"w", "x", "y", "z"}}
+    unordered_map<int, string> num_letters = {
+        {2, "abc"}, 
+        {3, "def"}, 
+        {4, "ghi"}, 
+        {5, "jkl"}, 
+        {6, "mno"},
+        {7, "pqrs"},
+        {8, "tuv"},
+        {9, "wxyz"}
     };
-vector<string> _getChar(string num){
-    return m_num_letters[stoi(num)];
-}
+
+    void backtrack(int step, string &digits, string current, vector<string> &result) {
+        if (step == digits.size() && current.size() > 0) {
+            result.push_back(current);
+            return;
+        }
+
+        string letters = num_letters[digits[step] - '0'];
+
+        for(int i = 0; i < letters.size(); ++i) {
+            current.push_back(letters[i]);
+
+            backtrack(step + 1, digits, current, result);
+
+            current.pop_back();
+        }
+    }
 
 public:
     vector<string> letterCombinations(string digits) {
-        if(digits.size() == 0){
-            return {};
-        }
-        vector<string> combined_letters;
-        queue<string> letters_node;
-        
-        auto root_letters = _getChar(digits.substr(0, 1));
-        for(auto letter: root_letters){
-            letters_node.push(std::move(letter));
-        }
+        vector<string> result;
+        string current;
 
-        int len = 0;
-        while(!letters_node.empty()){
-            if(len == digits.size()-1){
-                while(!letters_node.empty()){
-                    combined_letters.push_back(letters_node.front());
-                    letters_node.pop();
-                }
-                break;
-            }
+        backtrack(0, digits, current, result);
 
-            len += 1;
-            auto next_letters = _getChar(digits.substr(len, 1));
-            int size = letters_node.size();
-
-            for(int i = 0; i < size; i++){
-                auto node = letters_node.front();
-                letters_node.pop();
-
-                for( auto next: next_letters){
-                    letters_node.push(node+next);
-                }
-            }
-        }
-        return combined_letters;
+        return result;
     }
-
 };
