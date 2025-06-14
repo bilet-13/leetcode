@@ -1,87 +1,115 @@
-struct Node{
-    unordered_map<char, Node*> child;
-    bool is_word;
-
-    Node(): is_word(false){
-    }
-};
-
+#include<algorithm>
 class Solution {
-
 private:
-    Node* root;
+    class TreeNode {
+        public: 
+            TreeNode *child[26];
+            bool isEndOfWord = false;
 
-    void _addWord(string word){
-        auto cur = root;
-        for(const auto& chr: word){
-            auto iter = cur->child.find(chr);
-            if(iter == cur->child.end()){
-                cur->child[chr] = new Node();
+            TreeNode() {
+                for (int i = 0; i < 26; ++i) {
+                    child[i] = nullptr;
+                }
             }
-            cur = cur->child[chr];
-        }
-        cur->is_word = true;
-    }
+    };
 
-    void _DFS(Node* node, unordered_set<string>& result, vector<vector<char>>& board, vector<vector<bool>>& visited, string& cur, int i, int j){
-        vector<pair<int, int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-        
-        int m = board.size();
-        int n = board[0].size();
+    class Trie {
+        private:
+            TreeNode *root;
+        public:
+            Trie() {
+                root = new TreeNode();
+            }
 
-        auto iter = node->child.find(board[i][j]);
-        if(iter == node->child.end()){
+            void insertWord(string word) {
+                auto node = root;
+
+                for (const auto &chr: word) {
+                    if (node->child[chr - 'a'] == nullptr) {
+                        node->child[chr - 'a'] = new TreeNode();
+                    }
+                    node = node->child[chr - 'a'];
+                }
+                node->isEndOfWord = true;
+            }
+
+            bool findPrefix(string &word) {
+                auto node = root;
+
+                for (const auto &chr: word) {
+                    if (node->child[chr - 'a'] == nullptr) {
+                        return false;
+                    }
+                    node = node->child[chr - 'a'];
+                }
+                return true;
+            }
+
+            bool searchWord(string &word) {
+                auto node = root;
+
+                for (const auto &chr: word) {
+                    if (node->child[chr - 'a'] == nullptr) {
+                        return false;
+                    }
+                    node = node->child[chr - 'a'];
+                }
+                return node->isEndOfWord;
+            }
+    };
+
+    void backtrack(int step, int x, int y, vector<vector<char>> &board, Trie *trie, string current, unordered_set<string> &result, const int &longest_step) {
+        if (x < 0 || x >= board.size() || y < 0 || y >= board[0].size() || board[x][y] == '#' || step > longest_step) {
+            return;
+        } 
+
+        const auto chr = board[x][y];
+
+        current.push_back(chr);
+        if (!trie->findPrefix(current)) {
             return;
         }
         
-        node = iter->second;
-        cur.push_back(board[i][j]);
-
-        if(node->is_word){
-            result.insert(cur);
+        if(trie->searchWord(current)) {
+            result.insert(current);
         }
 
-        for(auto& d : directions){
-            auto nx = i + d.first;
-            auto ny = j + d.second;
+        board[x][y] = '#';
 
-            if(0 <= nx && nx < m && 0 <= ny && ny < n && !visited[nx][ny]){
-                auto it = node->child.find(board[nx][ny]);
-                if(it != node->child.end()){
-                    visited[nx][ny] = true;
-                    _DFS(node, result, board, visited, cur, nx, ny);
-                    visited[nx][ny] = false;
-                }                
-            }
+        backtrack(step + 1, x + 1, y, board, trie, current, result, longest_step);
+        backtrack(step + 1, x - 1, y, board, trie, current, result, longest_step);
+        backtrack(step + 1, x, y + 1, board, trie, current, result, longest_step);
+        backtrack(step + 1, x, y - 1, board, trie, current, result, longest_step);
 
-        }
-        cur.pop_back();
+        current.pop_back();
+        board[x][y] = chr;
     }
+     
 public:
-    Solution(){
-        root = new Node();
-    }
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
-        
-        int m = board.size();
-        int n = board[0].size();
-        unordered_set<string> found_words;
-        
-        for(const auto& word: words){
-            _addWord(word);
+        Trie *trie = new Trie();
+        unordered_set<string> result;
+        string current;
+        int longest_word_length = -1;
+
+        for (const auto &word : words) {
+            int size = word.size();
+            longest_word_length = std::max(longest_word_length, size);
+            trie->insertWord(word);
         }
 
-        for(int i = 0; i < m; i++){
-            for(int j = 0; j < n ; j++){
-                vector<vector<bool>> visited(m, vector<bool>(n, false));
-                visited[i][j] = true;
-                string start ;
-                _DFS(root, found_words, board, visited, start, i, j);
-            
+        for (int i = 0; i < board.size(); ++i) {
+            for (int j = 0; j < board[0].size(); ++j) {
+                backtrack(0, i, j, board, trie, current, result, longest_word_length - 1);
             }
-        }
-        
-        return vector<string>(found_words.begin(), found_words.end());
-    }
+        }   
 
+        vector<string> returned_result;
+
+        for (auto word: result) {
+            returned_result.push_back(word);
+        }
+
+        return returned_result;
+    }
 };
