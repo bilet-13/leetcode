@@ -1,71 +1,60 @@
 class Solution {
-private: 
-    int bfs(vector<vector<int>>& grid, int x, int y) {
-        queue<vector<int>> cells;
-        set<pair<int, int>> visited;
-
-        cells.push({x, y, 0});
-        vector<pair<int, int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-
-        while(!cells.empty()) {
-            vector<int> cell = cells.front();
-            cells.pop();
-
-            pair<int, int> cellPos = make_pair(cell[0], cell[1]);
-
-            if (visited.find(cellPos) != visited.end()) {
-                continue;
-            }
-
-            visited.insert(cellPos);
-
-            if (grid[cellPos.first][cellPos.second] == 2) {
-                return cell[2];
-            }
-
-            for (pair<int, int> &direction: directions) {
-                pair<int, int> neighborPos = make_pair(
-                    cellPos.first + direction.first, 
-                    cellPos.second + direction.second
-                );
-                vector<int> neighbor = {
-                    neighborPos.first, 
-                    neighborPos.second, 
-                    cell[2] + 1
-                };
-
-                if (neighbor[0] >= 0 && neighbor[0] < grid.size() 
-                    && neighbor[1] >= 0 && neighbor[1] < grid[0].size()
-                    && grid[neighbor[0]][neighbor[1]] != 0 
-                    && visited.find(neighborPos) == visited.end()
-                    ) {
-                        cells.push(neighbor);
-                    }
-            }
-        }
-        return -1;
-    }
-
 public:
     int orangesRotting(vector<vector<int>>& grid) {
-        // for each fresh fruit, find its shortest path to a rotten fruit. 
-        //return the max value of all shortest paths
+        // for each rotten fruit, start bfs and update the nearest fresh fruit time, 
+        // return the max minimum time of that fresh fruit turn to rotten fruit
         int minimumElapse = -1;
-        bool hasFresh = false;
+        queue<vector<int>> fruits;
+        vector<vector<bool>> visited(grid.size(), vector<bool>(grid[0].size(), false));
+        vector<pair<int, int>> directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        int numFreshFruits = 0;
+        int numVisitedFreshFruits = 0;
 
-        for (int i = 0; i < grid.size(); ++i) {
-            for (int j = 0; j < grid[0].size(); ++j) {
-                if (grid[i][j] == 1) {
-                    hasFresh = true;
-                    int elapse = bfs(grid, i, j);
-                    if (elapse == -1) {
-                        return -1;
-                    }
-                    minimumElapse = max(minimumElapse, elapse);
+        for (auto i = 0; i < grid.size(); ++i) {
+            for (auto j = 0; j < grid[0].size(); ++j) {
+                if (grid[i][j] == 2) {
+                    vector<int> fruit = {i, j, 0};
+                    fruits.push(fruit);
+                } else if (grid[i][j] == 1) {
+                    numFreshFruits++;
                 }
             }
         }
 
-        return hasFresh ? minimumElapse : 0;
+        if (numFreshFruits == 0) {
+            return 0;
+        }
+
+        while (!fruits.empty()) {
+            auto size = fruits.size();
+
+            for (auto i = 0; i < size; ++i) {
+                auto fruit = fruits.front();
+                fruits.pop();
+
+                if (visited[fruit[0]][fruit[1]]) {
+                    continue;
+                }
+                visited[fruit[0]][fruit[1]] = true;
+
+                if (grid[fruit[0]][fruit[1]] == 1) {
+                    numVisitedFreshFruits++;
+                    minimumElapse = max(minimumElapse, fruit[2]);
+                }
+
+                for (const auto& [dx, dy]: directions) {
+                    int nx = fruit[0] + dx;
+                    int ny = fruit[1] + dy;
+
+                    if (nx >= 0 && nx < grid.size() &&
+                        ny >= 0 && ny < grid[0].size() &&
+                        !visited[nx][ny] && grid[nx][ny] == 1) {
+                            vector<int> neighborFruit = {nx, ny, fruit[2] + 1};
+                            fruits.push(neighborFruit);
+                        }
+                }
+            }   
+        }
+        return numVisitedFreshFruits < numFreshFruits ? -1 : minimumElapse;
     }
 };
