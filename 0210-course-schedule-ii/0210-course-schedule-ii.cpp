@@ -28,13 +28,14 @@ public:
 
             order.push_back(course);
 
-            for (const auto& nextCourse: graph[course]) {
-                if (--inDegree[nextCourse] == 0) {
+            for (auto nextCourse: graph[course]) {
+                inDegree[nextCourse]--;
+
+                if (inDegree[nextCourse] == 0) {
                     q.push(nextCourse);
                 }
             }
         }
-        
-        return (order.size() == numCourses) ? order : vector<int>();
+        return order.size() == numCourses ? order : vector<int>();
     }
 };
