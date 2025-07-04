@@ -4,9 +4,12 @@ public:
         // shortest bath problem between beginWord and endWord
         // each word is a node in graph 
         // word a can transofro to word b => a -> b
-        // build the graph with 0: beginword 1 - n word in wordList
+        // build the graph with 0: beginword 1 - n word in wordList 
         int n = wordList.size();
         unordered_set<string> words(wordList.begin(), wordList.end());
+        if (!words.count(endWord)) {
+            return 0;
+        }
         unordered_set<string> visited;
         queue<pair<string, int>> q;
 
@@ -33,10 +36,10 @@ public:
                     }
                     word[i] = chr;
                     if (!visited.count(word) && words.count(word)) {
+                        words.erase(word);
                         q.emplace(word, step + 1);
                     }
                 }
-
                 word[i] = origin;
             }
         }
