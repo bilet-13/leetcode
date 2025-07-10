@@ -1,30 +1,18 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        unordered_map<char, int> s_count;
-
-        if(s.size() > t.size()){
-            swap(s, t);
-        }
-        
-        for (char chr : s){
-            auto iter = s_count.find(chr);
-
-            if(iter == s_count.end()){
-                s_count[chr] = 0;
-            }
-            s_count[chr] += 1;
+        if (s.size() != t.size()) {
+            return false;
         }
 
-        for (char chr : t){
-            auto iter = s_count.find(chr);
+        vector<int> sCount(26, 0);
+        vector<int> tCount(26, 0);
 
-            if(iter == s_count.end() || iter->second == 0){
-                return false;
-            }
-
-            iter->second -= 1;
+        for (int i = 0; i < s.size(); ++i) {
+            sCount[s[i] - 'a']++;
+            tCount[t[i] - 'a']++;
         }
-        return true;
+
+        return sCount == tCount;
     }
 };
