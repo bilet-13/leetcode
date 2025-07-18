@@ -1,14 +1,21 @@
 class Solution {
 public:
     int rob(vector<int>& nums) {
-        vector<int> max_rob(nums.size()+1, 0);
-        max_rob[0] = 0;
-        max_rob[1] = nums[0];
-
-        for (auto i = 2; i <= nums.size(); i++){
-            max_rob[i] = max(max_rob[i-1], max_rob[i-2] + nums[i-1]); 
+        // 1, 1, 3, 4
+        // brute force 2^n
+        int n = nums.size();
+        if (n <= 2) {
+            return *max_element(nums.begin(), nums.end());
         }
 
-        return max_rob[nums.size()];
+        vector<int> rob(n);
+        rob[0] = nums[0];
+        rob[1] = max(nums[0], nums[1]);
+
+        for (int i = 2; i < n; ++i) {
+            rob[i] = max(rob[i - 1], rob[i - 2] + nums[i]);
+        }
+
+        return rob[n - 1];
     }
 };
