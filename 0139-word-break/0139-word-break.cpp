@@ -1,19 +1,20 @@
 class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
-        vector<bool> is_string_segmented(s.length()+1, false);
-        is_string_segmented[0] = true;
+        int n = s.size();
+        vector<bool> dp(s.size() + 1); // dp[i] : the string s[0:i - 1] can be segemented by words in word dict or not
+        dp[0] = true;
 
-        for(auto i = 1; i <= s.length(); ++i){
-            for(const string& word : wordDict){
-                auto word_len = word.length();
-
-                if(i >= word_len  && s.compare(i - word_len, word_len, word) == 0){
-                    is_string_segmented[i] =  is_string_segmented[i] || is_string_segmented[i - word_len];
+        for (int i = 1; i <= n; ++i) {
+            for (const auto& word : wordDict) {
+                int idx = i - word.size(); 
+                if (idx >= 0 && idx < n) {
+                    dp[i] = dp[i] ||(dp[i - word.size()] &&  word == s.substr(idx, word.size()));
                 }
             }
         }
 
-        return is_string_segmented[s.length()];
+        return dp[s.size()]; // n: s.size(), d: wordDict.size(), w: max word.size() O(ndw);
+        //  permutation d^d  brute force
     }
 };
