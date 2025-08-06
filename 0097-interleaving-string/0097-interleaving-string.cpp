@@ -1,33 +1,28 @@
 class Solution {
 public:
     bool isInterleave(string s1, string s2, string s3) {
-        if(s1.size()+s2.size() != s3.size()){
+        int n = s1.size();
+        int m = s2.size();
+        int l = s3.size();
+
+        if (n + m != l) {
             return false;
         }
-        
-        if(s1.size() == 0 || s2.size() == 0){
-            string s = !s1.empty() ? s1 : s2;
-            return s == s3;
-        }
 
-        vector<vector<bool>> dp(s1.size() + 1, vector<bool>(s2.size() + 1, false));
-
+        vector<vector<bool>> dp(n + 1, vector<bool>(m + 1, false));
         dp[0][0] = true;
 
-        for (int i = 1; i <= s1.size(); i++) {
-            dp[i][0] = dp[i-1][0] && s1[i-1] == s3[i-1];
-        }
-
-        for (int j = 1; j <= s2.size(); j++) {
-            dp[0][j] = dp[0][j-1] && s2[j-1] == s3[j-1];
-        }
-
-        for(int i = 1; i <= s1.size(); i++){
-            for(int j = 1; j <= s2.size(); j++){
-                dp[i][j] = (dp[i][j-1] && s2[j-1] == s3[i+j-1]) || (dp[i-1][j] && s1[i-1] == s3[i+j-1]);
+        for (int i = 0; i <= n; ++i) {
+            for (int j = 0; j <= m; ++j) {
+                if (j > 0 && s2[j - 1] == s3[i + j - 1]) {
+                    dp[i][j] = dp[i][j] || dp[i][j - 1];
+                } 
+                
+                if (i > 0 && s1[i - 1] == s3[i + j - 1]) {
+                    dp[i][j] = dp[i][j] || dp[i - 1][j];
+                }
             }
         }
-
-        return dp[s1.size()][s2.size()];
+        return dp[n][m];
     }
 };
