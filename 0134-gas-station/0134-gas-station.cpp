@@ -15,10 +15,8 @@ public:
 
             if (curGas < cost[i]) {
                 start = i + 1;
-                curGas = 0;
-            } else {
-                curGas -= cost[i];
             }
+            curGas = max(0, curGas - cost[i]);
         }
 
         return (totalCost > totalGas) ? -1 : start;
