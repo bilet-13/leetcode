@@ -13,11 +13,11 @@ public:
 
         merged.push_back(intervals[0]);
         for (int i = 1; i < intervals.size(); ++i) {
-            int last = merged.size() - 1;
-            if (merged[last][1] < intervals[i][0]) {
+            auto& last = merged.back();
+            if (last[1] < intervals[i][0]) {
                 merged.push_back(intervals[i]); // not merge
             } else {
-                merged[last][1] = max(merged[last][1], intervals[i][1]);
+                last[1] = max(last[1], intervals[i][1]);
             }
         }
         return merged;
