@@ -8,7 +8,7 @@ public:
        int prevEnd = INT_MIN;
        int nonOverlapIntervalNum = 0;
 
-       for (auto iv : intervals) {
+       for (auto& iv : intervals) {
         if (prevEnd <= iv[0]) {
             nonOverlapIntervalNum++;
             prevEnd = iv[1];
