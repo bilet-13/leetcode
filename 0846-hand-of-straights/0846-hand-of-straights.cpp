@@ -25,7 +25,6 @@ public:
                         return false;
                     }
                     frequencies[num]--;
-                    
                 }
             }
         } // o(n)
