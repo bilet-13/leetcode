@@ -1,34 +1,50 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        vector<int> result;
-        traverse_four_edges(matrix, result, 0, matrix.size()-1, 0, matrix[0].size()-1);
-        return result;
-    }
+        // simulate the four direction way travsal
+        int m = matrix.size();
+        int n = matrix[0].size();
+        vector<int> orderResult;
 
-    void traverse_four_edges(vector<vector<int>>& matrix, vector<int>& result, int r_start, int r_end, int c_start, int c_end){
-        if(r_start <= r_end && c_start <= c_end){
-            for(int i = c_start; i <= c_end; i++){
-                result.push_back(matrix[r_start][i]);
+        int top = 0;
+        int end = m - 1;
+        int left = 0;
+        int right = n - 1;
+
+        while (left <= right && top <= end) {
+            for (int i = left; i <= right; ++i) {
+                orderResult.push_back(matrix[top][i]);
             }
-            if(r_start < r_end){
-                for(int i = r_start+1; i <= r_end; i++){
-                    result.push_back(matrix[i][c_end]);
-                }
-                
-                if(c_start < c_end){
-                    for(int i = c_end-1; i >= c_start; i--){
-                    result.push_back(matrix[r_end][i]);
-                    }
-                    for(int i = r_end-1; i > r_start; i--){
-                        result.push_back(matrix[i][c_start]);
-                    }
-                }
+            top++;
+
+            if (left > right || top > end) {
+                break;
             }
-            traverse_four_edges(matrix, result, r_start+1, r_end-1, c_start+1, c_end-1);
+
+            for (int i = top; i <= end; ++i) {
+                orderResult.push_back(matrix[i][right]);
+            }
+            right--;
+
+            if (left > right || top > end) {
+                break;
+            }
+
+            for (int i = right; i >= left; --i) {
+                orderResult.push_back(matrix[end][i]);
+            }
+            end--;
+
+            if (left > right || top > end) {
+                break;
+            }
+
+            for (int i = end; i >= top; --i) {
+                orderResult.push_back(matrix[i][left]);
+            }
+            left++;
         }
-        return;
+
+        return orderResult;
     }
 };
-
-// 00 01 02 12 22 21 20 10 11
