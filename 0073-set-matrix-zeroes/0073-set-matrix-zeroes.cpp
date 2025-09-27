@@ -1,26 +1,32 @@
-#define equal == 
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
-        set<int> zero_rows;
-        set<int> zero_columns;
-
-        for(int i = 0; i < matrix.size(); i++){
-            for(int j = 0; j < matrix[0].size(); j++){
-                if(matrix[i][j] equal 0){
-                    zero_rows.insert(i);
-                    zero_columns.insert(j);
+        int m = matrix.size();
+        int n = matrix[0].size();
+        bool col0 = false;
+        // 1.0 set row to be * if it need to be 0
+        for (int i = 0; i < m; ++i) {
+            if (matrix[i][0] == 0) {
+                col0 = true;
+            }
+            for (int j = 1; j < n; ++j) {
+                if (matrix[i][j] == 0) {
+                    matrix[i][0] = 0;
+                    matrix[0][j] = 0; 
                 }
             }
-        }
+        } 
 
-        for(int i = 0; i < matrix.size(); i++){
-            for(int j = 0; j < matrix[0].size(); j++){
-                if(zero_rows.count(i) != 0 || zero_columns.count(j) != 0){
+        for (int i = m - 1; i >= 0; --i) {
+            for (int j = n - 1; j >= 1; --j) {
+                if (matrix[0][j] == 0 || matrix[i][0] == 0) {
                     matrix[i][j] = 0;
                 }
             }
-        }
+            if (col0) {
+                matrix[i][0] = 0;
+            }
+        } 
         return;
     }
 };
