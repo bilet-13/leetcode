@@ -1,23 +1,26 @@
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        int carry = 0;
-        digits[digits.size()-1] += 1;
-        vector<int> answer;
+        vector<int> plusOneResult;
 
-        for (int i = digits.size()-1; i >= 0; i--){
-            int num = digits[i] + carry;
-            carry = num / 10;
-            digits[i] = num % 10;
+        int carry = 1;
+
+        // 1 start from rightmost digit and add 1 and maintain carry
+        // 2 for each digit add carry and store the result
+        for (int i = digits.size() - 1; i >= 0; --i) {
+            int sum = carry + digits[i];
+            int digit = sum % 10;
+            carry = sum / 10;
+
+            plusOneResult.push_back(digit);            
+        }
+        if (carry > 0) {
+            plusOneResult.push_back(carry); 
         }
 
-        if (carry != 0){
-            answer.push_back(carry);
-        }
+        // 3 reverse the result to maintain the order
+        reverse(plusOneResult.begin(), plusOneResult.end());
 
-        for(int num : digits){
-            answer.push_back(num);
-        }
-        return answer;
+        return plusOneResult;
     }
 };
