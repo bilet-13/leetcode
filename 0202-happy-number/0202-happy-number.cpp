@@ -21,9 +21,7 @@ public:
 
         while (slow != 1 && fast != 1) {
             slow = getSquareSum(slow);
-
-            fast = getSquareSum(fast);
-            fast = getSquareSum(fast);
+            fast = getSquareSum(getSquareSum(fast));
 
             if (slow != 1 && slow == fast) {
                 return false;
