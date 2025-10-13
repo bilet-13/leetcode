@@ -1,20 +1,10 @@
-class Solution(object):
-    def removeElement(self, nums, val):
-        """
-        :type nums: List[int]
-        :type val: int
-        :rtype: int
-        """
-        not_equal_nums = []
-        for num in nums:
-            if num == val:
-                continue
-            else:
-                not_equal_nums.append(num)
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        non_val_idx = 0
 
-        k = len(not_equal_nums)
-
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[non_val_idx] = nums[i]
+                non_val_idx += 1
         
-        nums[:k] = not_equal_nums[:k]
-
-        return k 
+        return non_val_idx 
