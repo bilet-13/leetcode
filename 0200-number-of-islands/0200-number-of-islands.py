@@ -4,11 +4,11 @@ class Solution:
         # mark the vistied cell to 2
         # use var to count the num of island
         count = 0
-        dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         m = len(grid)
         n = len(grid[0])
 
         def BFS(grid, i, j):
+            dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
             queue = deque()
             queue.append((i, j))
             grid[i][j] = '2'
