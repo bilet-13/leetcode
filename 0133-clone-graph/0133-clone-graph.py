@@ -29,28 +29,20 @@ class Solution:
         # add the unviisted neightbor into queue
 
         queue = deque([node])
-        copied_nodes = {}
-        visited = set([node.val])
+        clone_map = {node.val: Node(val=node.val)} #  key: node label val: copied node object
 
         while queue:
             cur = queue.popleft()
 
-            if cur.val not in copied_nodes:
-                copied_node = Node(val=cur.val)
-                copied_nodes[cur.val] = copied_node
+            for adj in cur.neighbors:
+                if adj.val not in clone_map:
+                    copied_node = Node(val=adj.val)
+                    clone_map[adj.val] = copied_node
+                    queue.append(adj)
 
-            for neighbor in cur.neighbors:
-                if neighbor.val not in copied_nodes:
-                    copied_node = Node(val=neighbor.val)
-                    copied_nodes[neighbor.val] = copied_node
+                clone_map[cur.val].neighbors.append(clone_map[adj.val])
 
-                copied_nodes[cur.val].neighbors.append(copied_nodes[neighbor.val])
-
-                if neighbor.val not in visited:
-                    visited.add(neighbor.val)
-                    queue.append(neighbor)
-
-        return copied_nodes[node.val]
+        return clone_map[node.val]
 
 
 
