@@ -1,38 +1,45 @@
 class Solution:
-    def BFS(self, board, root):
-        cells = [root]
-        queue = [root]
-
-        while queue:
-            x, y = queue.pop(0)
-            #board[x][y] = 'X'
-            directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-            
-            for dx, dy in directions:
-                nx, ny = x+dx, y +dy
-                
-                if 0<=nx<len(board) and 0<=ny<(len(board[0])) and board[nx][ny] == 'O':
-                    cells.append((nx, ny))
-                    board[nx][ny] = 'X'
-                    queue.append((nx, ny))
-        
-        
-        return cells
-
     def solve(self, board: List[List[str]]) -> None:
         """
         Do not return anything, modify board in-place instead.
         """
-        not_surround_cells = []
+          #         modify those cell to X
+        m = len(board)
+        n = len(board[0])
 
-        for i in range(len(board)):
-            for j in range(len(board[0])):
-                if (i == 0 or i == (len(board) - 1) or j == 0 or j ==(len(board[0]) - 1) ) and board[i][j] == 'O':
-                    not_surround_cells += self.BFS(board, (i, j))
+        def BFS(r, c):
+            # travser the O group
+            # mark the visited cell if can not reach board
+            queue = deque([(r, c)])
+            visited = [[False for _ in range(n)] for _ in range(m)] 
+            visited[r][c] = True
+            isSurround = True
 
-        for i in range(len(board)):
-            for j in range(len(board[0])):
-                board[i][j] = 'X'
+            while queue:
+                x, y = queue.popleft()
+                
+                if x == 0 or x == m - 1 or y == 0 or y == n - 1:
+                   isSurround = False 
+
+                for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+                    nx = x + dx
+                    ny = y + dy
+
+                    if m > nx >= 0 and n > ny >= 0 and not visited[nx][ny] and board[nx][ny] == 'O':
+                        visited[nx][ny] = True
+                        queue.append((nx, ny))
+
+            if isSurround:
+                for i in range(m):
+                    for j in range(n): 
+                        if visited[i][j]:
+                            board[i][j] = 'X'
+                    
+            return
+
+        for i in range(m):
+            for j in range(n):
+                if board[i][j] == 'O':
+                    BFS(i, j)
+        return
         
-        for x, y in not_surround_cells:
-            board[x][y] = 'O'
