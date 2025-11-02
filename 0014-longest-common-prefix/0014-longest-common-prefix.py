@@ -1,20 +1,16 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        prefix = strs[0]
+        # strict prefix? like bat is not the strict prefix of bat
+        # normal prefix
+        commonPrefix = strs[0]
 
-        for string in strs[1:]:
-            if prefix == "" or string == "":
-                prefix = ""
-                break
-            prefix = prefix[:min(len(prefix), len(string))]
+        for i in range(1, len(strs)):
+            commonPrefix = commonPrefix[:min(len(commonPrefix), len(strs[i]))]
 
-            for i in range( min(len(string), len(prefix)) ):
-                if string[i] != prefix[i]:
-                    if i == 0:
-                        prefix = ""
-                        break
-                    else:
-                        prefix = prefix[:i]
-                        break
+            for j in range(len(commonPrefix)):
+                if strs[i][j] != commonPrefix[j]:
+                    commonPrefix = commonPrefix[:j]
+                    break
 
-        return prefix
+        return commonPrefix
+        
