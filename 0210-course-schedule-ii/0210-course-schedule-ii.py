@@ -1,6 +1,6 @@
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-         in_degrees = [0 for _ in range(numCourses)]
+        in_degrees = [0 for _ in range(numCourses)]
         edges = [[] for _ in range(numCourses)]
         order = []
 
