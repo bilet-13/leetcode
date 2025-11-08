@@ -29,11 +29,8 @@ class Solution:
             state[node] = 1
 
             for course in edges[node]:
-                if state[course] == 1:
+                if check_cycle(course):
                     return True
-                elif state[course] == 0:
-                    if check_cycle(course):
-                        return True
 
             state[node] = 2
             return False
