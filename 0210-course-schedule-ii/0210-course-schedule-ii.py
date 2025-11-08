@@ -4,9 +4,9 @@ class Solution:
         edges = [[] for _ in range(numCourses)]
         order = []
 
-        for prereq in prerequisites:
-            edges[prereq[1]].append(prereq[0])
-            in_degrees[prereq[0]] += 1
+        for pre in prerequisites:
+            edges[pre[1]].append(pre[0])
+            in_degrees[pre[0]] += 1
         
         queue = deque(course for course in range(numCourses) if in_degrees[course] == 0)
 
