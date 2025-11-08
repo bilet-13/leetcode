@@ -41,11 +41,4 @@ class Solution:
                     return False
         return True
 
-
-        for i in range(numCourses):
-            if state[i] == 0:
-                if check_cycle(i):
-                    return False
-        return True
-
         
