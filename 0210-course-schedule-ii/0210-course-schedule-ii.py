@@ -8,16 +8,16 @@ class Solution:
             edges[prereq[1]].append(prereq[0])
             in_degrees[prereq[0]] += 1
         
-        starts = [course for course in range(numCourses) if in_degrees[course] == 0]
+        queue = deque(course for course in range(numCourses) if in_degrees[course] == 0)
 
-        while starts:
-            cur = starts.pop()
+        while queue:
+            cur = queue.popleft()
             order.append(cur)
 
             for nxt in edges[cur]:
                 in_degrees[nxt] -= 1
                 if in_degrees[nxt] == 0:
-                    starts.append(nxt)  
+                    queue.append(nxt)  
         
         return order if len(order) == numCourses else []
         
