@@ -9,7 +9,7 @@ class Solution:
         n = len(graph)
 
         def BFS(start, target):
-            visited = set(start)
+            visited = set([start])
             queue = deque([(start, 1)])
 
             while queue:
