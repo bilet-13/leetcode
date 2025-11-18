@@ -9,19 +9,21 @@ class Solution:
             degrees[v] += 1
         
         queue = deque([node for node in range(n) if degrees[node] == 1]) # start from leaves
-        remain_nodes = set(range(n))
+        if len(queue) == 0:
+            return [0]
+        remain_nodes = n
 
-        while len(remain_nodes) > 2:
+        while remain_nodes > 2:
             size = len(queue)
             
             for i in range(size):
                 cur = queue.popleft()
 
-                remain_nodes.discard(cur)
+                remain_nodes -= 1
 
                 for nbr in graph[cur]:
                     degrees[nbr] -= 1
                     if degrees[nbr] == 1:
                         queue.append(nbr)
         
-        return [node for node in remain_nodes]
+        return list(queue)
