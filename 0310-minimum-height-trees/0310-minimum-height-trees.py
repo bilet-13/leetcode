@@ -1,52 +1,27 @@
 class Solution:
     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
-        # time complesity o(n * (V + E)) = o(n * n) = o(n ^ 2)
         graph = [[] for _ in range(n)]
-        for edge in edges:
-            u = edge[0]
-            v = edge[1]
-
+        degrees = [0 for _ in range(n)]
+        for u, v in edges:
             graph[u].append(v)
             graph[v].append(u)
-
-        def longest_path(root):
-            parent = [-1 for _ in range(n)]
-            visited = [False for _ in range(n)]
-            path_len = 0
-            path_end = root
-
-            queue = deque([(root, -1, 0)]) # node, parent, len
-            visited[root] = True
-
-            while queue:
-                cur, par, cur_len = queue.popleft()
-                parent[cur] = par
-
-                if path_len < cur_len:
-                    path_len = cur_len
-                    path_end = cur
-                
-                for nbr in graph[cur]:
-                    if not visited[nbr]:
-                        visited[nbr] = True
-                        queue.append((nbr, cur, cur_len + 1))
-
-            path = []
-            cur = path_end
-            while cur != -1:
-                path.append(cur)
-                cur = parent[cur]
-            path.reverse()
-            print(path)
-
-            return path
-
-        longest_path_for_0 = longest_path(0)
-        root_diameter = longest_path_for_0[-1]
-        diameter_path = longest_path(root_diameter)
+            degrees[u] += 1
+            degrees[v] += 1
         
-        size = len(diameter_path)
-        right = size - 1
-        mid = right // 2
+        queue = deque([node for node in range(n) if degrees[node] == 1]) # start from leaves
+        remain_nodes = set(range(n))
 
-        return diameter_path[mid: mid + 1] if size % 2 == 1 else diameter_path[mid: mid + 2]
+        while len(remain_nodes) > 2:
+            size = len(queue)
+            
+            for i in range(size):
+                cur = queue.popleft()
+
+                remain_nodes.discard(cur)
+
+                for nbr in graph[cur]:
+                    degrees[nbr] -= 1
+                    if degrees[nbr] == 1:
+                        queue.append(nbr)
+        
+        return [node for node in remain_nodes]
