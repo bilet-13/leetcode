@@ -1,7 +1,5 @@
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
-        class Solution:
-    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         # bfs start from beginword
         # node: word in wordlist or beginword or endword
         # edge: node a -> node b ifnode b can be obtain by change only one letter in node a
