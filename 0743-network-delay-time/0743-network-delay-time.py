@@ -11,11 +11,11 @@ class Solution:
         for u, v, t in times:
             graph[u].append((v, t))
 
-        total_time = [float("inf") for _ in range(n + 1)]
+        total_time = {node: float("inf") for node in range(1, n + 1)}
         total_time[k] = 0
         min_delay_time = 0
         pq = []
-        heapq.heqppush(pq, (total_time[k], k))
+        heapq.heappush(pq, (total_time[k], k))
 
         while pq:
             time, cur = heapq.heappop(pq)
@@ -29,7 +29,7 @@ class Solution:
                     total_time[nbr] = time + nbr_time
                     heapq.heappush(pq, (total_time[nbr], nbr))
 
-        return -1 if any(time == float("inf") for time in total_time[1:]) else min_delay_time
+        return -1 if any(total_time[node] == float("inf") for node in total_time) else min_delay_time
 
 
 
