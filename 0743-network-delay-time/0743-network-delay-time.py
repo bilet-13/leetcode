@@ -14,7 +14,8 @@ class Solution:
         total_time = [float("inf") for _ in range(n + 1)]
         total_time[k] = 0
         min_delay_time = 0
-        pq = [(total_time[k], k)]
+        pq = []
+        heapq.heqppush(pq, (total_time[k], k))
 
         while pq:
             time, cur = heapq.heappop(pq)
