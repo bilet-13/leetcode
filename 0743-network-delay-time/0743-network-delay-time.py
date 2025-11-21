@@ -28,7 +28,7 @@ class Solution:
                     total_time[nbr] = time + nbr_time
                     heapq.heappush(pq, (total_time[nbr], nbr))
 
-        return min_delay_time if max(total_time[1:]) != float("inf") else -1
+        return -1 if any(time == float("inf") for time in total_time[1:]) else min_delay_time
 
 
 
