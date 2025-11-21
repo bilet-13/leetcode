@@ -29,7 +29,7 @@ class Solution:
                     total_time[nbr] = time + nbr_time
                     heapq.heappush(pq, (total_time[nbr], nbr))
 
-        return -1 if any(total_time[node] == float("inf") for node in total_time) else min_delay_time
+        return -1 if any(time == float("inf") for time in total_time.values()) else min_delay_time
 
 
 
