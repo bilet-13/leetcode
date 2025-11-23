@@ -1,6 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-         pq = []
+        pq = []
         n = len(points)
         min_cost = 0
 
