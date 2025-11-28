@@ -6,14 +6,8 @@ class Solution:
         for num in nums:
             count[num] += 1
         
-        for num, frequency in count.items():
-            if len(pq) < k:
-                heapq.heappush(pq, (frequency, num))
-            elif pq[0][0] < frequency:
-                heapq.heappop(pq)
-                heapq.heappush(pq, (frequency, num))
-        
-        return [num for frequency, num in pq]
+        pq = [(frequency, num) for num, frequency in count.items()]
+        return [num for frequency, num in heapq.nlargest(k, pq)]
                 
             
         
