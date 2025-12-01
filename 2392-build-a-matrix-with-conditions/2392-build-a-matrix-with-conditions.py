@@ -1,6 +1,6 @@
 class Solution:
     def buildMatrix(self, k: int, rowConditions: List[List[int]], colConditions: List[List[int]]) -> List[List[int]]:
-           row_graph = {i: [] for i in range(1, k + 1)}
+        row_graph = {i: [] for i in range(1, k + 1)}
         row_indegrees = {i: 0 for i in range(1, k + 1)}
 
         for above, below in rowConditions:
