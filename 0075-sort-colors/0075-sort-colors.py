@@ -4,22 +4,15 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         
-        red_num = 0
-        white_num = 0
-        blue_num = 0
+        color_num = defaultdict(int)
 
         for c in nums:
-            if c == 0:
-                red_num += 1
-            elif c == 1:
-                white_num += 1
-            else:
-                blue_num += 1
+            color_num[c] += 1
         
         for i in range(len(nums)):
-            if i < red_num:
+            if i < color_num[0]:
                 nums[i] = 0
-            elif white_num + red_num > i >= red_num:
+            elif color_num[1] + color_num[0] > i >= color_num[0]:
                 nums[i] = 1
             else:
                 nums[i] = 2
