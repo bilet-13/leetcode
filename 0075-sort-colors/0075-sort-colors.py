@@ -3,17 +3,22 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        
-        color_num = defaultdict(int)
+        cur = 0
+        p0 = 0
+        p2 = len(nums) - 1
 
-        for c in nums:
-            color_num[c] += 1
-        
-        for i in range(len(nums)):
-            if i < color_num[0]:
-                nums[i] = 0
-            elif color_num[1] + color_num[0] > i >= color_num[0]:
-                nums[i] = 1
+        while cur <= p2:
+            if nums[cur] == 0:
+                nums[cur], nums[p0] = nums[p0], nums[cur]
+                cur += 1
+                p0 += 1
+            
+            elif nums[cur] == 2:
+                nums[cur], nums[p2] = nums[p2], nums[cur]
+                p2 -= 1
+            
             else:
-                nums[i] = 2
+                cur += 1
+            
+        
         
