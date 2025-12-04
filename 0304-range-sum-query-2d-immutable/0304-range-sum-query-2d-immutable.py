@@ -8,29 +8,16 @@ class NumMatrix:
         # [5, 12, 21]
         n = len(matrix)
         m = len(matrix[0])
-        self.prefix_matrix = [[0 for _ in range(m)] for _ in range(n)]
+        self.prefix_matrix = [[0 for _ in range(m + 1)] for _ in range(n + 1)]
 
         for i in range(n):
             for j in range(m):
-                if i == 0:
-                    self.prefix_matrix[i][j] = matrix[i][j] if j == 0 else self.prefix_matrix[i][j - 1] + matrix[i][j]
-
-                else:
-                    left_part = self.prefix_matrix[i][j - 1] if j > 0 else 0
-                    upper_part = self.prefix_matrix[i - 1][j] if i > 0 else 0
-
-                    overlap_part = self.prefix_matrix[i - 1][j - 1] if i > 0 and j > 0 else 0
-
-                    self.prefix_matrix[i][j] = matrix[i][j] + left_part + upper_part - overlap_part
+                self.prefix_matrix[i + 1][j + 1] = matrix[i][j] + self.prefix_matrix[i + 1][j] + self.prefix_matrix[i][j + 1] - self.prefix_matrix[i][j]
+        
 
     def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
+        return self.prefix_matrix[row2 + 1][col2 + 1] - self.prefix_matrix[row1][col2 + 1] - self.prefix_matrix[row2 + 1][col1] + self.prefix_matrix[row1][col1]
 
-        left_part = self.prefix_matrix[row2][col1 - 1] if col1 - 1 >= 0 else 0
-        upper_part = self.prefix_matrix[row1 - 1][col2] if row1 - 1 >= 0 else 0
-
-        overlap_part = self.prefix_matrix[row1 - 1][col1 - 1] if row1 - 1 >= 0 and col1 - 1 >= 0 else 0
-
-        return  self.prefix_matrix[row2][col2] - left_part - upper_part + overlap_part
         
 
 
