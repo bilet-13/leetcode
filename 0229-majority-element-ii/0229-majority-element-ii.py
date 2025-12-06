@@ -22,6 +22,6 @@ class Solution:
                 c1 -= 1
                 c2 -= 1
 
-        return [num for num in [num1, num2] if nums.count(num) > len(nums) // 3]
+        return [n for n in [num1, num2] if nums.count(n) > len(nums) // 3]
 
         
