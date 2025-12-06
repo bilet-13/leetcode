@@ -22,21 +22,6 @@ class Solution:
                 c1 -= 1
                 c2 -= 1
 
-        cnt1 = 0
-        cnt2 = 0
-        for num in nums:
-            if num == num1:
-                cnt1 += 1
-            elif num == num2:
-                cnt2 += 1
-        
-        result = []
-        if cnt1 > len(nums) // 3:
-            result.append(num1)
-
-        if cnt2 > len(nums) // 3:
-            result.append(num2)
-
-        return result
+        return [num for num in [num1, num2] if nums.count(num) > len(nums) // 3]
 
         
