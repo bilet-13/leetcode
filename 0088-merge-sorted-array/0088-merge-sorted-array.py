@@ -1,18 +1,29 @@
-class Solution: 
+class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        if n == 0:
-            return
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
 
-        merge_idx = m + n - 1
-        nums1_idx = m - 1
-        nums2_idx = n - 1
+        idx = m + n - 1
+        idx1 = m - 1
+        idx2 = n - 1
 
-        while nums2_idx >= 0:
-            if nums1_idx >= 0 and nums1[nums1_idx] >= nums2[nums2_idx]:
-                nums1[merge_idx] = nums1[nums1_idx]
-                nums1_idx -= 1
+        while idx1 >= 0 and idx2 >= 0:
+            if nums1[idx1] > nums2[idx2]:
+                nums1[idx] = nums1[idx1]
+                idx1 -= 1
+
             else:
-                nums1[merge_idx] = nums2[nums2_idx]
-                nums2_idx -= 1
-            merge_idx -= 1
-        return 
+                nums1[idx] = nums2[idx2]
+                idx2 -= 1
+            idx -= 1
+
+        while idx2 >= 0:
+            nums1[idx] = nums2[idx2]
+            idx2 -= 1
+            idx -= 1
+
+
+        
+
+        
