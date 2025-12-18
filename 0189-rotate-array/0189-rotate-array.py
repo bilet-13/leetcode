@@ -3,15 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        k = k % len(nums)
+         def reverse_by_left_right(l, r):
+            while l < r:
+                nums[l], nums[r] = nums[r], nums[l]
+                l += 1
+                r -= 1
+
+        n = len(nums)
+
+        k = k % n
+        if k == 0:
+            return
+
+        reverse_by_left_right(0, n - 1)
+        reverse_by_left_right(0, k - 1)
+        reverse_by_left_right(k, n - 1)
         
-        self.reverse(nums, 0, len(nums) - 1)
-        self.reverse(nums, 0, k - 1)
-        self.reverse(nums, k, len(nums) - 1)
-    
-    @staticmethod
-    def reverse(self, nums, left, right):
-        while left < right:
-            nums[left], nums[right] = nums[right], nums[left]
-            left += 1
-            right -= 1
