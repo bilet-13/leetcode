@@ -1,6 +1,6 @@
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
-          people.sort()
+        people.sort()
         left = 0
         right = len(people) - 1
 
