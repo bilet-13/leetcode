@@ -3,7 +3,7 @@ class Solution:
          # brute force
         # for each bar, its water is determin by the smallest neighbor among right and left tallest neighbor
         #time complexity o(n)
-         result = 0
+        result = 0
 
         leftmost = 0
         rightmost = 0
