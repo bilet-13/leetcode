@@ -3,23 +3,27 @@ class Solution:
          # brute force
         # for each bar, its water is determin by the smallest neighbor among right and left tallest neighbor
         #time complexity o(n)
-        result = 0
-        leftmost = [0 for _ in range(len(height))]
-        rightmost = [0 for _ in range(len(height))]
+         result = 0
 
-        for i in range(1, len(height)):
-            cur_left_most = max(height[i - 1], leftmost[i - 1])
-            leftmost[i] = cur_left_most
+        leftmost = 0
+        rightmost = 0
 
-        for i in range(len(height) - 2, -1, -1):
-            cur_right_most = max(height[i + 1], rightmost[i + 1])
-            rightmost[i] = cur_right_most
-        
-        trap_water = 0
-        for i in range(len(height)):
-            trap_water += max(min(rightmost[i], leftmost[i]) - height[i], 0)
+        left = 0
+        right = len(height) - 1
 
-        return trap_water
+        while left <= right:
+            if leftmost < rightmost:
+                result += max(leftmost - height[left], 0)
+                leftmost = max(height[left], leftmost)
+                
+                left += 1
+            
+            else:
+                result += max(rightmost - height[right], 0)
+                rightmost = max(height[right], rightmost)
 
-        
+                right -= 1
+
+        return result
+
         
