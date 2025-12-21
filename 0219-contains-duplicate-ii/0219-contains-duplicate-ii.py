@@ -13,5 +13,5 @@ class Solution:
 
             nums_in_window[nums[right]] += 1
             
-        return Fals
+        return False
         
