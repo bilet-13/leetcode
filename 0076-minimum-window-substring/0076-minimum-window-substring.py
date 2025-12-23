@@ -19,7 +19,7 @@ class Solution:
         left = 0
 
         def contain_t(cur_count):
-            return all(cur_count.get(char, 0) >= count for char, count in count_t.items())
+            return not any(cur_count.get(char, 0) < count for char, count in count_t.items())
 
 
         for right in range(len(s)):
