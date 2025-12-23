@@ -1,22 +1,44 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        def window_contain_target(window_freq, target_freq):
-            return all(window_freq[char] >= target_freq[char] for char in target_freq)
+        # sliding window
+        # check the window contain t or not, use hash map to store the 
+        # frequency 
+        # the compare time is o(1) becasue the t only contain upper and lower english letter
+        # 
+        # if yes shrink the left window until the window does not contain t
+        # use two var result_substring_start and result_substring_len to record the anser
+        # update it during shringkinog
+        # time complexity o(n)
 
-        start = 0
-        min_window = s + "t"
-        target_freq = Counter(t)
-        window_freq = Counter()
+        result_str_start = 0
+        result_str_len = float('inf')
 
-        for end in range(len(s)):
-            window_freq[s[end]] += 1
+        count_t = Counter(t)
+        cur_count = defaultdict(int)
 
-            while window_contain_target(window_freq, target_freq) and start <= end:
-                str_len = end - start + 1
-                if str_len < len(min_window):
-                    min_window = s[start: end+1]
-                    
-                window_freq[s[start]] -= 1
-                start += 1
-        return min_window if len(min_window) <= len(s) else ""
-            
+        left = 0
+
+        def contain_t(cur_count):
+            return all(cur_count.get(char, 0) >= count for char, count in count_t.items())
+
+
+        for right in range(len(s)):
+            cur_count[s[right]] += 1
+
+            while contain_t(cur_count) and left <= right:
+                window_str_len = right - left + 1
+
+                if window_str_len < result_str_len:
+                    result_str_len = window_str_len
+                    result_str_start = left
+
+                cur_count[s[left]] -= 1
+                left += 1
+        
+        return s[result_str_start: result_str_start + result_str_len] if result_str_len != float('inf') else "" 
+
+
+
+
+        
+        
