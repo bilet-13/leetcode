@@ -1,17 +1,17 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        #tupel: read only
-        candidate, count = nums[0], 1
+        # voting algo
+        num_and_count = [nums[0], 1] # number, count
 
         for i in range(1, len(nums)):
-            if nums[i] != candidate:
-                count -= 1
+            if nums[i] != num_and_count[0]:
+                num_and_count[1] -= 1
                 
-                if count == 0:
-                    candidate, count = nums[i], 1
+                if num_and_count[1] == 0:
+                    num_and_count = [nums[i], 1]
             else:
-                count += 1
+                num_and_count[1] += 1
 
-        return candidate
-
+        return num_and_count[0]
+        
         
