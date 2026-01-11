@@ -12,32 +12,26 @@ class Solution:
         dummy = ListNode(next=slow)
         prev = dummy
 
-        for _ in range(0, left - 1):
+        for _ in range(left - 1):
             prev = prev.next
-            slow = slow.next
-        reverse_tail = slow
-
-        fast = head
-        for _ in range(0, right - 1):
-            fast = fast.next
-        tail = fast.next
-        reverse_head = fast 
-
-        start = left
-
-        follower = None
-        while start <= right:
-            next_ptr = slow.next
-            slow.next = follower 
-            follower = slow
-            slow = next_ptr
-
-            start += 1
         
-        prev.next = reverse_head
-        reverse_tail.next = tail
+        cur = prev.next
+        prev_node = None
+
+        for _ in range(left, right + 1):
+            next_ptr = cur.next
+            cur.next = prev_node
+            prev_node = cur
+            cur = next_ptr
+        
+        prev.next.next = cur
+        prev.next = prev_node
 
         return dummy.next
+
+
+
+       
 
         
         
