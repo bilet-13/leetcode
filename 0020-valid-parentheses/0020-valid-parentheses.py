@@ -1,17 +1,29 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        open_bracket_stack = deque()
-        close_to_open_bracket = {')': '(', ']': '[', '}': '{'}
-        open_bracket_set = set(['(', '[', '{'])
-        
-        for bracket in s:
-            if bracket in open_bracket_set:
-                open_bracket_stack.append(bracket)
-                continue
-            
-            if not open_bracket_stack or close_to_open_bracket[bracket] != open_bracket_stack[-1]:
-                return False
-            
-            open_bracket_stack.pop()
+        stack = []
 
-        return not open_bracket_stack
+        def is_valid_pair(char1, char2):
+            if char1 == '(':
+                return char2 == ')'
+
+            if char1 == '[':
+                return char2 == ']'
+
+            if char1 == '{':
+                return char2 == '}'
+
+        for char in s:
+            if char in ['(', '[', '{']:
+                stack.append(char)
+
+            else:
+                if not stack:
+                    return False
+                
+                left_part = stack.pop()
+                if not is_valid_pair(left_part, char):
+                    return False
+        
+        return len(stack) == 0
+
+        
