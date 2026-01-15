@@ -1,48 +1,56 @@
-struct Node{
-    unordered_map<char, Node*> childs;
-    bool is_end;
 
-    Node(){
-        is_end = false;
-    }
-};
 class Trie {
+    class TreeNode {
+        public:
+            TreeNode *child[26];
+            bool isEndOfWord = false;
+
+            TreeNode() {
+                for (int i = 0; i < 26; ++i) {
+                    child[i] = nullptr;
+                }
+            }
+    };
+
 private:
-    Node* root;
+    TreeNode *root;
 public:
     Trie() {
-        root = new Node();
+        root = new TreeNode();
     }
     
     void insert(string word) {
         auto node = root;
-        for(char chr : word){
-            if(node->childs.count(chr) == 0){
-                node->childs[chr] = new Node();
+
+        for(const auto &chr: word) {
+            if (node->child[chr - 'a'] == nullptr) {
+                node->child[chr - 'a'] = new TreeNode();
             }
-            node = node->childs[chr];
+            node = node->child[chr - 'a'];
         }
-        node->is_end = true;
+        node->isEndOfWord = true;
     }
     
     bool search(string word) {
         auto node = root;
-        for(char chr : word){
-            if(node->childs.count(chr) == 0){
+
+        for(const auto &chr: word) {
+            if (node->child[chr - 'a'] == nullptr) {
                 return false;
             }
-            node = node->childs[chr];
+            node = node->child[chr - 'a'];
         }
-        return node->is_end;
+        return node->isEndOfWord;
     }
     
     bool startsWith(string prefix) {
-        auto node = root;
-        for(char chr : prefix){
-            if(node->childs.count(chr) == 0){
+         auto node = root;
+
+        for(const auto &chr: prefix) {
+            if (node->child[chr - 'a'] == nullptr) {
                 return false;
             }
-            node = node->childs[chr];
+            node = node->child[chr - 'a'];
         }
         return true;
     }
