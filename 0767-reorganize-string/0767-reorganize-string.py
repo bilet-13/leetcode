@@ -1,36 +1,28 @@
 class Solution:
     def reorganizeString(self, s: str) -> str:
-        counter = Counter(s)
-
-        max_count = max(counter.values())
-        if max_count > math.ceil(len(s) / 2):
-            return ""
-
-        max_pq = [(-count, char) for char, count in counter.items()]
-        heapq.heapify(max_pq)
+          
+        freqs = Counter(s)
+        max_heap = [(-freq, char) for char, freq in freqs.items()]
+        heapq.heapify(max_heap)
 
         result = []
-        while len(max_pq) >= 2:
-            count1, ch1 = heapq.heappop(max_pq) 
-            count2, ch2 = heapq.heappop(max_pq) 
-
-            result.extend([ch1, ch2])
-
-            if count1 + 1 != 0:
-                heapq.heappush(max_pq, (count1 + 1, ch1))
-
-            if count2 + 1 != 0:
-                heapq.heappush(max_pq, (count2 + 1, ch2))
+        n = len(s)
         
-        if max_pq:
-            _, ch = heapq.heappop(max_pq)
-            result.append(ch)
+        prev = None
+        prev_negative_count = 0
+
+        while max_heap:
+            negative_freq, char = heapq.heappop(max_heap)
+            result.append(char)
+
+            if prev_negative_count < 0:
+                heapq.heappush(max_heap, (prev_negative_count, prev))
+
+            prev = char
+            prev_negative_count = negative_freq + 1
+
+        if len(result) < n:
+            return ""
 
         return "".join(result)
-        
-
-
-
             
-
-        
