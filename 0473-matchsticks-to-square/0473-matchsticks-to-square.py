@@ -22,7 +22,10 @@ class Solution:
                         return True
                 
                     sides[i] -= matchsticks[start]
-            
+                    
+                if sides[i] == 0:
+                    return False
+                    
             return False
 
         return backtrack(0)
