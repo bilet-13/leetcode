@@ -1,33 +1,35 @@
 class Solution:
     def makesquare(self, matchsticks: List[int]) -> bool:
-          #backtrack knappack
+           #backtrack knappack
         sum_sides = sum(matchsticks)
         if sum_sides % 4 != 0:
             return False
-
         matchsticks.sort(reverse=True)
 
         side_len = sum_sides // 4
-        sides = [0, 0, 0, 0]
+        n = len(matchsticks)
 
-        def backtrack(start):
-            if start == len(matchsticks):
+        @cache
+        def dp(mask):
+            if mask == (1 << n) - 1:
                 return True
+            
+            used_len = 0
+            for i in range(n):
+                if (mask & (1 << i)) != 0:
+                    used_len += matchsticks[i]
 
-            for i in range(4):
-                if sides[i] + matchsticks[start] <= side_len:
-                    sides[i] += matchsticks[start]
+            cur_len = used_len % side_len
 
-                    if backtrack(start + 1):
-                        return True
-                
-                    sides[i] -= matchsticks[start]
-                    
-                if sides[i] == 0:
-                    return False
-                    
+            for i in range(n):
+                if (mask & (1 << i)) == 0:
+                    if cur_len + matchsticks[i] <= side_len:
+                        next_mask = mask | (1 << i)
+
+                        if dp(next_mask):
+                            return True
             return False
 
-        return backtrack(0)
-        
+
+        return dp(0)
         
