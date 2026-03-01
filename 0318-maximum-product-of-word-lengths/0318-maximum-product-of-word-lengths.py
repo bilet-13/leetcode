@@ -1,22 +1,27 @@
 class Solution:
     def maxProduct(self, words: List[str]) -> int:
         # combination
-        states = {}
+        states = {} # key mask of word. value: the max length of the same mask words
         max_product = 0
 
         for word in words:
-            states[word] = 0
+            mask = 0
 
             for char in word:
-                states[word] |= (1 << (ord(char) - ord('a')))
+                mask |= (1 << (ord(char) - ord('a')))
+
+            if mask not in states:
+                states[mask] = len(word)
+            else:
+                states[mask] = max(states[mask], len(word))
         
-        for word_a in states:
-            for word_b in states:
-                if word_a == word_b:
+        for mask_a in states:
+            for mask_b in states:
+                if mask_a == mask_b:
                     continue
                 
-                if states[word_a] & states[word_b] == 0:
-                    max_product = max(max_product, len(word_a) * len(word_b))
+                if mask_a & mask_b == 0:
+                    max_product = max(max_product, states[mask_a] * states[mask_b])
 
         return max_product
 
