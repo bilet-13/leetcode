@@ -4,8 +4,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 <!---LeetCode Topics Start-->
 # LeetCode Topics
 ## Array
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0001-two-sum](https://github.com/bilet-13/leetcode/tree/master/0001-two-sum) |
 | [0004-median-of-two-sorted-arrays](https://github.com/bilet-13/leetcode/tree/master/0004-median-of-two-sorted-arrays) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/bilet-13/leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
@@ -32,6 +32,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 | [0073-set-matrix-zeroes](https://github.com/bilet-13/leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/bilet-13/leetcode/tree/master/0074-search-a-2d-matrix) |
+| [0078-subsets](https://github.com/bilet-13/leetcode/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/bilet-13/leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -71,8 +72,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 ## Two Pointers
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/bilet-13/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/bilet-13/leetcode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/bilet-13/leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
@@ -91,8 +92,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0295-find-median-from-data-stream](https://github.com/bilet-13/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0392-is-subsequence](https://github.com/bilet-13/leetcode/tree/master/0392-is-subsequence) |
 ## Depth-First Search
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/bilet-13/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0112-path-sum](https://github.com/bilet-13/leetcode/tree/master/0112-path-sum) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/bilet-13/leetcode/tree/master/0114-flatten-binary-tree-to-linked-list) |
@@ -109,8 +110,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 ## Breadth-First Search
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/bilet-13/leetcode/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/bilet-13/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0112-path-sum](https://github.com/bilet-13/leetcode/tree/master/0112-path-sum) |
@@ -128,15 +129,15 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 ## Union Find
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/bilet-13/leetcode/tree/master/0128-longest-consecutive-sequence) |
 | [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/master/0200-number-of-islands) |
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 ## Matrix
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0036-valid-sudoku](https://github.com/bilet-13/leetcode/tree/master/0036-valid-sudoku) |
 | [0048-rotate-image](https://github.com/bilet-13/leetcode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/bilet-13/leetcode/tree/master/0054-spiral-matrix) |
@@ -152,8 +153,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 ## Hash Table
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0001-two-sum](https://github.com/bilet-13/leetcode/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/bilet-13/leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0012-integer-to-roman](https://github.com/bilet-13/leetcode/tree/master/0012-integer-to-roman) |
@@ -183,15 +184,15 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0433-minimum-genetic-mutation](https://github.com/bilet-13/leetcode/tree/master/0433-minimum-genetic-mutation) |
 ## Graph
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0133-clone-graph](https://github.com/bilet-13/leetcode/tree/master/0133-clone-graph) |
 | [0207-course-schedule](https://github.com/bilet-13/leetcode/tree/master/0207-course-schedule) |
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
 ## String
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/bilet-13/leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0005-longest-palindromic-substring](https://github.com/bilet-13/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0006-zigzag-conversion](https://github.com/bilet-13/leetcode/tree/master/0006-zigzag-conversion) |
@@ -225,16 +226,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0433-minimum-genetic-mutation](https://github.com/bilet-13/leetcode/tree/master/0433-minimum-genetic-mutation) |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 ## Shortest Path
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 ## Topological Sort
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0207-course-schedule](https://github.com/bilet-13/leetcode/tree/master/0207-course-schedule) |
 ## Binary Search
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/bilet-13/leetcode/tree/master/0004-median-of-two-sorted-arrays) |
 | [0033-search-in-rotated-sorted-array](https://github.com/bilet-13/leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/bilet-13/leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
@@ -247,8 +248,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
 | [0300-longest-increasing-subsequence](https://github.com/bilet-13/leetcode/tree/master/0300-longest-increasing-subsequence) |
 ## Tree
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/bilet-13/leetcode/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/bilet-13/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -266,8 +267,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 ## Binary Tree
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/bilet-13/leetcode/tree/master/0103-binary-tree-zigzag-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/bilet-13/leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/bilet-13/leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -284,16 +285,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0450-delete-node-in-a-bst](https://github.com/bilet-13/leetcode/tree/master/0450-delete-node-in-a-bst) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 ## Trie
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0014-longest-common-prefix](https://github.com/bilet-13/leetcode/tree/master/0014-longest-common-prefix) |
 | [0139-word-break](https://github.com/bilet-13/leetcode/tree/master/0139-word-break) |
 | [0208-implement-trie-prefix-tree](https://github.com/bilet-13/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/bilet-13/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
 ## Math
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0002-add-two-numbers](https://github.com/bilet-13/leetcode/tree/master/0002-add-two-numbers) |
 | [0009-palindrome-number](https://github.com/bilet-13/leetcode/tree/master/0009-palindrome-number) |
 | [0012-integer-to-roman](https://github.com/bilet-13/leetcode/tree/master/0012-integer-to-roman) |
@@ -312,17 +313,18 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0279-perfect-squares](https://github.com/bilet-13/leetcode/tree/master/0279-perfect-squares) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Bit Manipulation
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
+| [0078-subsets](https://github.com/bilet-13/leetcode/tree/main/0078-subsets/) | Medium |
 | [0136-single-number](https://github.com/bilet-13/leetcode/tree/master/0136-single-number) |
 | [0137-single-number-ii](https://github.com/bilet-13/leetcode/tree/master/0137-single-number-ii) |
 | [0190-reverse-bits](https://github.com/bilet-13/leetcode/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/bilet-13/leetcode/tree/master/0191-number-of-1-bits) |
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
 ## Divide and Conquer
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/bilet-13/leetcode/tree/master/0004-median-of-two-sorted-arrays) |
 | [0023-merge-k-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0023-merge-k-sorted-lists) |
 | [0053-maximum-subarray](https://github.com/bilet-13/leetcode/tree/master/0053-maximum-subarray) |
@@ -336,8 +338,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 ## Linked List
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0002-add-two-numbers](https://github.com/bilet-13/leetcode/tree/master/0002-add-two-numbers) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/bilet-13/leetcode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0021-merge-two-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0021-merge-two-sorted-lists) |
@@ -354,8 +356,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
 | [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
 ## Sorting
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0049-group-anagrams](https://github.com/bilet-13/leetcode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/bilet-13/leetcode/tree/master/0056-merge-intervals) |
 | [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
@@ -368,20 +370,20 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
 ## Counting Sort
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0274-h-index](https://github.com/bilet-13/leetcode/tree/master/0274-h-index) |
 ## Stack
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/bilet-13/leetcode/tree/master/0042-trapping-rain-water) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/bilet-13/leetcode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
 | [0227-basic-calculator-ii](https://github.com/bilet-13/leetcode/tree/master/0227-basic-calculator-ii) |
 ## Design
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
 | [0208-implement-trie-prefix-tree](https://github.com/bilet-13/leetcode/tree/master/0208-implement-trie-prefix-tree) |
@@ -389,18 +391,18 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0295-find-median-from-data-stream](https://github.com/bilet-13/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Binary Search Tree
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
 | [0450-delete-node-in-a-bst](https://github.com/bilet-13/leetcode/tree/master/0450-delete-node-in-a-bst) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 ## Iterator
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
 ## Dynamic Programming
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/bilet-13/leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/bilet-13/leetcode/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/bilet-13/leetcode/tree/master/0042-trapping-rain-water) |
@@ -425,8 +427,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 ## Greedy
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0045-jump-game-ii](https://github.com/bilet-13/leetcode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/bilet-13/leetcode/tree/master/0055-jump-game) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/bilet-13/leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
@@ -437,63 +439,63 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
 ## Recursion
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0002-add-two-numbers](https://github.com/bilet-13/leetcode/tree/master/0002-add-two-numbers) |
 | [0021-merge-two-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0025-reverse-nodes-in-k-group](https://github.com/bilet-13/leetcode/tree/master/0025-reverse-nodes-in-k-group) |
 | [0050-powx-n](https://github.com/bilet-13/leetcode/tree/master/0050-powx-n) |
 ## Heap (Priority Queue)
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0023-merge-k-sorted-lists) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0295-find-median-from-data-stream](https://github.com/bilet-13/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
 ## Quickselect
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 ## Randomized
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 ## Prefix Sum
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/bilet-13/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [0238-product-of-array-except-self](https://github.com/bilet-13/leetcode/tree/master/0238-product-of-array-except-self) |
 ## Monotonic Stack
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/bilet-13/leetcode/tree/master/0042-trapping-rain-water) |
 ## Doubly-Linked List
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
 ## Simulation
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0054-spiral-matrix](https://github.com/bilet-13/leetcode/tree/master/0054-spiral-matrix) |
 | [0067-add-binary](https://github.com/bilet-13/leetcode/tree/master/0067-add-binary) |
 | [0068-text-justification](https://github.com/bilet-13/leetcode/tree/master/0068-text-justification) |
 | [0289-game-of-life](https://github.com/bilet-13/leetcode/tree/master/0289-game-of-life) |
 ## Memoization
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0070-climbing-stairs](https://github.com/bilet-13/leetcode/tree/master/0070-climbing-stairs) |
 | [0139-word-break](https://github.com/bilet-13/leetcode/tree/master/0139-word-break) |
 ## Sliding Window
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/bilet-13/leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0030-substring-with-concatenation-of-all-words](https://github.com/bilet-13/leetcode/tree/master/0030-substring-with-concatenation-of-all-words) |
 | [0076-minimum-window-substring](https://github.com/bilet-13/leetcode/tree/master/0076-minimum-window-substring) |
 | [0209-minimum-size-subarray-sum](https://github.com/bilet-13/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 ## Backtracking
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/bilet-13/leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/bilet-13/leetcode/tree/master/0022-generate-parentheses) |
 | [0039-combination-sum](https://github.com/bilet-13/leetcode/tree/master/0039-combination-sum) |
@@ -501,27 +503,28 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0047-permutations-ii](https://github.com/bilet-13/leetcode/tree/master/0047-permutations-ii) |
 | [0052-n-queens-ii](https://github.com/bilet-13/leetcode/tree/master/0052-n-queens-ii) |
 | [0077-combinations](https://github.com/bilet-13/leetcode/tree/master/0077-combinations) |
+| [0078-subsets](https://github.com/bilet-13/leetcode/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
 ## Merge Sort
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0023-merge-k-sorted-lists) |
 | [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
 ## Queue
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 ## Monotonic Queue
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 ## Data Stream
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0295-find-median-from-data-stream](https://github.com/bilet-13/leetcode/tree/master/0295-find-median-from-data-stream) |
 ## Geometry
-|  |
-| ------- |
+| Problem Name | Difficulty |
+| ------- | ------- |
 | [0149-max-points-on-a-line](https://github.com/bilet-13/leetcode/tree/master/0149-max-points-on-a-line) |
 <!---LeetCode Topics End-->
