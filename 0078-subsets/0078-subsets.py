@@ -1,18 +1,21 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-
-        def backtrack(cur, idx, result):
-            result.append(cur[:])
-
-            for i in range(idx, len(nums)):
-                cur.append(nums[i])
-                backtrack(cur, i + 1, result)
-                cur.pop()
-            
-            return
-        
+        n = len(nums)
+        total_subsets = 1 << n
         result = []
-        backtrack([], 0, result)
 
+        for i in range(total_subsets):
+            current_subset = []
+            for j in range(n):
+                if (i >> j) & 1:
+                    current_subset.append(nums[j])
+
+            result.append(current_subset)
+        
+        return result
+        
+
+
+        
         return result
         
