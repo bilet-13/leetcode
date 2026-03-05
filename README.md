@@ -71,6 +71,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
+| [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -312,6 +313,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0227-basic-calculator-ii](https://github.com/bilet-13/leetcode/tree/master/0227-basic-calculator-ii) |
 | [0279-perfect-squares](https://github.com/bilet-13/leetcode/tree/master/0279-perfect-squares) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
+| [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -322,6 +324,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0190-reverse-bits](https://github.com/bilet-13/leetcode/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/bilet-13/leetcode/tree/master/0191-number-of-1-bits) |
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
+| [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -506,6 +509,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0078-subsets](https://github.com/bilet-13/leetcode/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
+| [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 ## Merge Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -527,4 +531,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0149-max-points-on-a-line](https://github.com/bilet-13/leetcode/tree/master/0149-max-points-on-a-line) |
+## Combinatorics
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
+## Enumeration
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 <!---LeetCode Topics End-->
