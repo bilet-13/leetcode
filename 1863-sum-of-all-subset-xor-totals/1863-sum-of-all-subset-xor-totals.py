@@ -1,20 +1,25 @@
 class Solution:
     def subsetXORSum(self, nums: List[int]) -> int:
-           # use
-        result = []
-        cur = 0
+        result = 0
+        num_subsets = pow(2, len(nums))
 
-        def backtrack(cur, idx, result):
-            result.append(cur)
-
-            for i in range(idx, len(nums)):
-                backtrack(cur ^ nums[i], i + 1, result) 
+        for mask in range(num_subsets):
+            xor_total = 0
             
-            return
-        
-        backtrack(0, 0, result)
+            for i in range(len(nums)):
+                if mask & (1 << i) != 0:
+                    xor_total ^= nums[i]
 
-        return sum(result)
+            result += xor_total
+
+        return result
+
+
+
+            
+
+            
+
 
 
 
