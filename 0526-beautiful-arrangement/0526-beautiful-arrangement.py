@@ -6,23 +6,24 @@ class Solution:
         # else 
         # check [index] is true and do backtrack(idx + 1)
         nums = [i for i in range(1, n + 1)]
-        used = [False for _ in range(n + 1)]
+        mask = 0
         result = 0
 
         def backtrack(idx):
             nonlocal result
+            nonlocal mask
             if idx == 0:
                 result += 1
                 return
 
             for num in range(1, n + 1):
-                if not used[num] and (num % idx == 0 or idx % num == 0):
+                if mask & (1 << num) == 0 and (num % idx == 0 or idx % num == 0):
 
-                    used[num] = True
+                    mask |= 1 << num
 
                     backtrack(idx - 1)
 
-                    used[num] = False
+                    mask ^= 1 << num
 
         backtrack(n)
         return result
