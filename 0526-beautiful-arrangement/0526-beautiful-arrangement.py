@@ -1,27 +1,30 @@
 class Solution:
     def countArrangement(self, n: int) -> int:
-        # backtracking
+        # backtracking do permutaion and check rules in each level
         # input argument: index to track
         # if index == n: add the permuationt
         # else 
-        # check [index] is true and do backtrack(start + 1)
+        # check [index] is true and do backtrack(idx + 1)
         nums = [i for i in range(1, n + 1)]
+        used = [False for _ in range(n + 1)]
         result = 0
 
-        def backtrack(start):
+        def backtrack(idx):
             nonlocal result
-            if start == n:
+            if idx == 0:
                 result += 1
+                return
 
-            for i in range(start, n):
-                nums[start], nums[i] = nums[i], nums[start]
+            for num in range(1, n + 1):
+                if not used[num] and (num % idx == 0 or idx % num == 0):
 
-                if nums[start] % (start + 1) == 0 or (start + 1) % nums[start] == 0:
-                    backtrack(start + 1)
+                    used[num] = True
 
-                nums[start], nums[i] = nums[i], nums[start]
+                    backtrack(idx - 1)
 
-        backtrack(0)
+                    used[num] = False
+
+        backtrack(n)
         return result
                 
 
