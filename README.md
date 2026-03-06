@@ -68,6 +68,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 | [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/bilet-13/leetcode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
+| [0526-beautiful-arrangement](https://github.com/bilet-13/leetcode/tree/main/0526-beautiful-arrangement/) | Medium |
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
@@ -326,6 +327,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0190-reverse-bits](https://github.com/bilet-13/leetcode/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/bilet-13/leetcode/tree/master/0191-number-of-1-bits) |
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
+| [0526-beautiful-arrangement](https://github.com/bilet-13/leetcode/tree/main/0526-beautiful-arrangement/) | Medium |
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
@@ -429,6 +431,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0300-longest-increasing-subsequence](https://github.com/bilet-13/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/bilet-13/leetcode/tree/master/0322-coin-change) |
 | [0392-is-subsequence](https://github.com/bilet-13/leetcode/tree/master/0392-is-subsequence) |
+| [0526-beautiful-arrangement](https://github.com/bilet-13/leetcode/tree/main/0526-beautiful-arrangement/) | Medium |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 ## Greedy
@@ -512,6 +515,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0078-subsets](https://github.com/bilet-13/leetcode/tree/main/0078-subsets/) | Medium |
 | [0079-word-search](https://github.com/bilet-13/leetcode/tree/master/0079-word-search) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
+| [0526-beautiful-arrangement](https://github.com/bilet-13/leetcode/tree/main/0526-beautiful-arrangement/) | Medium |
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 ## Merge Sort
 | Problem Name | Difficulty |
@@ -542,4 +546,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
+## Bitmask
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0526-beautiful-arrangement](https://github.com/bilet-13/leetcode/tree/main/0526-beautiful-arrangement/) | Medium |
 <!---LeetCode Topics End-->
