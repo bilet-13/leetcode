@@ -21,9 +21,10 @@ class Solution:
 
             for i in range(len(nums)):
                 if mask & (1 << i) == 0 and cur_sum + nums[i] <= target_sum:
-                    subset_sum = 0 if cur_sum + nums[i] == target_sum else cur_sum + nums[i]
+                    next_sum = cur_sum + nums[i]
+                    next_sum %= target_sum
 
-                    if dp(mask | (1 << i), subset_sum):
+                    if dp(mask | (1 << i), next_sum):
                         return True
 
             return False
