@@ -6,34 +6,26 @@ class Solution:
         # put them into k buckets and check the sums of buckets equal
         #
 
-        if sum(nums) % k != 0:
-            return False 
+        sum_nums = sum(nums)
 
-        equal_num = sum(nums) // k
-        nums.sort(reverse=True)
-        
-        subsets = [0 for _ in range(k)]
-
-        def backtrack(start):
-            if start == len(nums):
-                return True
-
-            for i in range(k):
-                if subsets[i] + nums[start] > equal_num:
-                    continue
-
-                subsets[i] += nums[start]
-
-                if backtrack(start + 1):
-                    return True
-
-                subsets[i] -= nums[start]
-                if subsets[i] == 0:
-                    break
-            
+        if sum_nums % k != 0:
             return False
 
-        return backtrack(0)
-            
-                
-        
+        target_sum = sum_nums // k
+        nums.sort(reverse=True)
+
+        @cache
+        def dp(mask, cur_sum):
+            if mask.bit_count() == len(nums):
+                return True
+
+            for i in range(len(nums)):
+                if mask & (1 << i) == 0 and cur_sum + nums[i] <= target_sum:
+                    subset_sum = 0 if cur_sum + nums[i] == target_sum else cur_sum + nums[i]
+
+                    if dp(mask | (1 << i), subset_sum):
+                        return True
+
+            return False
+
+        return dp(0, 0)
