@@ -27,6 +27,9 @@ class Solution:
                     if dp(mask | (1 << i), next_sum):
                         return True
 
+                    if cur_sum == 0:
+                        return False
+
             return False
 
         return dp(0, 0)
