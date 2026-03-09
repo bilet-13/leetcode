@@ -6,16 +6,9 @@ class Solution:
         minimum_xor_sum = float("inf")
         n = len(nums1)
 
-        def get_xor_sum(nums2):
-            xor_sum = 0
-
-            for i in range(len(nums2)):
-                xor_sum += nums1[i] ^ nums2[i]
-            
-            return xor_sum
-
         @cache
-        def dp(mask, cur_idx):
+        def dp(mask):
+            cur_idx = mask.bit_count()
             if cur_idx == n:
                 return 0
 
@@ -25,13 +18,13 @@ class Solution:
                 if mask & (1 << i) == 0:
                     xor_sum = nums1[cur_idx] ^ nums2[i]
 
-                    sub_result = dp(mask | (1 << i),  cur_idx + 1)
+                    sub_result = dp(mask | (1 << i))
 
                     min_subproblem_sum = min(min_subproblem_sum, xor_sum + sub_result)
 
             return min_subproblem_sum
 
-        return dp(0, 0)
+        return dp(0)
 
 
 
