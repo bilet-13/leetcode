@@ -23,15 +23,15 @@ class Solution:
 
             ways = 0
 
-            for p in range(n):
-                if mask & (1 << p) == 0 and p in hats_people[hat_id]:
+            for p in hats_people[hat_id]:
+                if mask & (1 << p) == 0 :
                     ways += dp(hat_id + 1, mask | (1 << p))
 
             ways = (ways + dp(hat_id + 1, mask)) % (10**9 + 7)
 
             return ways
 
-        return dp(0, 0)
+        return dp(1, 0)
 
 
 
