@@ -1,38 +1,29 @@
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
-        # mask dp
-        # mask: ith bit is 1 if ith person already wear hat
-        #
+        # backtracking
+        # argument, cur_way, cur_idx(cur_idx person now)
+        # global set : used_hats
+        used_hats = set()
+        result = 0
         n = len(hats)
-        hats_people = defaultdict(set)
-        hats_num = 40
 
-        for p in range(n):
-            for hat in hats[p]:
-                hats_people[hat].add(p)
-       
-        @cache
-        def dp(hat_id, mask):
-            cur_idx = mask.bit_count()
+        def backtrack(cur_idx, cur_way):
+            nonlocal result
 
             if cur_idx == n:
-                return 1
+                result = (result + 1) % (10**9 + 7)
+                return
 
-            if hat_id > hats_num:
-                return 0
+            for hat in hats[cur_idx]:
+                if hat not in used_hats:
+                    used_hats.add(hat)
+                    backtrack(cur_idx + 1, cur_way)
+                    used_hats.remove(hat)
+            return
 
-            ways = 0
-
-            for p in hats_people[hat_id]:
-                if mask & (1 << p) == 0 :
-                    ways += dp(hat_id + 1, mask | (1 << p))
-
-            ways = (ways + dp(hat_id + 1, mask)) % (10**9 + 7)
-
-            return ways
-
-        return dp(1, 0)
-
+        backtrack(0, 0)
+        return result
+                
 
 
 
