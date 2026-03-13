@@ -22,6 +22,9 @@ class Solution:
             
             max_length = max(max_length, cur_len)
 
+            if start_idx == n:
+                return
+
             for i in range(start_idx, n):
                 if any(char in used_chars for char in unique_arr[i]):
                     continue # invalid string
@@ -29,7 +32,7 @@ class Solution:
                 for char in unique_arr[i]:
                     used_chars.add(char)
 
-                backtrack(i + 1, cur_len + len(unique_arr[i]))
+                backtrack(start_idx + 1, cur_len + len(unique_arr[i]))
 
                 for char in unique_arr[i]:
                     used_chars.remove(char)
