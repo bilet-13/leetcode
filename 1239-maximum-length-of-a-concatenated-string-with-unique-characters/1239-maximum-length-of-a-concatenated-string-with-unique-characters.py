@@ -17,28 +17,33 @@ class Solution:
         max_length = 0
         n = len(unique_arr)
 
-        def backtrack(start_idx, cur_len):
-            nonlocal max_length
-            
-            max_length = max(max_length, cur_len)
+        @cache
+        def dp(mask, start_idx):
+            if mask.bit_count() == 26 or start_idx == n:
+                return 0
 
-            if start_idx == n:
-                return
+            max_len = 0
 
             for i in range(start_idx, n):
-                if set(unique_arr[i]) & used_chars:
-                    continue # invalid string
+                is_duplicate = False
+
+                for char in unique_arr[i]:
+                    if mask & (1 << ord(char) - ord('a')) != 0:
+                        is_duplicate = True
+                        break
+
+                if is_duplicate:
+                    continue
+
+                next_mask = mask
+                for char in unique_arr[i]:
+                    next_mask |= (1 << ord(char) - ord('a'))
                 
-                for char in unique_arr[i]:
-                    used_chars.add(char)
+                max_len = max(max_len, len(unique_arr[i]) + dp(next_mask, i + 1))
 
-                backtrack(i + 1, cur_len + len(unique_arr[i]))
-
-                for char in unique_arr[i]:
-                    used_chars.remove(char)
-        
-        backtrack(0, 0)
-        return max_length
+            return max_len
+                
+        return dp(0, 0)
 
 
 
