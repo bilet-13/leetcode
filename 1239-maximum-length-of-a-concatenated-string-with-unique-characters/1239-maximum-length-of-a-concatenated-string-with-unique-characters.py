@@ -13,6 +13,15 @@ class Solution:
 
             unique_arr.append(s) 
 
+        str_mask = []
+        for s in unique_arr:
+            mask = 0
+            for char in s:
+                mask |= (1 << ord(char) - ord('a'))
+
+            str_mask.append(mask)
+
+
         used_chars = set()
         max_length = 0
         n = len(unique_arr)
@@ -25,21 +34,11 @@ class Solution:
             max_len = 0
 
             for i in range(start_idx, n):
-                is_duplicate = False
 
-                for char in unique_arr[i]:
-                    if mask & (1 << ord(char) - ord('a')) != 0:
-                        is_duplicate = True
-                        break
-
-                if is_duplicate:
+                if mask & str_mask[i] != 0:
                     continue
-
-                next_mask = mask
-                for char in unique_arr[i]:
-                    next_mask |= (1 << ord(char) - ord('a'))
                 
-                max_len = max(max_len, len(unique_arr[i]) + dp(next_mask, i + 1))
+                max_len = max(max_len, len(unique_arr[i]) + dp(mask | str_mask[i], i + 1))
 
             return max_len
                 
