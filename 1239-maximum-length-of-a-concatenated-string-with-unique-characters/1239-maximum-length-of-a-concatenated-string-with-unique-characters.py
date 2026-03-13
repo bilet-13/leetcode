@@ -26,7 +26,7 @@ class Solution:
                 return
 
             for i in range(start_idx, n):
-                if any(char in used_chars for char in unique_arr[i]):
+                if set(unique_arr[i]) & used_chars:
                     continue # invalid string
                 
                 for char in unique_arr[i]:
