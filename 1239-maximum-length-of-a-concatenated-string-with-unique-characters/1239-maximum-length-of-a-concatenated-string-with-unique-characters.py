@@ -32,7 +32,7 @@ class Solution:
                 for char in unique_arr[i]:
                     used_chars.add(char)
 
-                backtrack(start_idx + 1, cur_len + len(unique_arr[i]))
+                backtrack(i + 1, cur_len + len(unique_arr[i]))
 
                 for char in unique_arr[i]:
                     used_chars.remove(char)
