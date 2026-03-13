@@ -8,7 +8,7 @@ class Solution:
         unique_arr = []
 
         for s in arr:
-            if any(freq > 1 for _, freq in Counter(s).items()):
+            if len(s) != len(set(s)):
                 continue
 
             unique_arr.append(s) 
