@@ -15,6 +15,8 @@ class Solution:
 
         def backtrack(cookie_idx):
             nonlocal mini_unfairness
+            if max(children_to_cookies) >= mini_unfairness:
+                return
 
             if cookie_idx == n:
                 mini_unfairness = min(mini_unfairness, max(children_to_cookies))
