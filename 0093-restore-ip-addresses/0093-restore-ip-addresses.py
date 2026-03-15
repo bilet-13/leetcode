@@ -35,7 +35,7 @@ class Solution:
                     cur_arr.pop()
                 return
             
-            for i in range(cur_idx + 1, n + 1):
+            for i in range(cur_idx + 1, cur_idx + 4):
                 part = s[cur_idx: i]
 
                 if is_valid_IP(part):
