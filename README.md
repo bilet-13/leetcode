@@ -79,6 +79,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 | [1879-minimum-xor-sum-of-two-arrays](https://github.com/bilet-13/leetcode/tree/main/1879-minimum-xor-sum-of-two-arrays/) | Hard |
 | [2305-fair-distribution-of-cookies](https://github.com/bilet-13/leetcode/tree/main/2305-fair-distribution-of-cookies/) | Medium |
+| [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -192,6 +193,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0290-word-pattern](https://github.com/bilet-13/leetcode/tree/master/0290-word-pattern) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0433-minimum-genetic-mutation](https://github.com/bilet-13/leetcode/tree/master/0433-minimum-genetic-mutation) |
+| [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
 ## Graph
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -236,6 +238,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0433-minimum-genetic-mutation](https://github.com/bilet-13/leetcode/tree/master/0433-minimum-genetic-mutation) |
 | [1239-maximum-length-of-a-concatenated-string-with-unique-characters](https://github.com/bilet-13/leetcode/tree/main/1239-maximum-length-of-a-concatenated-string-with-unique-characters/) | Medium |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
+| [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
 ## Shortest Path
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -303,6 +306,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0208-implement-trie-prefix-tree](https://github.com/bilet-13/leetcode/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/bilet-13/leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/bilet-13/leetcode/tree/master/0212-word-search-ii) |
+| [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -450,6 +454,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 | [1879-minimum-xor-sum-of-two-arrays](https://github.com/bilet-13/leetcode/tree/main/1879-minimum-xor-sum-of-two-arrays/) | Hard |
 | [2305-fair-distribution-of-cookies](https://github.com/bilet-13/leetcode/tree/main/2305-fair-distribution-of-cookies/) | Medium |
+| [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
