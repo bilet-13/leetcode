@@ -19,28 +19,6 @@ class Trie:
         
         node.end_of_word = True
 
-    def startWith(self, sub_str):
-        node = self.root
-
-        for char in sub_str:
-            if char not in node.children:
-                return False
-            
-            node = node.children[char]
-        
-        return True
-    
-    def has_word(self, word):
-        node = self.root
-
-        for char in word:
-            if char not in node.children:
-                return False
-
-            node = node.children[char]
-        
-        return node.end_of_word
-
 
 class Solution:
     def minExtraChar(self, s: str, dictionary: List[str]) -> int:
