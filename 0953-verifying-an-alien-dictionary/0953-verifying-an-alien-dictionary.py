@@ -1,29 +1,41 @@
 class Solution:
     def isAlienSorted(self, words: List[str], order: str) -> bool:
-        # idea for each element, 
-        #    compare it to the next eleemnt if all comparsion is true return true
-        # else return false
-        # use hash map: key : the char value: idx of the char in the order
-        # time complexity O(n * length of word) n: len of words list
-
-        order_map = {}
+        # just follow problem
+        # time complexity o(len(words) * maximum word length + len(order))
+        order_int = {}
         for i in range(len(order)):
-            order_map[order[i]] = i
+            order_int[order[i]] = i 
 
-        for i in range(0, len(words) - 1):
-            word_a = words[i]
-            word_b = words[i + 1]
-            valid_pair = False
+        prev = words[0]
+        for i in range(1, len(words)):
+            word = words[i]
 
-            for j in range(min(len(word_a), len(word_b))):
-                if order_map[word_a[j]] > order_map[word_b[j]]:
-                    return False
-                elif order_map[word_a[j]] < order_map[word_b[j]]:
-                    valid_pair = True
+            is_correct_order = True
+            all_same = True
+            for j in range(min(len(word), len(prev))):
+                if order_int[word[j]] < order_int[prev[j]]:
+                    all_same = False
+                    is_correct_order = False
                     break
-                    
+                
+                elif order_int[word[j]] > order_int[prev[j]]:
+                    all_same = False
+                    is_correct_order = True
+                    break
 
-            if not valid_pair and len(word_a) > len(word_b):
+            if all_same and len(word) < len(prev):
+                is_correct_order = False
+
+            if not is_correct_order:
                 return False
-        
+
+            prev = word
+
         return True
+
+
+
+
+
+        
+        
