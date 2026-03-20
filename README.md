@@ -75,6 +75,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 | [0953-verifying-an-alien-dictionary](https://github.com/bilet-13/leetcode/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
+| [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 | [1239-maximum-length-of-a-concatenated-string-with-unique-characters](https://github.com/bilet-13/leetcode/tree/main/1239-maximum-length-of-a-concatenated-string-with-unique-characters/) | Medium |
 | [1434-number-of-ways-to-wear-different-hats-to-each-other](https://github.com/bilet-13/leetcode/tree/main/1434-number-of-ways-to-wear-different-hats-to-each-other/) | Hard |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
@@ -199,6 +200,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0433-minimum-genetic-mutation](https://github.com/bilet-13/leetcode/tree/master/0433-minimum-genetic-mutation) |
 | [0953-verifying-an-alien-dictionary](https://github.com/bilet-13/leetcode/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
+| [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 | [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
 ## Graph
 | Problem Name | Difficulty |
@@ -587,4 +589,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1434-number-of-ways-to-wear-different-hats-to-each-other](https://github.com/bilet-13/leetcode/tree/main/1434-number-of-ways-to-wear-different-hats-to-each-other/) | Hard |
 | [1879-minimum-xor-sum-of-two-arrays](https://github.com/bilet-13/leetcode/tree/main/1879-minimum-xor-sum-of-two-arrays/) | Hard |
 | [2305-fair-distribution-of-cookies](https://github.com/bilet-13/leetcode/tree/main/2305-fair-distribution-of-cookies/) | Medium |
+## Graph Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 <!---LeetCode Topics End-->
