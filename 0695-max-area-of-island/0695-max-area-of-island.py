@@ -1,18 +1,19 @@
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-         # and update the max area variable
-        maxArea = 0 
+          # use dfs to find areas of each island and update the global var max_area
+        # time complexity o(n * m) n = len(grid) m= len(grid[0])
+        max_area = 0
         n = len(grid)
         m = len(grid[0])
 
-        def BFS(r, c):
+        def get_area(start_x, start_y):
+            # dfs
             area = 0
-            queue = deque([(r, c)])
-            grid[r][c] = 2
+            stack = [(start_x, start_y)]
+            grid[start_x][start_y] = 0
 
-            while queue:
-                x, y = queue.popleft()
-
+            while stack:
+                x, y = stack.pop()
                 area += 1
 
                 for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
@@ -20,15 +21,16 @@ class Solution:
                     ny = y + dy
 
                     if n > nx >= 0 and m > ny >= 0 and grid[nx][ny] == 1:
-                        grid[nx][ny] = 2
-                        queue.append((nx, ny))
+                        grid[nx][ny] = 0
+                        stack.append((nx, ny))
+            
             return area
 
-        for i in range(n):
-            for j in range(m):
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
                 if grid[i][j] == 1:
-                    maxArea = max(maxArea, BFS(i, j))
+                    max_area = max(max_area, get_area(i, j))
 
-        return maxArea
+        return max_area
         
         
