@@ -14,26 +14,20 @@ class Solution:
         if not node:
             return None
 
-        labels_to_nodes = {}
+        labels_to_new_nodes = {node.val: Node(val=node.val)}
         stack = [node]
-        visited = set([node.val])
 
         while stack:
             n = stack.pop()
 
-            if n.val not in labels_to_nodes:
-                labels_to_nodes[n.val] = Node(val=n.val)
-
             for nbr in n.neighbors:
-                if nbr.val not in labels_to_nodes:
-                    labels_to_nodes[nbr.val] = Node(val=nbr.val)
-                labels_to_nodes[n.val].neighbors.append(labels_to_nodes[nbr.val])
-                
-                if nbr.val not in visited:
+                if nbr.val not in labels_to_new_nodes:
+                    labels_to_new_nodes[nbr.val] = Node(val=nbr.val)
                     stack.append(nbr)
-                    visited.add(nbr.val)
+                
+                labels_to_new_nodes[n.val].neighbors.append(labels_to_new_nodes[nbr.val])
 
-        return labels_to_nodes[1]
+        return labels_to_new_nodes[1]
 
         
         
