@@ -1,5 +1,7 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
+      class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
         # dfs: start from 1 cell and mark the land cell to water
         # use a global var to store the number of islands
 
