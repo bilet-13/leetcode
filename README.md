@@ -597,6 +597,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0133-clone-graph](https://github.com/bilet-13/leetcode/tree/main/0133-clone-graph/) | Medium |
+| [0207-course-schedule](https://github.com/bilet-13/leetcode/tree/main/0207-course-schedule/) | Medium |
 | [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 ## Union-Find
 | Problem Name | Difficulty |
