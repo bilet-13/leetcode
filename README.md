@@ -125,6 +125,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0463-island-perimeter](https://github.com/bilet-13/leetcode/tree/main/0463-island-perimeter/) | Easy |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
+| [1462-course-schedule-iv](https://github.com/bilet-13/leetcode/tree/main/1462-course-schedule-iv/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -147,6 +148,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
+| [1462-course-schedule-iv](https://github.com/bilet-13/leetcode/tree/main/1462-course-schedule-iv/) | Medium |
 ## Union Find
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -263,6 +265,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0207-course-schedule](https://github.com/bilet-13/leetcode/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/bilet-13/leetcode/tree/main/0210-course-schedule-ii/) | Medium |
+| [1462-course-schedule-iv](https://github.com/bilet-13/leetcode/tree/main/1462-course-schedule-iv/) | Medium |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -603,6 +606,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0207-course-schedule](https://github.com/bilet-13/leetcode/tree/main/0207-course-schedule/) | Medium |
 | [0210-course-schedule-ii](https://github.com/bilet-13/leetcode/tree/main/0210-course-schedule-ii/) | Medium |
 | [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
+| [1462-course-schedule-iv](https://github.com/bilet-13/leetcode/tree/main/1462-course-schedule-iv/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
