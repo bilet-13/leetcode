@@ -17,7 +17,7 @@ class LRUCache:
         return self.map[key]
 
     def put(self, key: int, value: int) -> None:
-        if len(self.map) == self.capacity:
+        if key not in self.map and len(self.map) == self.capacity:
             self.map.popitem()
         
         self.map[key] = value
