@@ -13,6 +13,7 @@ class Solution:
         counter = Counter(s)
         max_heap = [(-count, char) for char, count in counter.items()]
         heapq.heapify(max_heap)
+
         result = []
         prev = None
 
@@ -24,10 +25,7 @@ class Solution:
             if prev != None:
                 heapq.heappush(max_heap, prev)
             
-            if neg_c < 0:
-                prev = (neg_c, char)
-            else:
-                prev = None
+            prev = (neg_c, char) if neg_c < 0 else None
         
         return "".join(result) if len(result) == len(s) else ""
           
