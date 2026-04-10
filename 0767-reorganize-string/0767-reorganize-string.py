@@ -1,28 +1,34 @@
 class Solution:
     def reorganizeString(self, s: str) -> str:
-          
-        freqs = Counter(s)
-        max_heap = [(-freq, char) for char, freq in freqs.items()]
-        heapq.heapify(max_heap)
+        # greedy. with max heap
+        # use a max heap to store the character and number of the char
+        # and a var prev taht store the prev char and count 
+        # init with None and a result init with empty string
+        # each time while heap not empty
+        #   pop element and append it to result 
+        #   push prev into heap
+        #   assign prev to the cur pop elemtn and count
+        #return result if len(result) == len(s) else ""
 
+        counter = Counter(s)
+        max_heap = [(-count, char) for char, count in counter.items()]
+        heapq.heapify(max_heap)
         result = []
-        n = len(s)
-        
         prev = None
-        prev_negative_count = 0
 
         while max_heap:
-            negative_freq, char = heapq.heappop(max_heap)
+            neg_c, char = heapq.heappop(max_heap) 
             result.append(char)
+            neg_c += 1
 
-            if prev_negative_count < 0:
-                heapq.heappush(max_heap, (prev_negative_count, prev))
-
-            prev = char
-            prev_negative_count = negative_freq + 1
-
-        if len(result) < n:
-            return ""
-
-        return "".join(result)
+            if prev != None:
+                heapq.heappush(max_heap, prev)
             
+            if neg_c < 0:
+                prev = (neg_c, char)
+            else:
+                prev = None
+        
+        return "".join(result) if len(result) == len(s) else ""
+          
+      
