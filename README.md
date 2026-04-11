@@ -84,6 +84,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1879-minimum-xor-sum-of-two-arrays](https://github.com/bilet-13/leetcode/tree/main/1879-minimum-xor-sum-of-two-arrays/) | Hard |
 | [2305-fair-distribution-of-cookies](https://github.com/bilet-13/leetcode/tree/main/2305-fair-distribution-of-cookies/) | Medium |
 | [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
+| [3434-maximum-frequency-after-subarray-operation](https://github.com/bilet-13/leetcode/tree/main/3434-maximum-frequency-after-subarray-operation/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -211,6 +212,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0953-verifying-an-alien-dictionary](https://github.com/bilet-13/leetcode/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 | [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
+| [3434-maximum-frequency-after-subarray-operation](https://github.com/bilet-13/leetcode/tree/main/3434-maximum-frequency-after-subarray-operation/) | Medium |
 ## Graph
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -478,6 +480,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1879-minimum-xor-sum-of-two-arrays](https://github.com/bilet-13/leetcode/tree/main/1879-minimum-xor-sum-of-two-arrays/) | Hard |
 | [2305-fair-distribution-of-cookies](https://github.com/bilet-13/leetcode/tree/main/2305-fair-distribution-of-cookies/) | Medium |
 | [2707-extra-characters-in-a-string](https://github.com/bilet-13/leetcode/tree/main/2707-extra-characters-in-a-string/) | Medium |
+| [3434-maximum-frequency-after-subarray-operation](https://github.com/bilet-13/leetcode/tree/main/3434-maximum-frequency-after-subarray-operation/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -491,6 +494,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
+| [3434-maximum-frequency-after-subarray-operation](https://github.com/bilet-13/leetcode/tree/main/3434-maximum-frequency-after-subarray-operation/) | Medium |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -520,6 +524,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/bilet-13/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [0238-product-of-array-except-self](https://github.com/bilet-13/leetcode/tree/master/0238-product-of-array-except-self) |
+| [3434-maximum-frequency-after-subarray-operation](https://github.com/bilet-13/leetcode/tree/main/3434-maximum-frequency-after-subarray-operation/) | Medium |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -597,6 +602,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
+| [3434-maximum-frequency-after-subarray-operation](https://github.com/bilet-13/leetcode/tree/main/3434-maximum-frequency-after-subarray-operation/) | Medium |
 ## Bitmask
 | Problem Name | Difficulty |
 | ------- | ------- |
