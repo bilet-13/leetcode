@@ -6,10 +6,7 @@ class Solution:
         # time complexity o(len(piles) * log(max(piles)))
 
         def can_eat(k):
-            time = 0
-            for p in piles:
-                time += math.ceil(p / k)
-            
+            time = sum(math.ceil(p / k) for p in piles)
             return time <= h
 
         left = 1
