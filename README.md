@@ -73,6 +73,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/bilet-13/leetcode/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
+| [0875-koko-eating-bananas](https://github.com/bilet-13/leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 | [0953-verifying-an-alien-dictionary](https://github.com/bilet-13/leetcode/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
@@ -284,6 +285,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0209-minimum-size-subarray-sum](https://github.com/bilet-13/leetcode/tree/master/0209-minimum-size-subarray-sum) |
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
 | [0300-longest-increasing-subsequence](https://github.com/bilet-13/leetcode/tree/master/0300-longest-increasing-subsequence) |
+| [0875-koko-eating-bananas](https://github.com/bilet-13/leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
