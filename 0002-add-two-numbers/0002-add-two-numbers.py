@@ -12,18 +12,18 @@ class Solution:
         carry = 0
 
         while l1 or l2 or carry != 0:
-            val = l1.val if l1 else 0
+            val = carry
+            val += l1.val if l1 else 0
             val += l2.val if l2 else 0
-            val += carry
             
             digit = val % 10
+            carry = val // 10
+
             node.next = ListNode(val=digit)
+            node = node.next
 
             l1 = l1.next if l1 else l1
             l2 = l2.next if l2 else l2
-            node = node.next
-            carry = val // 10
-        
         
         return dummy.next
 
