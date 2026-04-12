@@ -8,28 +8,43 @@ class Solution:
 
         # time complexity o(V* len(nums))
 
-        counter = Counter(nums)
-        result = 0
-        k_num = counter[k] if k in counter else 0
+        num_indices = defaultdict(list)
+        n = len(nums)
+        k_prefix = [0 for _ in range(n + 1)]
 
-        for num, count in counter.items():
-          
-            cur = 0
-            max_profit = 0
-            for i in range(len(nums)):
-                cur = max(cur, 0)
+        for i in range(n):
+            num_indices[nums[i]].append(i)
+            if nums[i] == k:
+                k_prefix[i + 1] = k_prefix[i] + 1
+            else:
+                k_prefix[i + 1] = k_prefix[i] 
 
-                if nums[i] == k:
-                    cur -= 1
-                elif nums[i] == num:
-                    cur += 1
+        max_profit = 0
+        for num, indices in num_indices.items():
+            if num == k:
+                continue
+            profit = 1
+            cur = 1
+            prev = indices[0]
 
-                max_profit = max(cur, max_profit)
+            for i in range(1, len(indices)):
+                cur -= k_prefix[indices[i]] - k_prefix[prev] 
+                cur = max(0, cur)
 
-            result = max(result, max_profit + k_num) 
+                cur += 1 
 
-        return result
+                profit = max(profit, cur)
+                prev = indices[i] 
 
-                    
+            max_profit = max(max_profit, profit)
+        
+        return len(num_indices[k]) + max_profit
+
+            
 
 
+
+
+
+
+        
