@@ -1,8 +1,9 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         # brute force
-        # start with a char extend to left and right and find the max possible palindromic string
+        # start with a char extend to left and right and find the max possible palindromic string # chedck plidromic that len is odd
         # start with a pair of char and extend left and right max possible string
+        #   check pali string whose len
         # time complexity o(2 * n * n) = o(n ^ 2)
 
         result = ""
