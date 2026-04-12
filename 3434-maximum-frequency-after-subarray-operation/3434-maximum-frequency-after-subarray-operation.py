@@ -10,14 +10,11 @@ class Solution:
 
         num_indices = defaultdict(list)
         n = len(nums)
-        k_prefix = [0 for _ in range(n + 1)]
+        k_count_so_far = [0 for _ in range(n + 1)]
 
         for i in range(n):
             num_indices[nums[i]].append(i)
-            if nums[i] == k:
-                k_prefix[i + 1] = k_prefix[i] + 1
-            else:
-                k_prefix[i + 1] = k_prefix[i] 
+            k_count_so_far[i + 1] = k_count_so_far[i] + (1 if nums[i] == k else 0)
 
         max_profit = 0
         for num, indices in num_indices.items():
@@ -28,7 +25,7 @@ class Solution:
             prev = indices[0]
 
             for i in range(1, len(indices)):
-                cur -= k_prefix[indices[i]] - k_prefix[prev] 
+                cur -= k_count_so_far[indices[i]] - k_count_so_far[prev] 
                 cur = max(0, cur)
 
                 cur += 1 
