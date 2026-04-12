@@ -35,7 +35,7 @@ class Solution:
 
             max_profit = max(max_profit, profit)
         
-        return len(num_indices[k]) + max_profit
+        return k_count_so_far[n] + max_profit
 
             
 
