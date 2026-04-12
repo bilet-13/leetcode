@@ -8,11 +8,7 @@ class Solution:
         def can_eat(k):
             time = 0
             for p in piles:
-                while p > 0:
-                    p -= k
-                    time += 1
-                    if time > h:
-                        return False
+                time += math.ceil(p / k)
             
             return time <= h
 
