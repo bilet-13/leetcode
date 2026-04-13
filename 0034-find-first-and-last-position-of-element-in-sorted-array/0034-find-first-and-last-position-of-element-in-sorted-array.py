@@ -8,33 +8,26 @@ class Solution:
         if not nums:
             return [-1, -1]
         
-        left = 0
-        right = len(nums) - 1
+        def search(condiction, return_left=True):
+            left = 0
+            right = len(nums) - 1
+            while left <= right:
+                mid = (left + right) // 2
+    
+                if condiction(nums[mid]):
+                    right = mid - 1
+                else:
+                    left = mid + 1
+            
+            return left if return_left else right
 
-        while left <= right:
-            mid = (left + right) // 2
-
-            if nums[mid] >= target:
-                right = mid - 1
-            else:
-                left = mid + 1
-
+        left = search(lambda x: x >= target)
         if left >= len(nums) or nums[left] != target:
             return [-1, -1]
 
         result = [left]
 
-        left = 0
-        right = len(nums) - 1
-
-        while left <= right:
-            mid = (left + right) // 2
-
-            if nums[mid] > target:
-                right = mid - 1
-            else:
-                left = mid + 1
-        
+        right = search(lambda x: x > target, False)
         result.append(right)
 
         return result
