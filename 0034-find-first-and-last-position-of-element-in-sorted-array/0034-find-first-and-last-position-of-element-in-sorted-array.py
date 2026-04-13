@@ -1,12 +1,12 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
+        # need to consider target not exist or the nums is empty arr
         # do binary search twice                               V  
         # first binary search condiciton : num >= target x x x o o o 
 
        # do binary search twice                               V  
         # second binary search condiciton : num > target, x x x o o o 
-        if not nums:
-            return [-1, -1]
+      
         
         def search(condiction, return_left=True):
             left = 0
