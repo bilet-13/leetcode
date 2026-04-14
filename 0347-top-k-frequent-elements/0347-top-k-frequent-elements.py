@@ -1,9 +1,12 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        # heap 
+        # use hash map to store the number of the elememnts
+        # time complexity o(n + klogn)
         counter = Counter(nums)
-        min_heap = []
-        for num, freq in counter.items():
-            heapq.heappush(min_heap, (freq, num))
+        pq = [(count, num) for num, count in counter.items()]
+        heapq.heapify(pq)
 
-        return [num for _, num in heapq.nlargest(k, min_heap)]
-        
+        return [num for _, num in heapq.nlargest(k, pq)]
+
+      
