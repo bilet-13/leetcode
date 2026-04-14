@@ -64,6 +64,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0289-game-of-life](https://github.com/bilet-13/leetcode/tree/master/0289-game-of-life) |
 | [0300-longest-increasing-subsequence](https://github.com/bilet-13/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/bilet-13/leetcode/tree/master/0322-coin-change) |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0399-evaluate-division](https://github.com/bilet-13/leetcode/tree/master/0399-evaluate-division) |
 | [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/bilet-13/leetcode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
@@ -207,6 +208,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0219-contains-duplicate-ii](https://github.com/bilet-13/leetcode/tree/main/0219-contains-duplicate-ii/) | Easy |
 | [0242-valid-anagram](https://github.com/bilet-13/leetcode/tree/master/0242-valid-anagram) |
 | [0290-word-pattern](https://github.com/bilet-13/leetcode/tree/master/0290-word-pattern) |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0433-minimum-genetic-mutation](https://github.com/bilet-13/leetcode/tree/master/0433-minimum-genetic-mutation) |
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
@@ -383,6 +385,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0190-reverse-bits](https://github.com/bilet-13/leetcode/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/bilet-13/leetcode/tree/master/0191-number-of-1-bits) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 ## Linked List
@@ -414,6 +417,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0242-valid-anagram](https://github.com/bilet-13/leetcode/tree/master/0242-valid-anagram) |
 | [0274-h-index](https://github.com/bilet-13/leetcode/tree/master/0274-h-index) |
 | [0295-find-median-from-data-stream](https://github.com/bilet-13/leetcode/tree/master/0295-find-median-from-data-stream) |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/bilet-13/leetcode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
@@ -423,6 +427,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0169-majority-element](https://github.com/bilet-13/leetcode/tree/master/0169-majority-element) |
 | [0274-h-index](https://github.com/bilet-13/leetcode/tree/master/0274-h-index) |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
@@ -510,6 +515,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0023-merge-k-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0023-merge-k-sorted-lists) |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0295-find-median-from-data-stream](https://github.com/bilet-13/leetcode/tree/master/0295-find-median-from-data-stream) |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
@@ -517,6 +523,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/bilet-13/leetcode/tree/master/0215-kth-largest-element-in-an-array) |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Randomized
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -627,4 +634,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
+## Bucket Sort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 <!---LeetCode Topics End-->
