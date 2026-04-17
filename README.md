@@ -83,6 +83,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 | [1239-maximum-length-of-a-concatenated-string-with-unique-characters](https://github.com/bilet-13/leetcode/tree/main/1239-maximum-length-of-a-concatenated-string-with-unique-characters/) | Medium |
 | [1434-number-of-ways-to-wear-different-hats-to-each-other](https://github.com/bilet-13/leetcode/tree/main/1434-number-of-ways-to-wear-different-hats-to-each-other/) | Hard |
+| [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 | [1879-minimum-xor-sum-of-two-arrays](https://github.com/bilet-13/leetcode/tree/main/1879-minimum-xor-sum-of-two-arrays/) | Hard |
@@ -132,6 +133,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [1462-course-schedule-iv](https://github.com/bilet-13/leetcode/tree/main/1462-course-schedule-iv/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -155,6 +157,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 | [1462-course-schedule-iv](https://github.com/bilet-13/leetcode/tree/main/1462-course-schedule-iv/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Union Find
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -181,6 +184,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
+| [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -293,6 +297,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0222-count-complete-tree-nodes](https://github.com/bilet-13/leetcode/tree/master/0222-count-complete-tree-nodes) |
 | [0300-longest-increasing-subsequence](https://github.com/bilet-13/leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0875-koko-eating-bananas](https://github.com/bilet-13/leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -524,6 +529,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
 ## Quickselect
 | Problem Name | Difficulty |
@@ -642,6 +648,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Bucket Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
