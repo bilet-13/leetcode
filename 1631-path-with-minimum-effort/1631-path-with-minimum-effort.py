@@ -1,28 +1,24 @@
 class Solution:
     def minimumEffortPath(self, heights: List[List[int]]) -> int:
-          # no negative edge, dijkstra
+        min_cost = {(i, j): float("inf")  for i in range(len(heights)) for j in range(len(heights[0]))}
+        min_heap = [(0, 0, 0)]
+        min_cost[(0, 0)] = 0
         n = len(heights)
         m = len(heights[0])
-        dist = [[float("inf") for _ in range(m)] for _ in range(n)]
-        dist[0][0] = 0
 
-        pq = [(dist[0][0], 0, 0)]
-
-        while pq:
-            effort, cur_x, cur_y = heapq.heappop(pq)
-            if effort > dist[cur_x][cur_y]:
-                continue
-
-            if cur_x == n - 1 and cur_y == m - 1:
+        while min_heap:
+            effort, x, y = heapq.heappop(min_heap)
+            
+            if x ==  n - 1 and y == m - 1:
                 return effort
+            
+            for dx, dy in [(0, 1), (0, -1), (-1, 0), (1, 0)]:
+                nx = x + dx
+                ny = y + dy
 
-            for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
-                nx = cur_x + dx
-                ny = cur_y + dy
-                if n > nx >= 0 and m > ny >= 0:
-                    nbr_cost = max(effort, abs(heights[nx][ny] - heights[cur_x][cur_y]))
-                    if dist[nx][ny] > nbr_cost:
-                        dist[nx][ny] = nbr_cost
-                        heapq.heappush(pq, (nbr_cost, nx, ny))
-        return 0
+                if n > nx >= 0 and m > ny >= 0 and max(effort, abs(heights[x][y] - heights[nx][ny])) < min_cost[(nx, ny)]:
+                    new_effort = max(effort, abs(heights[x][y] - heights[nx][ny]))
+                    heapq.heappush(min_heap, (new_effort, nx, ny))
+                    min_cost[(nx, ny)] = new_effort
+        return min_cost[(n - 1, m - 1)]
         
