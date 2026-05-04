@@ -83,6 +83,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 | [1239-maximum-length-of-a-concatenated-string-with-unique-characters](https://github.com/bilet-13/leetcode/tree/main/1239-maximum-length-of-a-concatenated-string-with-unique-characters/) | Medium |
 | [1434-number-of-ways-to-wear-different-hats-to-each-other](https://github.com/bilet-13/leetcode/tree/main/1434-number-of-ways-to-wear-different-hats-to-each-other/) | Hard |
+| [1584-min-cost-to-connect-all-points](https://github.com/bilet-13/leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
 | [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
@@ -642,15 +643,21 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0210-course-schedule-ii](https://github.com/bilet-13/leetcode/tree/main/0210-course-schedule-ii/) | Medium |
 | [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
 | [1462-course-schedule-iv](https://github.com/bilet-13/leetcode/tree/main/1462-course-schedule-iv/) | Medium |
+| [1584-min-cost-to-connect-all-points](https://github.com/bilet-13/leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0130-surrounded-regions](https://github.com/bilet-13/leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/bilet-13/leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
+| [1584-min-cost-to-connect-all-points](https://github.com/bilet-13/leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
 | [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Bucket Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+## Minimum Spanning Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/bilet-13/leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
 <!---LeetCode Topics End-->
