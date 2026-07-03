@@ -7,25 +7,25 @@ class Solution:
         # return false if count <= 0 before - 1
         # in the end return true
         #o (n)
-
+        five = 0
+        ten = 0
         count = defaultdict(int)
         for bill in bills:
             if bill == 5:
-                count[bill] += 1
+                five += 1
             elif bill == 10:
-                if count[5] <= 0:
+                if five <= 0:
                     return False
-                count[5] -= 1
-                count[bill] += 1
+                five -= 1
+                ten += 1
             else:
-                if (count[5] < 3 and count[10] <= 0) or count[5] <= 0:
-                    return False
-                if count[10] > 0:
-                    count[5] -= 1
-                    count[10] -= 1
+                if five > 0 and ten > 0:
+                    five -= 1
+                    ten -= 1
+                elif five >= 3:
+                    five -= 3
                 else:
-                    count[5] -= 3
-                count[bill] += 1
+                    return False
         
         return True
 
