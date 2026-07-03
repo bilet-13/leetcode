@@ -76,6 +76,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0695-max-area-of-island](https://github.com/bilet-13/leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/bilet-13/leetcode/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
+| [0860-lemonade-change](https://github.com/bilet-13/leetcode/tree/main/0860-lemonade-change/) | Easy |
 | [0875-koko-eating-bananas](https://github.com/bilet-13/leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 | [0953-verifying-an-alien-dictionary](https://github.com/bilet-13/leetcode/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
@@ -511,6 +512,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/bilet-13/leetcode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
+| [0860-lemonade-change](https://github.com/bilet-13/leetcode/tree/main/0860-lemonade-change/) | Easy |
 | [1700-minimum-time-to-make-rope-colorful](https://github.com/bilet-13/leetcode/tree/master/1700-minimum-time-to-make-rope-colorful) |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
 | [3434-maximum-frequency-after-subarray-operation](https://github.com/bilet-13/leetcode/tree/main/3434-maximum-frequency-after-subarray-operation/) | Medium |
