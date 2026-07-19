@@ -10,14 +10,10 @@ class Solution:
         found_max = -float("inf")
 
         for num in nums:
-            if cur_max < 0:
-                cur_max = 0
-            cur_max += num
+            cur_max = max(0, cur_max) + num
             found_max = max(found_max, cur_max)
 
-            if cur_min > 0:
-                cur_min = 0
-            cur_min += num
+            cur_min = min(cur_min, 0) + num
             found_min = min(found_min, cur_min)
         
         if found_max < 0:
