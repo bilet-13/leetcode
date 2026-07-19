@@ -1,6 +1,7 @@
 class Solution:
     def maxSubarraySumCircular(self, nums: List[int]) -> int:
         #brute force n ^ 2
+        # kandane's algo
         total = sum(nums)
         cur_min = 0
         found_min = float("inf")
@@ -18,5 +19,8 @@ class Solution:
                 cur_min = 0
             cur_min += num
             found_min = min(found_min, cur_min)
+        
+        if found_max < 0:
+            return found_max
 
-        return found_max if found_max > (total - found_min) or found_max < 0 else total - found_min
+        return found_max if found_max > (total - found_min) else total - found_min
