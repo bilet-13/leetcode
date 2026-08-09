@@ -78,6 +78,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 | [0860-lemonade-change](https://github.com/bilet-13/leetcode/tree/main/0860-lemonade-change/) | Easy |
 | [0875-koko-eating-bananas](https://github.com/bilet-13/leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
+| [0877-stone-game](https://github.com/bilet-13/leetcode/tree/main/0877-stone-game/) | Medium |
 | [0918-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [0945-snakes-and-ladders](https://github.com/bilet-13/leetcode/tree/master/0945-snakes-and-ladders) |
 | [0953-verifying-an-alien-dictionary](https://github.com/bilet-13/leetcode/tree/main/0953-verifying-an-alien-dictionary/) | Easy |
@@ -369,6 +370,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0227-basic-calculator-ii](https://github.com/bilet-13/leetcode/tree/master/0227-basic-calculator-ii) |
 | [0279-perfect-squares](https://github.com/bilet-13/leetcode/tree/master/0279-perfect-squares) |
 | [0380-insert-delete-getrandom-o1](https://github.com/bilet-13/leetcode/tree/master/0380-insert-delete-getrandom-o1) |
+| [0877-stone-game](https://github.com/bilet-13/leetcode/tree/main/0877-stone-game/) | Medium |
 | [1863-sum-of-all-subset-xor-totals](https://github.com/bilet-13/leetcode/tree/main/1863-sum-of-all-subset-xor-totals/) | Easy |
 ## Bit Manipulation
 | Problem Name | Difficulty |
@@ -498,6 +500,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0392-is-subsequence](https://github.com/bilet-13/leetcode/tree/master/0392-is-subsequence) |
 | [0526-beautiful-arrangement](https://github.com/bilet-13/leetcode/tree/main/0526-beautiful-arrangement/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/bilet-13/leetcode/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
+| [0877-stone-game](https://github.com/bilet-13/leetcode/tree/main/0877-stone-game/) | Medium |
 | [0918-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 | [0978-longest-turbulent-subarray](https://github.com/bilet-13/leetcode/tree/main/0978-longest-turbulent-subarray/) | Medium |
@@ -672,4 +675,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1584-min-cost-to-connect-all-points](https://github.com/bilet-13/leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
+## Minimax
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0877-stone-game](https://github.com/bilet-13/leetcode/tree/main/0877-stone-game/) | Medium |
+## Game Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0877-stone-game](https://github.com/bilet-13/leetcode/tree/main/0877-stone-game/) | Medium |
+## Zero-Sum Game
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0877-stone-game](https://github.com/bilet-13/leetcode/tree/main/0877-stone-game/) | Medium |
 <!---LeetCode Topics End-->
