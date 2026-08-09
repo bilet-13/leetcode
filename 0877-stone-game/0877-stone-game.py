@@ -7,10 +7,10 @@ class Solution:
         for i in range(n):
             dp[i][i] = piles[i]
 
-        for length in range(2, n + 1):
+        for length in range(1, n):
 
-            for i in range(n - length + 1):
-                j = i + length - 1
+            for i in range(n - length):
+                j = i + length 
 
                 dp[i][j] = max(piles[i] - dp[i + 1][j], piles[j] - dp[i][j - 1])
 
