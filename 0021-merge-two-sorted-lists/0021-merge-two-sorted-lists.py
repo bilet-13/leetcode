@@ -10,7 +10,7 @@ class Solution:
         dummy = ListNode()
         cur = dummy
 
-        while l1 or l2:
+        while l1 and l2:
             if l1 and l2:
                 if l1.val < l2.val:
                     cur.next = l1
@@ -19,13 +19,8 @@ class Solution:
                     cur.next = l2
                     l2 = l2.next
                 cur = cur.next
-                
-            elif l1:
-                cur.next = l1
-                break
-            else:
-                cur.next = l2
-                break
+
+        cur.next = l1 if l1 else l2
             
         return dummy.next
 
