@@ -85,6 +85,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0954-maximum-sum-circular-subarray](https://github.com/bilet-13/leetcode/tree/master/0954-maximum-sum-circular-subarray) |
 | [0978-longest-turbulent-subarray](https://github.com/bilet-13/leetcode/tree/main/0978-longest-turbulent-subarray/) | Medium |
 | [0997-find-the-town-judge](https://github.com/bilet-13/leetcode/tree/main/0997-find-the-town-judge/) | Easy |
+| [1046-last-stone-weight](https://github.com/bilet-13/leetcode/tree/main/1046-last-stone-weight/) | Easy |
 | [1049-last-stone-weight-ii](https://github.com/bilet-13/leetcode/tree/main/1049-last-stone-weight-ii/) | Medium |
 | [1239-maximum-length-of-a-concatenated-string-with-unique-characters](https://github.com/bilet-13/leetcode/tree/main/1239-maximum-length-of-a-concatenated-string-with-unique-characters/) | Medium |
 | [1434-number-of-ways-to-wear-different-hats-to-each-other](https://github.com/bilet-13/leetcode/tree/main/1434-number-of-ways-to-wear-different-hats-to-each-other/) | Hard |
@@ -554,6 +555,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/bilet-13/leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0502-ipo](https://github.com/bilet-13/leetcode/tree/master/0502-ipo) |
 | [0767-reorganize-string](https://github.com/bilet-13/leetcode/tree/main/0767-reorganize-string/) | Medium |
+| [1046-last-stone-weight](https://github.com/bilet-13/leetcode/tree/main/1046-last-stone-weight/) | Easy |
 | [1631-path-with-minimum-effort](https://github.com/bilet-13/leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 | [2379-maximum-total-importance-of-roads](https://github.com/bilet-13/leetcode/tree/master/2379-maximum-total-importance-of-roads) |
 ## Quickselect
