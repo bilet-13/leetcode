@@ -22,11 +22,8 @@ class Solution:
                 larger = larger.next
             node = nxt
         
-        if dummy_less.next:
-            less.next = dummy_larger.next
-            return dummy_less.next
-        else:
-            return dummy_larger.next
+        less.next = dummy_larger.next
+        return dummy_less.next
         
 
         
