@@ -4,27 +4,29 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-      # time complexity o(mlogk) m: the number of all eleemnt in resutl
+    def mergeKLists(self, lists: list[ListNode | None]) -> ListNode | None:
+        # use min heap to store k node from k lists
+        # each time pop one and append to result if the one has next push into heap
+        # use dummy head to handle head and empty list
+        # return dummy.next
 
-        dummy = ListNode()
-        cur = dummy
         min_heap = []
-
-        for i, head in enumerate(lists):
-            if head:
-                heapq.heappush(min_heap, (head.val, i, head))
-
-        while min_heap:
-            val, idx, node = heapq.heappop(min_heap)
-
-            cur.next = node
-            cur = cur.next
-
-            nxt_node = node.next
-            if nxt_node:
-                heapq.heappush(min_heap, (nxt_node.val, idx, nxt_node))
+        for i in range(len(lists)):
+            if lists[i]:
+                heapq.heappush(min_heap, (lists[i].val, i ,lists[i].next))
         
+        dummy = ListNode()
+        node = dummy
+        while min_heap:
+            smallest, idx, nxt = heapq.heappop(min_heap)
+            node.next = ListNode(val=smallest)
+            node = node.next
+
+            if nxt:
+                heapq.heappush(min_heap, (nxt.val, idx , nxt.next))
+
         return dummy.next
+
+
 
         
