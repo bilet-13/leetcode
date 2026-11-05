@@ -441,6 +441,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0142-linked-list-cycle-ii](https://github.com/bilet-13/leetcode/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
 | [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
+| [0206-reverse-linked-list](https://github.com/bilet-13/leetcode/tree/main/0206-reverse-linked-list/) | Easy |
 | [0234-palindrome-linked-list](https://github.com/bilet-13/leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0876-middle-of-the-linked-list](https://github.com/bilet-13/leetcode/tree/main/0876-middle-of-the-linked-list/) | Easy |
 ## Sorting
@@ -556,6 +557,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0021-merge-two-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0025-reverse-nodes-in-k-group](https://github.com/bilet-13/leetcode/tree/master/0025-reverse-nodes-in-k-group) |
 | [0050-powx-n](https://github.com/bilet-13/leetcode/tree/master/0050-powx-n) |
+| [0206-reverse-linked-list](https://github.com/bilet-13/leetcode/tree/main/0206-reverse-linked-list/) | Easy |
 | [0234-palindrome-linked-list](https://github.com/bilet-13/leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
