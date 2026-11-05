@@ -116,6 +116,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0151-reverse-words-in-a-string](https://github.com/bilet-13/leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0189-rotate-array](https://github.com/bilet-13/leetcode/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/bilet-13/leetcode/tree/master/0202-happy-number) |
+| [0234-palindrome-linked-list](https://github.com/bilet-13/leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0295-find-median-from-data-stream](https://github.com/bilet-13/leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0392-is-subsequence](https://github.com/bilet-13/leetcode/tree/master/0392-is-subsequence) |
 | [0876-middle-of-the-linked-list](https://github.com/bilet-13/leetcode/tree/main/0876-middle-of-the-linked-list/) | Easy |
@@ -440,6 +441,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0142-linked-list-cycle-ii](https://github.com/bilet-13/leetcode/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0146-lru-cache](https://github.com/bilet-13/leetcode/tree/master/0146-lru-cache) |
 | [0148-sort-list](https://github.com/bilet-13/leetcode/tree/master/0148-sort-list) |
+| [0234-palindrome-linked-list](https://github.com/bilet-13/leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0876-middle-of-the-linked-list](https://github.com/bilet-13/leetcode/tree/main/0876-middle-of-the-linked-list/) | Easy |
 ## Sorting
 | Problem Name | Difficulty |
@@ -472,6 +474,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0144-binary-tree-preorder-traversal](https://github.com/bilet-13/leetcode/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
 | [0227-basic-calculator-ii](https://github.com/bilet-13/leetcode/tree/master/0227-basic-calculator-ii) |
+| [0234-palindrome-linked-list](https://github.com/bilet-13/leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0589-n-ary-tree-preorder-traversal](https://github.com/bilet-13/leetcode/tree/main/0589-n-ary-tree-preorder-traversal/) | Easy |
 ## Design
 | Problem Name | Difficulty |
@@ -553,6 +556,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0021-merge-two-sorted-lists](https://github.com/bilet-13/leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0025-reverse-nodes-in-k-group](https://github.com/bilet-13/leetcode/tree/master/0025-reverse-nodes-in-k-group) |
 | [0050-powx-n](https://github.com/bilet-13/leetcode/tree/master/0050-powx-n) |
+| [0234-palindrome-linked-list](https://github.com/bilet-13/leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
