@@ -11,7 +11,8 @@ class Solution:
                 return node
             
             last = reverse(node.next)
-            node.next.next = node
+            nxt_node = node.next
+            nxt_node.next = node # brillent step
             node.next = None
 
             return last
