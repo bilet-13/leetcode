@@ -6,30 +6,30 @@
 class Solution:
     def reverseBetween(self, head: ListNode | None, left: int, right: int) -> ListNode | None:
         dummy = ListNode(next=head)
-        fast = dummy
-        slow = dummy
+        end = dummy
+        start = dummy
 
         for _ in range(left - 1):
-            slow = slow.next
+            start = start.next
         
-        prev = slow
-        slow = slow.next
+        before = start
+        start = start.next
 
         for _ in range(right):
-            fast = fast.next
+            end = end.next
 
-        nxt = fast.next
-        node = slow
+        after = end.next
+        node = start
         
-        node_prev = None
-        while node and node != nxt:
+        prev = None
+        while node != after:
             node_nxt = node.next
-            node.next = node_prev
-            node_prev = node
+            node.next = prev
+            prev = node
             node = node_nxt
         
-        prev.next = node_prev
-        slow.next = nxt
+        before.next = prev
+        start.next = after
 
         return dummy.next
 
