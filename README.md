@@ -333,6 +333,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0450-delete-node-in-a-bst](https://github.com/bilet-13/leetcode/tree/master/0450-delete-node-in-a-bst) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
 | [0589-n-ary-tree-preorder-traversal](https://github.com/bilet-13/leetcode/tree/main/0589-n-ary-tree-preorder-traversal/) | Easy |
+| [0700-search-in-a-binary-search-tree](https://github.com/bilet-13/leetcode/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
 | [0703-kth-largest-element-in-a-stream](https://github.com/bilet-13/leetcode/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 | [0772-construct-quad-tree](https://github.com/bilet-13/leetcode/tree/master/0772-construct-quad-tree) |
 ## Binary Tree
@@ -355,6 +356,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/bilet-13/leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0450-delete-node-in-a-bst](https://github.com/bilet-13/leetcode/tree/master/0450-delete-node-in-a-bst) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
+| [0700-search-in-a-binary-search-tree](https://github.com/bilet-13/leetcode/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
 | [0703-kth-largest-element-in-a-stream](https://github.com/bilet-13/leetcode/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 ## Trie
 | Problem Name | Difficulty |
@@ -494,6 +496,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0173-binary-search-tree-iterator](https://github.com/bilet-13/leetcode/tree/master/0173-binary-search-tree-iterator) |
 | [0450-delete-node-in-a-bst](https://github.com/bilet-13/leetcode/tree/master/0450-delete-node-in-a-bst) |
 | [0530-minimum-absolute-difference-in-bst](https://github.com/bilet-13/leetcode/tree/master/0530-minimum-absolute-difference-in-bst) |
+| [0700-search-in-a-binary-search-tree](https://github.com/bilet-13/leetcode/tree/main/0700-search-in-a-binary-search-tree/) | Easy |
 | [0703-kth-largest-element-in-a-stream](https://github.com/bilet-13/leetcode/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 ## Iterator
 | Problem Name | Difficulty |
