@@ -1,10 +1,13 @@
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-        insert_idx = 1
-        for i in range(1, len(nums)):
-            if nums[i] != nums[i - 1]:
-                nums[insert_idx] = nums[i]
-                insert_idx += 1
-        
-        return insert_idx 
-        
+    def removeDuplicates(self, nums: list[int]) -> int:
+        # read fast pointer
+        # write:next unique element index , insert
+        # 
+        write = 0
+
+        for read in range(1, len(nums)):
+            if nums[read] != nums[write]:
+                write += 1
+                nums[write] = nums[read]
+
+        return write + 1
