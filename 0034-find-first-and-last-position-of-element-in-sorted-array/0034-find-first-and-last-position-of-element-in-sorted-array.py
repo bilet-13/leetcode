@@ -1,34 +1,41 @@
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
-        # need to consider target not exist or the nums is empty arr
-        # do binary search twice                               V  
-        # first binary search condiciton : num >= target x x x o o o 
+    def searchRange(self, nums: list[int], target: int) -> list[int]:
+        #  5 7 7 8 8 
+        #  x x x o o  
+        #      r l
+        #  5 7 7 8 8 
+        # x  x x x x o     
+        left = 0
+        right = len(nums) - 1
+        result = []
 
-       # do binary search twice                               V  
-        # second binary search condiciton : num > target, x x x o o o 
-      
+        while left <= right:
+            mid = left + (right - left) // 2
+
+            if nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
         
-        def search(condiction, return_left=True):
-            left = 0
-            right = len(nums) - 1
-            while left <= right:
-                mid = (left + right) // 2
-    
-                if condiction(nums[mid]):
-                    right = mid - 1
-                else:
-                    left = mid + 1
-            
-            return left if return_left else right
-
-        left = search(lambda x: x >= target)
         if left >= len(nums) or nums[left] != target:
             return [-1, -1]
 
-        result = [left]
+        result.append(left)
 
-        right = search(lambda x: x > target, False)
+        left = 0
+        right = len(nums) - 1
+
+        while left <= right:
+            mid = left + (right - left) // 2
+
+            if nums[mid] <= target:
+                left = mid + 1
+            else:
+                right = mid - 1
+        
         result.append(right)
 
         return result
-        
+
+
+
